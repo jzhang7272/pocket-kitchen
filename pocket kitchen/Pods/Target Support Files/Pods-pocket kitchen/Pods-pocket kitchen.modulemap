@@ -1,0 +1,6 @@
+framework module Pods_pocket_kitchen {
+  umbrella header "Pods-pocket kitchen-umbrella.h"
+
+  export *
+  module * { export * }
+}

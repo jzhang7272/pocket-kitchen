@@ -1,0 +1,6 @@
+framework module Pods_pocket_kitchen_pocket_kitchenUITests {
+  umbrella header "Pods-pocket kitchen-pocket kitchenUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
