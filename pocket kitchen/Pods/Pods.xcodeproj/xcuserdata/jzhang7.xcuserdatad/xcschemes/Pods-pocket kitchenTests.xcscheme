@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B3F401207972E44D4DE91869B7D11B6E"
-               BuildableName = "Pods_pocket_kitchenTests.framework"
-               BlueprintName = "Pods-pocket kitchenTests"
+               BlueprintIdentifier = "577CBB3CF7DD1A1F06C53A5A5201F1BB"
+               BuildableName = "Pods_Pocket_KitchenTests.framework"
+               BlueprintName = "Pods-Pocket KitchenTests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

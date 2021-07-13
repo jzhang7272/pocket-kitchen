@@ -1,20 +1,21 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'pocket kitchen' do
+target 'Pocket Kitchen' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for pocket kitchen
+  # Pods for Pocket Kitchen
   pod 'Parse'
   pod 'AFNetworking'
+  pod 'DateTools'
 
-  target 'pocket kitchenTests' do
+  target 'Pocket KitchenTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'pocket kitchenUITests' do
+  target 'Pocket KitchenUITests' do
     # Pods for testing
   end
 

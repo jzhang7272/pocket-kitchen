@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_pocket_kitchen_pocket_kitchenUITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_pocket_kitchen_pocket_kitchenUITestsVersionString[];
+FOUNDATION_EXPORT double Pods_Pocket_Kitchen_Pocket_KitchenUITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Pocket_Kitchen_Pocket_KitchenUITestsVersionString[];
 

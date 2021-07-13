@@ -7,20 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		681DF74B65A725056A7ACC70 /* Pods_pocket_kitchen_pocket_kitchenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C619E553489149FBDBB41A97 /* Pods_pocket_kitchen_pocket_kitchenUITests.framework */; };
-		9134D5E9671CBB25BADEB17D /* Pods_pocket_kitchenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D5F436639BC1F8FBF08C19 /* Pods_pocket_kitchenTests.framework */; };
-		CBDEE471F8A85E109409A801 /* Pods_pocket_kitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9685BF1041C6C9E1C486CAD8 /* Pods_pocket_kitchen.framework */; };
+		3B0100D75E3E2734BFEE131B /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */; };
+		E5B409BC2D72DD85F1022DD0 /* Pods_Pocket_Kitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */; };
 		EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF224B269CD86800862BD5 /* AppDelegate.m */; };
 		EDFF224F269CD86800862BD5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF224E269CD86800862BD5 /* SceneDelegate.m */; };
-		EDFF2252269CD86800862BD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF2251269CD86800862BD5 /* ViewController.m */; };
 		EDFF2255269CD86800862BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFF2253269CD86800862BD5 /* Main.storyboard */; };
 		EDFF2257269CD86900862BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDFF2256269CD86900862BD5 /* Assets.xcassets */; };
 		EDFF225A269CD86900862BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFF2258269CD86900862BD5 /* LaunchScreen.storyboard */; };
 		EDFF225D269CD86900862BD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF225C269CD86900862BD5 /* main.m */; };
-		EDFF2267269CD86900862BD5 /* pocket_kitchenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF2266269CD86900862BD5 /* pocket_kitchenTests.m */; };
-		EDFF2272269CD86900862BD5 /* pocket_kitchenUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF2271269CD86900862BD5 /* pocket_kitchenUITests.m */; };
+		EDFF2267269CD86900862BD5 /* Pocket_KitchenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF2266269CD86900862BD5 /* Pocket_KitchenTests.m */; };
+		EDFF2272269CD86900862BD5 /* Pocket_KitchenUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF2271269CD86900862BD5 /* Pocket_KitchenUITests.m */; };
 		EDFF2281269CDA2E00862BD5 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF2280269CDA2E00862BD5 /* LogInViewController.m */; };
 		EDFF2285269CDD2200862BD5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF2284269CDD2200862BD5 /* ProfileViewController.m */; };
+		EDFF2288269CE3AB00862BD5 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF2287269CE3AB00862BD5 /* InventoryViewController.m */; };
+		EDFF228B269CE54E00862BD5 /* FoodItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF228A269CE54E00862BD5 /* FoodItemCell.m */; };
+		EDFF228E269CF88100862BD5 /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF228D269CF88100862BD5 /* AddItemViewController.m */; };
+		EDFF2291269DF77500862BD5 /* FoodItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF2290269DF77500862BD5 /* FoodItem.m */; };
+		FF14010838EA6409E975A803 /* Pods_Pocket_KitchenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819CE84D30E911F7802F40DF /* Pods_Pocket_KitchenTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,37 +44,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3EC659F42DCD3C7F94EB036C /* Pods-pocket kitchenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocket kitchenTests.release.xcconfig"; path = "Target Support Files/Pods-pocket kitchenTests/Pods-pocket kitchenTests.release.xcconfig"; sourceTree = "<group>"; };
-		52933E8DCDC21905F6FC9F38 /* Pods-pocket kitchen-pocket kitchenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocket kitchen-pocket kitchenUITests.debug.xcconfig"; path = "Target Support Files/Pods-pocket kitchen-pocket kitchenUITests/Pods-pocket kitchen-pocket kitchenUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		53D5F436639BC1F8FBF08C19 /* Pods_pocket_kitchenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pocket_kitchenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		862B80E9910AAE5CA16909F3 /* Pods-pocket kitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocket kitchen.release.xcconfig"; path = "Target Support Files/Pods-pocket kitchen/Pods-pocket kitchen.release.xcconfig"; sourceTree = "<group>"; };
-		9685BF1041C6C9E1C486CAD8 /* Pods_pocket_kitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pocket_kitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B29FD7149751ABE1CC1460AB /* Pods-pocket kitchenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocket kitchenTests.debug.xcconfig"; path = "Target Support Files/Pods-pocket kitchenTests/Pods-pocket kitchenTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C619E553489149FBDBB41A97 /* Pods_pocket_kitchen_pocket_kitchenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pocket_kitchen_pocket_kitchenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48936EE100BF10EABBB476EE /* Pods-Pocket KitchenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket KitchenTests.release.xcconfig"; path = "Target Support Files/Pods-Pocket KitchenTests/Pods-Pocket KitchenTests.release.xcconfig"; sourceTree = "<group>"; };
+		758B1DD9CC52C3EBF552E7C9 /* Pods-Pocket Kitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Kitchen.release.xcconfig"; path = "Target Support Files/Pods-Pocket Kitchen/Pods-Pocket Kitchen.release.xcconfig"; sourceTree = "<group>"; };
+		7BDF5A2E8BC38806DC30FB96 /* Pods-Pocket KitchenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket KitchenTests.debug.xcconfig"; path = "Target Support Files/Pods-Pocket KitchenTests/Pods-Pocket KitchenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		819CE84D30E911F7802F40DF /* Pods_Pocket_KitchenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_KitchenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D28353843A5C98482CA001 /* Pods-Pocket Kitchen-Pocket KitchenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Kitchen-Pocket KitchenUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pocket Kitchen-Pocket KitchenUITests/Pods-Pocket Kitchen-Pocket KitchenUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B61D42C159A5C99EA9AE363A /* Pods-Pocket Kitchen-Pocket KitchenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Kitchen-Pocket KitchenUITests.release.xcconfig"; path = "Target Support Files/Pods-Pocket Kitchen-Pocket KitchenUITests/Pods-Pocket Kitchen-Pocket KitchenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Kitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0183D6556C75F6E2ED958FB /* Pods-Pocket Kitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Kitchen.debug.xcconfig"; path = "Target Support Files/Pods-Pocket Kitchen/Pods-Pocket Kitchen.debug.xcconfig"; sourceTree = "<group>"; };
 		EDFF2247269CD86800862BD5 /* Pocket Kitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Kitchen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFF224A269CD86800862BD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDFF224B269CD86800862BD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EDFF224D269CD86800862BD5 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		EDFF224E269CD86800862BD5 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		EDFF2250269CD86800862BD5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EDFF2251269CD86800862BD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EDFF2254269CD86800862BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDFF2256269CD86900862BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDFF2259269CD86900862BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDFF225B269CD86900862BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDFF225C269CD86900862BD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EDFF2262269CD86900862BD5 /* Pocket KitchenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket KitchenTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDFF2266269CD86900862BD5 /* pocket_kitchenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pocket_kitchenTests.m; sourceTree = "<group>"; };
+		EDFF2266269CD86900862BD5 /* Pocket_KitchenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pocket_KitchenTests.m; sourceTree = "<group>"; };
 		EDFF2268269CD86900862BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDFF226D269CD86900862BD5 /* Pocket KitchenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket KitchenUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDFF2271269CD86900862BD5 /* pocket_kitchenUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pocket_kitchenUITests.m; sourceTree = "<group>"; };
+		EDFF2271269CD86900862BD5 /* Pocket_KitchenUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pocket_KitchenUITests.m; sourceTree = "<group>"; };
 		EDFF2273269CD86900862BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDFF227F269CDA2E00862BD5 /* LogInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		EDFF2280269CDA2E00862BD5 /* LogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		EDFF2283269CDD2200862BD5 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		EDFF2284269CDD2200862BD5 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		F7D42DFA79DF9DC4F58E1E00 /* Pods-pocket kitchen-pocket kitchenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocket kitchen-pocket kitchenUITests.release.xcconfig"; path = "Target Support Files/Pods-pocket kitchen-pocket kitchenUITests/Pods-pocket kitchen-pocket kitchenUITests.release.xcconfig"; sourceTree = "<group>"; };
-		FDF926CC833C0778467E6B6A /* Pods-pocket kitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocket kitchen.debug.xcconfig"; path = "Target Support Files/Pods-pocket kitchen/Pods-pocket kitchen.debug.xcconfig"; sourceTree = "<group>"; };
+		EDFF2286269CE3AB00862BD5 /* InventoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
+		EDFF2287269CE3AB00862BD5 /* InventoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
+		EDFF2289269CE54E00862BD5 /* FoodItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodItemCell.h; sourceTree = "<group>"; };
+		EDFF228A269CE54E00862BD5 /* FoodItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodItemCell.m; sourceTree = "<group>"; };
+		EDFF228C269CF88100862BD5 /* AddItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
+		EDFF228D269CF88100862BD5 /* AddItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
+		EDFF228F269DF77500862BD5 /* FoodItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodItem.h; sourceTree = "<group>"; };
+		EDFF2290269DF77500862BD5 /* FoodItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDEE471F8A85E109409A801 /* Pods_pocket_kitchen.framework in Frameworks */,
+				E5B409BC2D72DD85F1022DD0 /* Pods_Pocket_Kitchen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9134D5E9671CBB25BADEB17D /* Pods_pocket_kitchenTests.framework in Frameworks */,
+				FF14010838EA6409E975A803 /* Pods_Pocket_KitchenTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,45 +104,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				681DF74B65A725056A7ACC70 /* Pods_pocket_kitchen_pocket_kitchenUITests.framework in Frameworks */,
+				3B0100D75E3E2734BFEE131B /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E38035E2361718877D30760 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */,
+				DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */,
+				819CE84D30E911F7802F40DF /* Pods_Pocket_KitchenTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		43F31D62756AC16FE17FD1F9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FDF926CC833C0778467E6B6A /* Pods-pocket kitchen.debug.xcconfig */,
-				862B80E9910AAE5CA16909F3 /* Pods-pocket kitchen.release.xcconfig */,
-				52933E8DCDC21905F6FC9F38 /* Pods-pocket kitchen-pocket kitchenUITests.debug.xcconfig */,
-				F7D42DFA79DF9DC4F58E1E00 /* Pods-pocket kitchen-pocket kitchenUITests.release.xcconfig */,
-				B29FD7149751ABE1CC1460AB /* Pods-pocket kitchenTests.debug.xcconfig */,
-				3EC659F42DCD3C7F94EB036C /* Pods-pocket kitchenTests.release.xcconfig */,
+				E0183D6556C75F6E2ED958FB /* Pods-Pocket Kitchen.debug.xcconfig */,
+				758B1DD9CC52C3EBF552E7C9 /* Pods-Pocket Kitchen.release.xcconfig */,
+				A0D28353843A5C98482CA001 /* Pods-Pocket Kitchen-Pocket KitchenUITests.debug.xcconfig */,
+				B61D42C159A5C99EA9AE363A /* Pods-Pocket Kitchen-Pocket KitchenUITests.release.xcconfig */,
+				7BDF5A2E8BC38806DC30FB96 /* Pods-Pocket KitchenTests.debug.xcconfig */,
+				48936EE100BF10EABBB476EE /* Pods-Pocket KitchenTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		8F37BECA5AA22F54B72E2177 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9685BF1041C6C9E1C486CAD8 /* Pods_pocket_kitchen.framework */,
-				C619E553489149FBDBB41A97 /* Pods_pocket_kitchen_pocket_kitchenUITests.framework */,
-				53D5F436639BC1F8FBF08C19 /* Pods_pocket_kitchenTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EDFF223E269CD86800862BD5 = {
 			isa = PBXGroup;
 			children = (
-				EDFF2249269CD86800862BD5 /* pocket kitchen */,
-				EDFF2265269CD86900862BD5 /* pocket kitchenTests */,
-				EDFF2270269CD86900862BD5 /* pocket kitchenUITests */,
+				EDFF2249269CD86800862BD5 /* Pocket Kitchen */,
+				EDFF2265269CD86900862BD5 /* Pocket KitchenTests */,
+				EDFF2270269CD86900862BD5 /* Pocket KitchenUITests */,
 				EDFF2248269CD86800862BD5 /* Products */,
 				43F31D62756AC16FE17FD1F9 /* Pods */,
-				8F37BECA5AA22F54B72E2177 /* Frameworks */,
+				0E38035E2361718877D30760 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,15 +156,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EDFF2249269CD86800862BD5 /* pocket kitchen */ = {
+		EDFF2249269CD86800862BD5 /* Pocket Kitchen */ = {
 			isa = PBXGroup;
 			children = (
+				EDFF228F269DF77500862BD5 /* FoodItem.h */,
+				EDFF2290269DF77500862BD5 /* FoodItem.m */,
+				EDFF2289269CE54E00862BD5 /* FoodItemCell.h */,
+				EDFF228A269CE54E00862BD5 /* FoodItemCell.m */,
 				EDFF224A269CD86800862BD5 /* AppDelegate.h */,
 				EDFF224B269CD86800862BD5 /* AppDelegate.m */,
 				EDFF224D269CD86800862BD5 /* SceneDelegate.h */,
 				EDFF224E269CD86800862BD5 /* SceneDelegate.m */,
-				EDFF2250269CD86800862BD5 /* ViewController.h */,
-				EDFF2251269CD86800862BD5 /* ViewController.m */,
 				EDFF2253269CD86800862BD5 /* Main.storyboard */,
 				EDFF2282269CDA3300862BD5 /* View Controllers */,
 				EDFF2256269CD86900862BD5 /* Assets.xcassets */,
@@ -163,30 +174,34 @@
 				EDFF225B269CD86900862BD5 /* Info.plist */,
 				EDFF225C269CD86900862BD5 /* main.m */,
 			);
-			path = "pocket kitchen";
+			path = "Pocket Kitchen";
 			sourceTree = "<group>";
 		};
-		EDFF2265269CD86900862BD5 /* pocket kitchenTests */ = {
+		EDFF2265269CD86900862BD5 /* Pocket KitchenTests */ = {
 			isa = PBXGroup;
 			children = (
-				EDFF2266269CD86900862BD5 /* pocket_kitchenTests.m */,
+				EDFF2266269CD86900862BD5 /* Pocket_KitchenTests.m */,
 				EDFF2268269CD86900862BD5 /* Info.plist */,
 			);
-			path = "pocket kitchenTests";
+			path = "Pocket KitchenTests";
 			sourceTree = "<group>";
 		};
-		EDFF2270269CD86900862BD5 /* pocket kitchenUITests */ = {
+		EDFF2270269CD86900862BD5 /* Pocket KitchenUITests */ = {
 			isa = PBXGroup;
 			children = (
-				EDFF2271269CD86900862BD5 /* pocket_kitchenUITests.m */,
+				EDFF2271269CD86900862BD5 /* Pocket_KitchenUITests.m */,
 				EDFF2273269CD86900862BD5 /* Info.plist */,
 			);
-			path = "pocket kitchenUITests";
+			path = "Pocket KitchenUITests";
 			sourceTree = "<group>";
 		};
 		EDFF2282269CDA3300862BD5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EDFF228C269CF88100862BD5 /* AddItemViewController.h */,
+				EDFF228D269CF88100862BD5 /* AddItemViewController.m */,
+				EDFF2286269CE3AB00862BD5 /* InventoryViewController.h */,
+				EDFF2287269CE3AB00862BD5 /* InventoryViewController.m */,
 				EDFF2283269CDD2200862BD5 /* ProfileViewController.h */,
 				EDFF2284269CDD2200862BD5 /* ProfileViewController.m */,
 				EDFF2280269CDA2E00862BD5 /* LogInViewController.m */,
@@ -202,11 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDFF2276269CD86900862BD5 /* Build configuration list for PBXNativeTarget "Pocket Kitchen" */;
 			buildPhases = (
-				E8C8BA22A7FC5D7DE3718F5A /* [CP] Check Pods Manifest.lock */,
+				F699E13C216A7A6A50C4E0B3 /* [CP] Check Pods Manifest.lock */,
 				EDFF2243269CD86800862BD5 /* Sources */,
 				EDFF2244269CD86800862BD5 /* Frameworks */,
 				EDFF2245269CD86800862BD5 /* Resources */,
-				AC3F1581E0A12618A5BB5B67 /* [CP] Embed Pods Frameworks */,
+				AE849CC8F98832D9965C24F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,7 +236,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDFF2279269CD86900862BD5 /* Build configuration list for PBXNativeTarget "Pocket KitchenTests" */;
 			buildPhases = (
-				6A71D4D94CA20937DBE23F36 /* [CP] Check Pods Manifest.lock */,
+				091B7B4BC98757A35F97587D /* [CP] Check Pods Manifest.lock */,
 				EDFF225E269CD86900862BD5 /* Sources */,
 				EDFF225F269CD86900862BD5 /* Frameworks */,
 				EDFF2260269CD86900862BD5 /* Resources */,
@@ -240,11 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDFF227C269CD86900862BD5 /* Build configuration list for PBXNativeTarget "Pocket KitchenUITests" */;
 			buildPhases = (
-				721DC5CC0D2B98514224B9CE /* [CP] Check Pods Manifest.lock */,
+				BFF094DE275E0ED1DABBC53A /* [CP] Check Pods Manifest.lock */,
 				EDFF2269269CD86900862BD5 /* Sources */,
 				EDFF226A269CD86900862BD5 /* Frameworks */,
 				EDFF226B269CD86900862BD5 /* Resources */,
-				16D05BD0377FEBA07DFD3652 /* [CP] Embed Pods Frameworks */,
+				8B1C2EF46305E39BA7A09C31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,24 +340,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16D05BD0377FEBA07DFD3652 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pocket kitchen-pocket kitchenUITests/Pods-pocket kitchen-pocket kitchenUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pocket kitchen-pocket kitchenUITests/Pods-pocket kitchen-pocket kitchenUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pocket kitchen-pocket kitchenUITests/Pods-pocket kitchen-pocket kitchenUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A71D4D94CA20937DBE23F36 /* [CP] Check Pods Manifest.lock */ = {
+		091B7B4BC98757A35F97587D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,14 +355,48 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-pocket kitchenTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Pocket KitchenTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		721DC5CC0D2B98514224B9CE /* [CP] Check Pods Manifest.lock */ = {
+		8B1C2EF46305E39BA7A09C31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Kitchen-Pocket KitchenUITests/Pods-Pocket Kitchen-Pocket KitchenUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Kitchen-Pocket KitchenUITests/Pods-Pocket Kitchen-Pocket KitchenUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pocket Kitchen-Pocket KitchenUITests/Pods-Pocket Kitchen-Pocket KitchenUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE849CC8F98832D9965C24F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Kitchen/Pods-Pocket Kitchen-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Kitchen/Pods-Pocket Kitchen-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pocket Kitchen/Pods-Pocket Kitchen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFF094DE275E0ED1DABBC53A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,31 +411,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-pocket kitchen-pocket kitchenUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Pocket Kitchen-Pocket KitchenUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC3F1581E0A12618A5BB5B67 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pocket kitchen/Pods-pocket kitchen-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pocket kitchen/Pods-pocket kitchen-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pocket kitchen/Pods-pocket kitchen-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8C8BA22A7FC5D7DE3718F5A /* [CP] Check Pods Manifest.lock */ = {
+		F699E13C216A7A6A50C4E0B3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -418,7 +433,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-pocket kitchen-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Pocket Kitchen-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -432,12 +447,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDFF2252269CD86800862BD5 /* ViewController.m in Sources */,
+				EDFF228B269CE54E00862BD5 /* FoodItemCell.m in Sources */,
 				EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */,
 				EDFF2281269CDA2E00862BD5 /* LogInViewController.m in Sources */,
+				EDFF228E269CF88100862BD5 /* AddItemViewController.m in Sources */,
 				EDFF225D269CD86900862BD5 /* main.m in Sources */,
 				EDFF2285269CDD2200862BD5 /* ProfileViewController.m in Sources */,
+				EDFF2288269CE3AB00862BD5 /* InventoryViewController.m in Sources */,
 				EDFF224F269CD86800862BD5 /* SceneDelegate.m in Sources */,
+				EDFF2291269DF77500862BD5 /* FoodItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDFF2267269CD86900862BD5 /* pocket_kitchenTests.m in Sources */,
+				EDFF2267269CD86900862BD5 /* Pocket_KitchenTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDFF2272269CD86900862BD5 /* pocket_kitchenUITests.m in Sources */,
+				EDFF2272269CD86900862BD5 /* Pocket_KitchenUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +624,7 @@
 		};
 		EDFF2277269CD86900862BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDF926CC833C0778467E6B6A /* Pods-pocket kitchen.debug.xcconfig */;
+			baseConfigurationReference = E0183D6556C75F6E2ED958FB /* Pods-Pocket Kitchen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -625,7 +643,7 @@
 		};
 		EDFF2278269CD86900862BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 862B80E9910AAE5CA16909F3 /* Pods-pocket kitchen.release.xcconfig */;
+			baseConfigurationReference = 758B1DD9CC52C3EBF552E7C9 /* Pods-Pocket Kitchen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -644,7 +662,7 @@
 		};
 		EDFF227A269CD86900862BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B29FD7149751ABE1CC1460AB /* Pods-pocket kitchenTests.debug.xcconfig */;
+			baseConfigurationReference = 7BDF5A2E8BC38806DC30FB96 /* Pods-Pocket KitchenTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -665,7 +683,7 @@
 		};
 		EDFF227B269CD86900862BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EC659F42DCD3C7F94EB036C /* Pods-pocket kitchenTests.release.xcconfig */;
+			baseConfigurationReference = 48936EE100BF10EABBB476EE /* Pods-Pocket KitchenTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -686,7 +704,7 @@
 		};
 		EDFF227D269CD86900862BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52933E8DCDC21905F6FC9F38 /* Pods-pocket kitchen-pocket kitchenUITests.debug.xcconfig */;
+			baseConfigurationReference = A0D28353843A5C98482CA001 /* Pods-Pocket Kitchen-Pocket KitchenUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RFMYJSBY95;
@@ -705,7 +723,7 @@
 		};
 		EDFF227E269CD86900862BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7D42DFA79DF9DC4F58E1E00 /* Pods-pocket kitchen-pocket kitchenUITests.release.xcconfig */;
+			baseConfigurationReference = B61D42C159A5C99EA9AE363A /* Pods-Pocket Kitchen-Pocket KitchenUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RFMYJSBY95;
