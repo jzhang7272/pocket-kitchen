@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B0100D75E3E2734BFEE131B /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */; };
 		E5B409BC2D72DD85F1022DD0 /* Pods_Pocket_Kitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */; };
+		ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */; };
 		EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF224B269CD86800862BD5 /* AppDelegate.m */; };
 		EDFF224F269CD86800862BD5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF224E269CD86800862BD5 /* SceneDelegate.m */; };
 		EDFF2255269CD86800862BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFF2253269CD86800862BD5 /* Main.storyboard */; };
@@ -53,6 +54,8 @@
 		B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Kitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0183D6556C75F6E2ED958FB /* Pods-Pocket Kitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Kitchen.debug.xcconfig"; path = "Target Support Files/Pods-Pocket Kitchen/Pods-Pocket Kitchen.debug.xcconfig"; sourceTree = "<group>"; };
+		ED81F800269E3BDA00F9E2CF /* NutrientApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NutrientApiManager.h; sourceTree = "<group>"; };
+		ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NutrientApiManager.m; sourceTree = "<group>"; };
 		EDFF2247269CD86800862BD5 /* Pocket Kitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Kitchen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFF224A269CD86800862BD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDFF224B269CD86800862BD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 		EDFF2249269CD86800862BD5 /* Pocket Kitchen */ = {
 			isa = PBXGroup;
 			children = (
+				ED81F800269E3BDA00F9E2CF /* NutrientApiManager.h */,
+				ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */,
 				EDFF228F269DF77500862BD5 /* FoodItem.h */,
 				EDFF2290269DF77500862BD5 /* FoodItem.m */,
 				EDFF2289269CE54E00862BD5 /* FoodItemCell.h */,
@@ -454,6 +459,7 @@
 				EDFF225D269CD86900862BD5 /* main.m in Sources */,
 				EDFF2285269CDD2200862BD5 /* ProfileViewController.m in Sources */,
 				EDFF2288269CE3AB00862BD5 /* InventoryViewController.m in Sources */,
+				ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */,
 				EDFF224F269CD86800862BD5 /* SceneDelegate.m in Sources */,
 				EDFF2291269DF77500862BD5 /* FoodItem.m in Sources */,
 			);

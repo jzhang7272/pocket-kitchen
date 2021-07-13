@@ -7,6 +7,7 @@
 
 #import "InventoryViewController.h"
 #import "AddItemViewController.h"
+#import "NutrientApiManager.h"
 
 #import "FoodItemCell.h"
 
@@ -37,11 +38,21 @@ const int QUERIES = 20;
     
     [self fetchData];
     
+    [self getNutrients];
+    
     // Refresh
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
 
+}
+
+- (void)getNutrients{
+    NutrientApiManager *manager = [NutrientApiManager new];
+    [manager fetchFoodItem: @"cauliflower" :3 :^(NSArray *foodItems, NSError *error) {
+//        self.movies = movies;
+//        [self.tableView reloadData];
+    }];
 }
 
 - (void)fetchData{
