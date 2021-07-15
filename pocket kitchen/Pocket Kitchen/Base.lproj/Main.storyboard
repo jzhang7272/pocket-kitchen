@@ -122,8 +122,8 @@
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJQ-xy-xuc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UnY-d3-B3Y">
-                                                    <rect key="frame" x="10" y="0.0" width="414" height="150"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UnY-d3-B3Y">
+                                                    <rect key="frame" x="8" y="0.0" width="414" height="150"/>
                                                     <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 </stackView>
                                             </subviews>
@@ -198,6 +198,7 @@
                                             <outlet property="expDateLabel" destination="Vpz-tr-CcU" id="um7-hY-eNg"/>
                                             <outlet property="itemLabel" destination="PP0-0x-49s" id="7Xc-4K-DLA"/>
                                             <outlet property="quantityLabel" destination="LUS-Td-KKr" id="Iwo-le-est"/>
+                                            <segue destination="nah-Fb-A7z" kind="show" identifier="detailsSegue" id="GMs-pU-Ph1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -221,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJO-Ej-diJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688.40579710144937" y="2364.5089285714284"/>
+            <point key="canvasLocation" x="-1246" y="2365"/>
         </scene>
         <!--Add Item View Controller-->
         <scene sceneID="ag5-Xv-ave">
@@ -312,7 +313,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-688.40579710144937" y="3806.9196428571427"/>
+            <point key="canvasLocation" x="-1246" y="3808"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Sxd-ru-mC3">
@@ -369,7 +370,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmM-Lq-M8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-686" y="1616"/>
+            <point key="canvasLocation" x="-1246" y="1616"/>
         </scene>
         <!--Item-->
         <scene sceneID="ZMC-b4-cW7">
@@ -406,7 +407,82 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bip-tC-4KE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="3084"/>
+            <point key="canvasLocation" x="-1246" y="3085"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="lXb-sp-Mco">
+            <objects>
+                <viewController id="nah-Fb-A7z" customClass="DetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xGj-Tq-DdN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ib0-hn-SiB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YJ-ef-ho6">
+                                        <rect key="frame" x="20" y="35" width="117" height="124"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofm-yI-1qt">
+                                        <rect key="frame" x="166" y="35" width="131" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4k-Rk-dUm">
+                                        <rect key="frame" x="166" y="76" width="76" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expiration Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itp-Vc-3x9">
+                                        <rect key="frame" x="166" y="122" width="116" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Li2-YT-3ta">
+                                        <rect key="frame" x="17" y="226" width="362" height="299"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nutrition Facts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jy-Ym-Ewb">
+                                        <rect key="frame" x="20" y="184" width="112" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Lve-mq-4uu">
+                                        <rect key="frame" x="261" y="70" width="94" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stepper>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="QTM-xJ-Onp"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5bV-M6-QtC"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hal-7V-sDa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="62u-a5-iOm"/>
+                    <connections>
+                        <outlet property="expDateLabel" destination="Itp-Vc-3x9" id="P9m-V6-5Ld"/>
+                        <outlet property="foodItemLabel" destination="Ofm-yI-1qt" id="L6D-38-dO8"/>
+                        <outlet property="nutritionLabel" destination="Li2-YT-3ta" id="NUF-1l-dIt"/>
+                        <outlet property="quantityLabel" destination="h4k-Rk-dUm" id="9Rd-fa-Dca"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1J-6f-RiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-528.98550724637687" y="2364.5089285714284"/>
         </scene>
     </scenes>
     <resources>

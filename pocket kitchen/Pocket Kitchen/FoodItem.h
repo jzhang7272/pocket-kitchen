@@ -20,8 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSNumber *quantity;
 @property (nonatomic, strong) NSDate *expirationDate;
 @property (nonatomic, strong) NSString *category;
+@property (nonatomic, strong) NSMutableDictionary *nutrients;
 
 + (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSDate *)expDate :(NSString *)category;
+
++ (NSDictionary *)initNutrients: (NSDictionary *)dictionary;
 
 @end
 

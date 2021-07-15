@@ -10,6 +10,7 @@
 		3B0100D75E3E2734BFEE131B /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */; };
 		E5B409BC2D72DD85F1022DD0 /* Pods_Pocket_Kitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */; };
 		ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */; };
+		ED81F805269F87F700F9E2CF /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F804269F87F700F9E2CF /* DetailsViewController.m */; };
 		EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF224B269CD86800862BD5 /* AppDelegate.m */; };
 		EDFF224F269CD86800862BD5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF224E269CD86800862BD5 /* SceneDelegate.m */; };
 		EDFF2255269CD86800862BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFF2253269CD86800862BD5 /* Main.storyboard */; };
@@ -56,6 +57,8 @@
 		E0183D6556C75F6E2ED958FB /* Pods-Pocket Kitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Kitchen.debug.xcconfig"; path = "Target Support Files/Pods-Pocket Kitchen/Pods-Pocket Kitchen.debug.xcconfig"; sourceTree = "<group>"; };
 		ED81F800269E3BDA00F9E2CF /* NutrientApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NutrientApiManager.h; sourceTree = "<group>"; };
 		ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NutrientApiManager.m; sourceTree = "<group>"; };
+		ED81F803269F87F700F9E2CF /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		ED81F804269F87F700F9E2CF /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		EDFF2247269CD86800862BD5 /* Pocket Kitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Kitchen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFF224A269CD86800862BD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDFF224B269CD86800862BD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 		EDFF2282269CDA3300862BD5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ED81F803269F87F700F9E2CF /* DetailsViewController.h */,
+				ED81F804269F87F700F9E2CF /* DetailsViewController.m */,
 				EDFF228C269CF88100862BD5 /* AddItemViewController.h */,
 				EDFF228D269CF88100862BD5 /* AddItemViewController.m */,
 				EDFF2286269CE3AB00862BD5 /* InventoryViewController.h */,
@@ -454,6 +459,7 @@
 			files = (
 				EDFF228B269CE54E00862BD5 /* FoodItemCell.m in Sources */,
 				EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */,
+				ED81F805269F87F700F9E2CF /* DetailsViewController.m in Sources */,
 				EDFF2281269CDA2E00862BD5 /* LogInViewController.m in Sources */,
 				EDFF228E269CF88100862BD5 /* AddItemViewController.m in Sources */,
 				EDFF225D269CD86900862BD5 /* main.m in Sources */,

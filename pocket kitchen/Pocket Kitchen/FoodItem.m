@@ -13,6 +13,8 @@
 @dynamic expirationDate;
 @dynamic name;
 @dynamic quantity;
+@dynamic category;
+@dynamic nutrients;
 
 + (nonnull NSString *)parseClassName {
     return @"FoodItem";
@@ -27,6 +29,17 @@
     newItem.category = category;
     
     [newItem saveInBackgroundWithBlock: nil];
+}
+
++ (NSDictionary *)initNutrients: (NSDictionary *)dictionary{
+    NSMutableDictionary *nutrients = [NSMutableDictionary new];
+    for(id nutrient in dictionary){
+        NSDictionary *details = dictionary[nutrient];
+        NSString *unit = details[@"unit"];
+        NSString *quantity = details[@"quantity"];
+        [nutrients setObject: [NSString stringWithFormat:@"%@ %@", quantity, unit] forKey:details[@"label"]];
+    }
+    return nutrients;
 }
 
 @end

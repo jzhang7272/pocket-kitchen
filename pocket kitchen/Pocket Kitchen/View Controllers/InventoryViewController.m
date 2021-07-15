@@ -7,6 +7,7 @@
 
 #import "InventoryViewController.h"
 #import "AddItemViewController.h"
+#import "DetailsViewController.h"
 #import "NutrientApiManager.h"
 
 #import "FoodItemCell.h"
@@ -38,7 +39,7 @@ const int QUERIES = 20;
     
     [self fetchData];
     
-    [self getNutrients];
+//    [self getNutrients];
     
     // Refresh
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -47,13 +48,12 @@ const int QUERIES = 20;
 
 }
 
-- (void)getNutrients{
-    NutrientApiManager *manager = [NutrientApiManager new];
-    [manager fetchFoodItem: @"cauliflower" :3 :^(NSArray *foodItems, NSError *error) {
-//        self.movies = movies;
-//        [self.tableView reloadData];
-    }];
-}
+//- (void)getNutrients{
+    
+//    NutrientApiManager *manager = [NutrientApiManager new];
+//    [manager fetchFood];
+//    [manager fetchFoodItem: @"cauliflower" :3 :^(NSArray *foodItems, NSError *error) {}];
+// }
 
 - (void)fetchData{
     PFQuery *query = [PFQuery queryWithClassName:@"FoodItem"];
@@ -112,6 +112,13 @@ const int QUERIES = 20;
         UINavigationController *navigationController = [segue destinationViewController];
             AddItemViewController *addController = (AddItemViewController*)navigationController.topViewController;
 //            addController.delegate = self;
+    }
+    if([[segue identifier] isEqualToString:@"detailsSegue"]) {
+        UITableViewCell *tappedCell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+        FoodItem *item = self.itemArray[indexPath.row];
+        DetailsViewController *detailsViewController = [segue destinationViewController];
+        detailsViewController.item = item;
     }
 }
 
