@@ -15,6 +15,7 @@
 @dynamic quantity;
 @dynamic category;
 @dynamic nutrients;
+@dynamic image;
 
 + (nonnull NSString *)parseClassName {
     return @"FoodItem";
@@ -36,8 +37,8 @@
     for(id nutrient in dictionary){
         NSDictionary *details = dictionary[nutrient];
         NSString *unit = details[@"unit"];
-        NSString *quantity = details[@"quantity"];
-        [nutrients setObject: [NSString stringWithFormat:@"%@ %@", quantity, unit] forKey:details[@"label"]];
+        double quantity = [details[@"quantity"] doubleValue];
+        [nutrients setObject: [NSString stringWithFormat:@"%.2f %@", quantity, unit] forKey:details[@"label"]];
     }
     return nutrients;
 }

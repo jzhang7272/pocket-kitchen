@@ -52,7 +52,7 @@
 }
 
 // Parser API - GET
-- (void)fetchFood:(NSString *)item :(void(^)(NSDictionary *, NSError *))completion{
+- (void)fetchFood:(NSString *)item :(void(^)(NSDictionary *, NSString *, NSError *))completion{
     
     NSString *baseParseURL = @"https://api.edamam.com/api/food-database/v2/parser";
     NSURLComponents *components = [NSURLComponents componentsWithString:baseParseURL];
@@ -73,18 +73,19 @@
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
-            completion(nil, error);
+            completion(nil, nil, error);
         }
         else {
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             foodID.string = dataDictionary[@"parsed"][0][@"food"][@"foodId"];
+            NSString *foodImage = dataDictionary[@"parsed"][0][@"food"][@"image"];
             [self fetchNutrients :foodID :^(NSDictionary *dictionary, NSError *error){
                 if(error){
                     NSLog(@"%@", error.localizedDescription);
                 }
                 else{
                     [nutrients addEntriesFromDictionary:dictionary];
-                    completion(nutrients, nil);
+                    completion(nutrients, foodImage, nil);
                 }
             }];
         }
