@@ -11,14 +11,17 @@
 #import "NutrientApiManager.h"
 
 #import "FoodItemCell.h"
+#import "CategoryView.h"
 
 #import "FoodItem.h"
 #import <Parse/Parse.h>
 #import "DateTools.h"
 
 const int QUERIES = 20;
+CategoryView *all;
 
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIStackView *horizontalScrollView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
@@ -37,9 +40,15 @@ const int QUERIES = 20;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    [self fetchData];
+//    for (int i = 0; i <= 2; i++){
+//    NSLog(@"HI");
+    all = [[[NSBundle mainBundle] loadNibNamed:@"Category" owner:self options:nil] objectAtIndex:0];
+//    [all.categoryButton setTitle:@"Hello" forState:UIControlStateNormal];
+    [self.horizontalScrollView addArrangedSubview:all];
     
-//    [self getNutrients];
+    
+    [self fetchData];
+
     
     // Refresh
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -48,12 +57,10 @@ const int QUERIES = 20;
 
 }
 
-//- (void)getNutrients{
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     
-//    NutrientApiManager *manager = [NutrientApiManager new];
-//    [manager fetchFood];
-//    [manager fetchFoodItem: @"cauliflower" :3 :^(NSArray *foodItems, NSError *error) {}];
-// }
+}
 
 - (void)fetchData{
     PFQuery *query = [PFQuery queryWithClassName:@"FoodItem"];
