@@ -16,18 +16,20 @@
 @dynamic category;
 @dynamic nutrients;
 @dynamic image;
+@dynamic branded;
 
 + (nonnull NSString *)parseClassName {
     return @"FoodItem";
 }
 
-+ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSDate *)expDate :(NSString *)category{
++ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSDate *)expDate :(NSString *)category :(BOOL) branded{
     FoodItem *newItem = [FoodItem new];
     newItem.author = PFUser.currentUser;
     newItem.expirationDate = expDate;
     newItem.name = item;
     newItem.quantity = quantity;
     newItem.category = category;
+    newItem.branded = branded;
     
     [newItem saveInBackgroundWithBlock: nil];
 }

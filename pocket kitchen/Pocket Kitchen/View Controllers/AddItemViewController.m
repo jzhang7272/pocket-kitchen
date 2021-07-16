@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *quantityField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *expirationDate;
 @property (weak, nonatomic) IBOutlet UIPickerView *categoryPicker;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *typeControl;
 
 @property (nonatomic, strong) NSArray *pickerData;
 
@@ -36,8 +37,9 @@
     NSNumber *quantity = [formatter numberFromString:self.quantityField.text];
     NSDate *expDate = self.expirationDate.date;
     NSString *category = [self pickerView:self.categoryPicker titleForRow:[self.categoryPicker selectedRowInComponent:0] forComponent:0];
+    BOOL branded = (self.typeControl.selectedSegmentIndex == 1) ? true : false;
     
-    [FoodItem saveItem:item :quantity :expDate :category];
+    [FoodItem saveItem:item :quantity :expDate :category :branded];
     [self dismissViewControllerAnimated:true completion:nil];
 }
 

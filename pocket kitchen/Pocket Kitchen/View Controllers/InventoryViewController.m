@@ -39,13 +39,12 @@ const int QUERIES = 20;
     // Delegates
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
     _categoriesArray = @[@"Food", @"Fridge", @"Pantry"];
     for (int i = 0; i <= 2; i++){
-//    NSLog(@"HI");
         CategoryView *categories = [[CategoryView alloc] init];
         [categories.categoryButton setTitle:[_categoriesArray objectAtIndex:i] forState:UIControlStateNormal];
 //    all = [[[NSBundle mainBundle] loadNibNamed:@"Category" owner:self options:nil] objectAtIndex:0];
-//    [all.categoryButton setTitle:@"Hello" forState:UIControlStateNormal];
         [self.horizontalScrollView addArrangedSubview:categories];
     }
     
@@ -84,7 +83,7 @@ const int QUERIES = 20;
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FoodItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FoodItemCell"];
     FoodItem *item = self.itemArray[indexPath.row];
-    NSLog(@"%@", item);
+    // NSLog(@"%@", item);
     cell.itemLabel.text = item.name;
     cell.quantityLabel.text = [NSString stringWithFormat:@"%@", item.quantity];
     cell.categoryLabel.text = item.category;

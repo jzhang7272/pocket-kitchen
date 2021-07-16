@@ -79,7 +79,7 @@
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             foodID.string = dataDictionary[@"parsed"][0][@"food"][@"foodId"];
             NSString *foodImage = dataDictionary[@"parsed"][0][@"food"][@"image"];
-            [self fetchNutrients :foodID :^(NSDictionary *dictionary, NSError *error){
+            [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_unit" :^(NSDictionary *dictionary, NSError *error){
                 if(error){
                     NSLog(@"%@", error.localizedDescription);
                 }
@@ -94,7 +94,7 @@
 }
 
 // Nutrients API - POST
-- (void) fetchNutrients:(NSString *)foodID :(void(^)(NSDictionary *, NSError *))completion{
+- (void) fetchNutrients:(NSString *)foodID :(NSString *)url :(void(^)(NSDictionary *, NSError *))completion{
     NSString *baseNutrientURL = @"https://api.edamam.com/api/food-database/v2/nutrients";
     NSURLComponents *nutrientComponents = [NSURLComponents componentsWithString:baseNutrientURL];
     NSURLQueryItem *appID = [NSURLQueryItem queryItemWithName:@"app_id" value:@"03df0f4f"];
@@ -106,12 +106,11 @@
     // Create POST method
     [requestNutrient setHTTPMethod:@"POST"];
     
-    NSString *jsonString = [NSString stringWithFormat:@"{\"ingredients\": [{\"quantity\": 1,\"measureURI\": \"http://www.edamam.com/ontologies/edamam.owl#Measure_unit\",\"foodId\": \"%@\"}]}", foodID];
+    NSString *jsonString = [NSString stringWithFormat:@"{\"ingredients\": [{\"quantity\": 1,\"measureURI\": \"%@\",\"foodId\": \"%@\"}]}", url, foodID];
 
     // Apply data to body
     [requestNutrient setHTTPBody:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
     [requestNutrient setValue:@"application/json" forHTTPHeaderField:@"content-type"];
-
     NSMutableDictionary *nutrients = [NSMutableDictionary new];
     NSURLSession *nutrient_session = [NSURLSession sharedSession];
     NSURLSessionDataTask *nutrient_dataTask = [nutrient_session dataTaskWithRequest:requestNutrient completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -123,8 +122,23 @@
 //            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
 //            NSLog(@"%@", httpResponse);
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            [nutrients addEntriesFromDictionary: [FoodItem initNutrients:dataDictionary[@"totalNutrients"]]];
-            completion(nutrients, nil);
+            if ([dataDictionary[@"totalNutrients"] count] == 0){
+                NSLog(@"1");
+                [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_serving" :^(NSDictionary *dictionary, NSError *error){
+                    if(error){
+                        NSLog(@"%@", error.localizedDescription);
+                        completion(nil, error);
+                    }
+                    else{
+                        [nutrients addEntriesFromDictionary:dictionary];
+                        completion(nutrients, nil);
+                    }
+                }];
+            }
+            else{
+                [nutrients addEntriesFromDictionary: [FoodItem initNutrients:dataDictionary[@"totalNutrients"]]];
+                completion(nutrients, nil);
+            }
         }
     }];
     [nutrient_dataTask resume];

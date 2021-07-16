@@ -22,8 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *category;
 @property (nonatomic, strong) NSMutableDictionary *nutrients;
 @property (nonatomic, strong) NSString *image;
+@property (nonatomic) BOOL branded;
 
-+ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSDate *)expDate :(NSString *)category;
++ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSDate *)expDate :(NSString *)category :(BOOL) branded;
 
 + (NSDictionary *)initNutrients: (NSDictionary *)dictionary;
 
