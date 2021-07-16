@@ -18,7 +18,6 @@
 #import "DateTools.h"
 
 const int QUERIES = 20;
-CategoryView *all;
 
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIStackView *horizontalScrollView;
@@ -26,6 +25,7 @@ CategoryView *all;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @property (nonatomic, strong) NSMutableArray *itemArray;
+@property (nonatomic, strong) NSMutableArray *categoriesArray;
 
 
 
@@ -39,12 +39,15 @@ CategoryView *all;
     // Delegates
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-//    for (int i = 0; i <= 2; i++){
+    _categoriesArray = @[@"Food", @"Fridge", @"Pantry"];
+    for (int i = 0; i <= 2; i++){
 //    NSLog(@"HI");
-    all = [[[NSBundle mainBundle] loadNibNamed:@"Category" owner:self options:nil] objectAtIndex:0];
+        CategoryView *categories = [[CategoryView alloc] init];
+        [categories.categoryButton setTitle:[_categoriesArray objectAtIndex:i] forState:UIControlStateNormal];
+//    all = [[[NSBundle mainBundle] loadNibNamed:@"Category" owner:self options:nil] objectAtIndex:0];
 //    [all.categoryButton setTitle:@"Hello" forState:UIControlStateNormal];
-    [self.horizontalScrollView addArrangedSubview:all];
+        [self.horizontalScrollView addArrangedSubview:categories];
+    }
     
     
     [self fetchData];
