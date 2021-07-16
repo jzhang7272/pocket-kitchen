@@ -40,7 +40,13 @@
         NSDictionary *details = dictionary[nutrient];
         NSString *unit = details[@"unit"];
         double quantity = [details[@"quantity"] doubleValue];
-        [nutrients setObject: [NSString stringWithFormat:@"%.2fd %@", quantity, unit] forKey:details[@"label"]];
+        if (quantity < 0.01){
+            [nutrients setObject: [NSString stringWithFormat:@"<0.01 %@", unit] forKey:details[@"label"]];
+        }
+        else{
+            [nutrients setObject: [NSString stringWithFormat:@"%.2f %@", quantity, unit] forKey:details[@"label"]];
+        }
+        
     }
     return nutrients;
 }

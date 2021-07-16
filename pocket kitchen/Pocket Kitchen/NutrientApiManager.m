@@ -52,7 +52,7 @@
 }
 
 // Parser API - GET
-- (void)fetchFood:(NSString *)item :(void(^)(NSDictionary *, NSString *, NSError *))completion{
+- (void)fetchFood:(NSString *)item :(void(^)(NSDictionary *, BOOL, NSString *, NSError *))completion{
     
     NSString *baseParseURL = @"https://api.edamam.com/api/food-database/v2/parser";
     NSURLComponents *components = [NSURLComponents componentsWithString:baseParseURL];
@@ -73,19 +73,19 @@
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
-            completion(nil, nil, error);
+            completion(nil, nil, nil, error);
         }
         else {
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             foodID.string = dataDictionary[@"parsed"][0][@"food"][@"foodId"];
             NSString *foodImage = dataDictionary[@"parsed"][0][@"food"][@"image"];
-            [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_unit" :^(NSDictionary *dictionary, NSError *error){
+            [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_unit" :^(NSDictionary *dictionary, BOOL gram, NSError *error){
                 if(error){
                     NSLog(@"%@", error.localizedDescription);
                 }
                 else{
                     [nutrients addEntriesFromDictionary:dictionary];
-                    completion(nutrients, foodImage, nil);
+                    completion(nutrients, gram, foodImage, nil);
                 }
             }];
         }
@@ -94,7 +94,7 @@
 }
 
 // Nutrients API - POST
-- (void) fetchNutrients:(NSString *)foodID :(NSString *)url :(void(^)(NSDictionary *, NSError *))completion{
+- (void) fetchNutrients:(NSString *)foodID :(NSString *)url :(void(^)(NSDictionary *, BOOL, NSError *))completion{
     NSString *baseNutrientURL = @"https://api.edamam.com/api/food-database/v2/nutrients";
     NSURLComponents *nutrientComponents = [NSURLComponents componentsWithString:baseNutrientURL];
     NSURLQueryItem *appID = [NSURLQueryItem queryItemWithName:@"app_id" value:@"03df0f4f"];
@@ -116,28 +116,27 @@
     NSURLSessionDataTask *nutrient_dataTask = [nutrient_session dataTaskWithRequest:requestNutrient completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
-            completion(nil, error);
+            completion(nil, nil, error);
         }
         else {
 //            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
 //            NSLog(@"%@", httpResponse);
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             if ([dataDictionary[@"totalNutrients"] count] == 0){
-                NSLog(@"1");
-                [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_serving" :^(NSDictionary *dictionary, NSError *error){
+                [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_gram" :^(NSDictionary *dictionary, BOOL unused, NSError *error){
                     if(error){
                         NSLog(@"%@", error.localizedDescription);
-                        completion(nil, error);
+                        completion(nil, nil, error);
                     }
                     else{
                         [nutrients addEntriesFromDictionary:dictionary];
-                        completion(nutrients, nil);
+                        completion(nutrients, true, nil);
                     }
                 }];
             }
             else{
                 [nutrients addEntriesFromDictionary: [FoodItem initNutrients:dataDictionary[@"totalNutrients"]]];
-                completion(nutrients, nil);
+                completion(nutrients, false, nil);
             }
         }
     }];
