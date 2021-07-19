@@ -7,6 +7,7 @@
 
 #import "DetailsViewController.h"
 #import "NutrientApiManager.h"
+#import <Parse/Parse.h>
 
 #import "UIImageView+AFNetworking.h"
 
@@ -66,9 +67,9 @@
     if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
         [self.item saveInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
             if (succeeded) {
-                NSLog(@"The post was saved.");
+                NSLog(@"The item was saved.");
             } else {
-                NSLog(@"Problem saving post: %@", error.localizedDescription);
+                NSLog(@"Problem saving item: %@", error.localizedDescription);
             }
         }];
     }
@@ -115,6 +116,17 @@
     sender.value = 0;
 
     self.item.quantity= [NSNumber numberWithInt:quantity];
+}
+- (IBAction)onTapDelete:(id)sender {
+    [self.item deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
+        if (succeeded) {
+            NSLog(@"The item was deleted.");
+        } else {
+            NSLog(@"Problem deleting post: %@", error.localizedDescription);
+        }
+    }];
+    [[self navigationController] popViewControllerAnimated:YES];
+    
 }
 
 /*

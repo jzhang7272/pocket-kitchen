@@ -587,7 +587,13 @@
                         <viewLayoutGuide key="safeArea" id="hal-7V-sDa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="62u-a5-iOm"/>
+                    <navigationItem key="navigationItem" id="62u-a5-iOm">
+                        <barButtonItem key="rightBarButtonItem" title="Delete" id="SA4-R1-Sk0">
+                            <connections>
+                                <action selector="onTapDelete:" destination="nah-Fb-A7z" id="gp7-uw-ilG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="categoryLabel" destination="Bes-uH-hSo" id="7w9-sN-COT"/>
                         <outlet property="contentView" destination="4xE-tn-2xt" id="0cR-1p-7HX"/>
