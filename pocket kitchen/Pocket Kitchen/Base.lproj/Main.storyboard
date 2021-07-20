@@ -199,43 +199,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Rtf-XM-ghl">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="161"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJQ-xy-xuc">
-                                            <rect key="frame" x="0.0" y="30.5" width="414" height="100"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UnY-d3-B3Y">
-                                                    <rect key="frame" x="20" y="0.0" width="414" height="100"/>
-                                                    <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="UnY-d3-B3Y" firstAttribute="centerX" secondItem="GJQ-xy-xuc" secondAttribute="centerX" constant="20" placeholder="YES" id="Rm9-Jc-WXV"/>
-                                                <constraint firstAttribute="height" constant="100" id="YRr-YR-U3s"/>
-                                                <constraint firstItem="UnY-d3-B3Y" firstAttribute="top" secondItem="uUe-Pe-dBD" secondAttribute="top" id="ehH-1t-whM"/>
-                                                <constraint firstItem="UnY-d3-B3Y" firstAttribute="height" secondItem="GJQ-xy-xuc" secondAttribute="height" id="ioq-6O-gRp"/>
-                                                <constraint firstItem="UnY-d3-B3Y" firstAttribute="trailing" secondItem="uUe-Pe-dBD" secondAttribute="trailing" constant="434" id="j5c-R5-mcA"/>
-                                                <constraint firstItem="UnY-d3-B3Y" firstAttribute="leading" secondItem="uUe-Pe-dBD" secondAttribute="leading" constant="20" id="ldd-7o-3QL"/>
-                                                <constraint firstItem="UnY-d3-B3Y" firstAttribute="bottom" secondItem="uUe-Pe-dBD" secondAttribute="bottom" constant="100" id="tXT-zU-5I5"/>
-                                            </constraints>
-                                            <viewLayoutGuide key="contentLayoutGuide" id="uUe-Pe-dBD"/>
-                                            <viewLayoutGuide key="frameLayoutGuide" id="obS-Ui-iJD"/>
-                                        </scrollView>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstItem="GJQ-xy-xuc" firstAttribute="leading" secondItem="Rtf-XM-ghl" secondAttribute="leading" id="cIN-bu-OMK"/>
-                                        <constraint firstItem="GJQ-xy-xuc" firstAttribute="centerY" secondItem="Rtf-XM-ghl" secondAttribute="centerY" id="jf7-pF-yyR"/>
-                                        <constraint firstAttribute="trailing" secondItem="GJQ-xy-xuc" secondAttribute="trailing" id="tH6-yE-uu5"/>
-                                    </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodItemCell" rowHeight="135" id="KFV-6P-Ek7" customClass="FoodItemCell">
-                                        <rect key="frame" x="0.0" y="185.5" width="414" height="135"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodItemCell" rowHeight="125" id="KFV-6P-Ek7" customClass="FoodItemCell">
+                                        <rect key="frame" x="0.0" y="96.5" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KFV-6P-Ek7" id="ddg-6G-wPM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PP0-0x-49s">
@@ -304,7 +277,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="horizontalScrollView" destination="UnY-d3-B3Y" id="O8J-qb-zvu"/>
                         <outlet property="tableView" destination="3NX-O3-oW6" id="Z4o-ck-vhu"/>
                     </connections>
                 </viewController>
@@ -424,8 +396,8 @@
                     <connections>
                         <segue destination="Bpw-gc-24k" kind="relationship" relationship="viewControllers" id="MA3-Ki-73d"/>
                         <segue destination="pZD-Dq-4Yk" kind="relationship" relationship="viewControllers" id="s8S-Hd-I5g"/>
-                        <segue destination="OuD-BZ-uav" kind="relationship" relationship="viewControllers" id="iCe-cy-zyh"/>
                         <segue destination="j10-y9-KE9" kind="relationship" relationship="viewControllers" id="O5s-Gs-6Ri"/>
+                        <segue destination="OuD-BZ-uav" kind="relationship" relationship="viewControllers" id="NlW-a4-5mV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9u-ce-WCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -65,6 +65,8 @@ const int QUERIES = 20;
 
 - (void)fetchData{
     PFQuery *query = [PFQuery queryWithClassName:@"FoodItem"];
+    [query includeKey:@"author"];
+    [query whereKey:@"author" equalTo:PFUser.currentUser];
     [query whereKey:@"grocery" equalTo:[NSNumber numberWithBool:false]];
     [query orderByDescending:@"name"];
     query.limit = QUERIES;
@@ -89,6 +91,7 @@ const int QUERIES = 20;
     cell.quantityLabel.text = [NSString stringWithFormat:@"%@", item.quantity];
     cell.categoryLabel.text = item.category;
     cell.expDateLabel.text = [self getExpirationDate:item.expirationDate];
+   // cell.expDateLabel.text = ([[self getExpirationDate:item.expirationDate] integerValue] < 0) ? @"Expired" : [self getExpirationDate:item.expirationDate];
     
     return cell;
 }
@@ -124,14 +127,20 @@ const int QUERIES = 20;
     NSInteger yearsApart = [date yearsFrom:current];
     NSInteger monthsApart = [date monthsFrom:current];
     NSInteger daysApart = [date daysFrom:current];
-    if (yearsApart > 0){
-        return [NSString stringWithFormat:@"%li year(s)", yearsApart+1];
+    if ([[NSCalendar currentCalendar] isDate:date inSameDayAsDate:current]){
+        return @"Expiring today!";
+    }
+    else if ([date timeIntervalSinceDate:current] < 0){
+        return @"Expired";
+    }
+    else if (yearsApart > 0){
+        return [NSString stringWithFormat:@"%li year(s)", yearsApart];
     }
     else if (monthsApart > 0){
-        return [NSString stringWithFormat:@"%li month(s)", monthsApart+1];
+        return [NSString stringWithFormat:@"%li month(s)", monthsApart];
     }
     else{
-        return [NSString stringWithFormat:@"%li day(s)", daysApart+1];
+        return [NSString stringWithFormat:@"%li day(s)", daysApart];
     }
 }
 
