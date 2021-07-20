@@ -11,6 +11,7 @@
 @interface AddItemViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *itemField;
 @property (weak, nonatomic) IBOutlet UITextField *quantityField;
+@property (weak, nonatomic) IBOutlet UITextField *quantityUnitField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *expirationDate;
 @property (weak, nonatomic) IBOutlet UIPickerView *categoryPicker;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *typeControl;
@@ -36,10 +37,11 @@
     formatter.numberStyle = NSNumberFormatterDecimalStyle;
     NSNumber *quantity = [formatter numberFromString:self.quantityField.text];
     NSDate *expDate = self.expirationDate.date;
+    NSString *quantityUnit = self.quantityUnitField.text;
     NSString *category = [self pickerView:self.categoryPicker titleForRow:[self.categoryPicker selectedRowInComponent:0] forComponent:0];
     BOOL branded = (self.typeControl.selectedSegmentIndex == 1) ? true : false;
     
-    [FoodItem saveItem:item :quantity :expDate :category :branded];
+    [FoodItem saveItem:item :quantity :quantityUnit :expDate :category :branded];
     [self dismissViewControllerAnimated:true completion:nil];
 }
 

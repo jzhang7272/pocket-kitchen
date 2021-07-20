@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 //@property (nonatomic, strong) PFFileObject *image;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *quantity;
+@property (nonatomic, strong) NSString *quantityUnit;
 @property (nonatomic, strong) NSDate *expirationDate;
 @property (nonatomic, strong) NSString *category;
 @property (nonatomic, strong) NSMutableDictionary *nutrients;
@@ -25,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) BOOL branded;
 @property (nonatomic) BOOL grocery;
 
-+ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSDate *)expDate :(NSString *)category :(BOOL) branded;
++ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSString *)quantityUnit :(NSDate *)expDate :(NSString *)category :(BOOL) branded;
 
 + (void)saveItemAsGrocery: (NSString *)item :(NSNumber *)quantity :(void(^)(FoodItem *groceryItem, NSError *))completion;
 

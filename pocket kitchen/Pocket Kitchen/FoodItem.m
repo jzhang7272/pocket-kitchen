@@ -13,6 +13,7 @@
 @dynamic expirationDate;
 @dynamic name;
 @dynamic quantity;
+@dynamic quantityUnit;
 @dynamic category;
 @dynamic nutrients;
 @dynamic image;
@@ -22,12 +23,13 @@
     return @"FoodItem";
 }
 
-+ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSDate *)expDate :(NSString *)category :(BOOL) branded{
++ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSString *)quantityUnit:(NSDate *)expDate :(NSString *)category :(BOOL) branded{
     FoodItem *newItem = [FoodItem new];
     newItem.author = PFUser.currentUser;
     newItem.expirationDate = expDate;
     newItem.name = item;
     newItem.quantity = quantity;
+    newItem.quantityUnit = quantityUnit;
     newItem.category = category;
     newItem.branded = branded;
     newItem.grocery = false;

@@ -88,7 +88,7 @@ const int QUERIES = 20;
     FoodItem *item = self.itemArray[indexPath.row];
     // NSLog(@"%@", item);
     cell.itemLabel.text = item.name;
-    cell.quantityLabel.text = [NSString stringWithFormat:@"%@", item.quantity];
+    cell.quantityLabel.text = [NSString stringWithFormat:@"%@ %@", item.quantity, item.quantityUnit];
     cell.categoryLabel.text = item.category;
     cell.expDateLabel.text = [self getExpirationDate:item.expirationDate];
    // cell.expDateLabel.text = ([[self getExpirationDate:item.expirationDate] integerValue] < 0) ? @"Expired" : [self getExpirationDate:item.expirationDate];

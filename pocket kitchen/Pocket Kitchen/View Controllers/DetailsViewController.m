@@ -33,7 +33,7 @@
     
     // Update labels
     self.foodItemLabel.text = self.item.name;
-    self.quantityLabel.text = [NSString stringWithFormat:@"%@", self.item.quantity];
+    self.quantityLabel.text = [NSString stringWithFormat:@"%@ %@", self.item.quantity, self.item.quantityUnit];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateStyle = NSDateFormatterShortStyle;
     self.expDateLabel.text = [formatter stringFromDate:self.item.expirationDate];
@@ -114,7 +114,7 @@
 - (IBAction)stepperValueChanged:(UIStepper *)sender {
     int quantity = [self.quantityLabel.text integerValue];
     quantity += [sender value];
-    self.quantityLabel.text = [NSString stringWithFormat:@"%i", quantity];
+    self.quantityLabel.text = [NSString stringWithFormat:@"%i %@", quantity, self.item.quantityUnit];
     sender.value = 0;
 
     self.item.quantity= [NSNumber numberWithInt:quantity];

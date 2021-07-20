@@ -312,12 +312,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjp-ls-ruI">
-                                <rect key="frame" x="280" y="288" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f45-zm-dN5">
                                 <rect key="frame" x="190" y="679" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -357,6 +351,18 @@
                                     <segment title="Branded"/>
                                 </segments>
                             </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-lN-6oC">
+                                <rect key="frame" x="280" y="288" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjp-ls-ruI">
+                                <rect key="frame" x="190" y="288" width="65" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EWj-t3-gQ0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -371,6 +377,7 @@
                         <outlet property="expirationDate" destination="w02-NB-Lzw" id="Nr5-e1-5OD"/>
                         <outlet property="itemField" destination="AFf-c0-fEg" id="je5-Ba-ZpK"/>
                         <outlet property="quantityField" destination="Jjp-ls-ruI" id="KBX-vA-jzH"/>
+                        <outlet property="quantityUnitField" destination="mjR-lN-6oC" id="J7G-tG-yWJ"/>
                         <outlet property="typeControl" destination="3bH-be-SLx" id="jHr-4k-Qdk"/>
                     </connections>
                 </viewController>
@@ -382,7 +389,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1246" y="3808"/>
+            <point key="canvasLocation" x="-1246.376811594203" y="3807.5892857142853"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Sxd-ru-mC3">
