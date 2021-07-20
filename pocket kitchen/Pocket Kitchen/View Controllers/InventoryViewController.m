@@ -71,7 +71,8 @@ const int QUERIES = 20;
 
     [query findObjectsInBackgroundWithBlock:^(NSArray<FoodItem *> *items, NSError *error) {
         if (items != nil) {
-            self.itemArray = [items copy];
+            self.itemArray = [NSMutableArray new];
+            [self.itemArray addObjectsFromArray:items];
             [self.tableView reloadData];
         } else {
             NSLog(@"%@", error.localizedDescription);
@@ -96,6 +97,27 @@ const int QUERIES = 20;
     return self.itemArray.count;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return true;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        FoodItem *foodItem = [self.itemArray objectAtIndex:indexPath.row];
+        [foodItem deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
+            if (succeeded) {
+                NSLog(@"The item was deleted.");
+                [self.itemArray removeObjectAtIndex:indexPath.row];
+                [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+                [tableView reloadData];
+            } else {
+                NSLog(@"Problem deleting item: %@", error.localizedDescription);
+            }
+        }];
+    }
+}
+
+// Helper Functions
 - (NSString *)getExpirationDate:(NSDate *)date{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     NSDate *current = [NSDate date];

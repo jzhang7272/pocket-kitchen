@@ -142,30 +142,15 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6I-2p-M2F">
-                                                    <rect key="frame" x="80" y="26" width="44" height="24"/>
+                                                    <rect key="frame" x="80" y="26" width="41.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDL-q8-eWp">
-                                                    <rect key="frame" x="374" y="15" width="35" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="6xL-NO-Pi8"/>
-                                                        <constraint firstAttribute="width" constant="35" id="OiF-5n-9Jx"/>
-                                                    </constraints>
-                                                    <color key="tintColor" systemColor="systemGray3Color"/>
-                                                    <state key="normal" image="xmark" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="onTapDelete:" destination="yhc-Ss-O3r" eventType="touchUpInside" id="xWq-wx-huS"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="wDL-q8-eWp" firstAttribute="trailing" secondItem="oSh-rl-RAZ" secondAttribute="trailingMargin" constant="15" id="IVb-mV-a0A"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="b6I-2p-M2F" secondAttribute="bottom" constant="15" id="RRW-cD-LMu"/>
                                                 <constraint firstItem="7Je-hJ-AyY" firstAttribute="top" secondItem="oSh-rl-RAZ" secondAttribute="top" constant="15" id="TyD-l0-dIh"/>
-                                                <constraint firstItem="wDL-q8-eWp" firstAttribute="top" secondItem="7Je-hJ-AyY" secondAttribute="top" id="Ua4-ns-ie8"/>
-                                                <constraint firstItem="wDL-q8-eWp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="b6I-2p-M2F" secondAttribute="trailing" constant="250" id="aIO-6N-uEx"/>
                                                 <constraint firstItem="b6I-2p-M2F" firstAttribute="top" secondItem="oSh-rl-RAZ" secondAttribute="topMargin" constant="15" id="ixO-Z6-xiw"/>
                                                 <constraint firstItem="b6I-2p-M2F" firstAttribute="leading" secondItem="7Je-hJ-AyY" secondAttribute="trailing" constant="15" id="jDo-23-hhB"/>
                                                 <constraint firstAttribute="bottom" secondItem="7Je-hJ-AyY" secondAttribute="bottom" constant="15" id="kpf-nS-MMi"/>
@@ -679,15 +664,11 @@
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

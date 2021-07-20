@@ -89,6 +89,25 @@
     return self.groceryItemArray.count;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return true;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        FoodItem *groceryItem = [self.groceryItemArray objectAtIndex:indexPath.row];
+        [groceryItem deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
+            if (succeeded) {
+                NSLog(@"The item was deleted.");
+                [self.groceryItemArray removeObjectAtIndex:indexPath.row];
+                [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+                [tableView reloadData];
+            } else {
+                NSLog(@"Problem deleting item: %@", error.localizedDescription);
+            }
+        }];
+    }
+}
 /*
 #pragma mark - Navigation
 

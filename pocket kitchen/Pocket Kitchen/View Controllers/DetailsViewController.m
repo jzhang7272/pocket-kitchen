@@ -124,7 +124,7 @@
         if (succeeded) {
             NSLog(@"The item was deleted.");
         } else {
-            NSLog(@"Problem deleting post: %@", error.localizedDescription);
+            NSLog(@"Problem deleting item: %@", error.localizedDescription);
         }
     }];
     [[self navigationController] popViewControllerAnimated:YES];
