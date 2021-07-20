@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface InventoryViewController : UIViewController
 
+extern const int QUERIES;
+
 @end
 
 NS_ASSUME_NONNULL_END

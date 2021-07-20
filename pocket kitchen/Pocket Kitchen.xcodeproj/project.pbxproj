@@ -15,7 +15,6 @@
 		ED81F81A26A109F200F9E2CF /* CategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F81926A109F200F9E2CF /* CategoryView.m */; };
 		ED81F81D26A221CE00F9E2CF /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F81C26A221CE00F9E2CF /* ShoppingViewController.m */; };
 		ED81F82026A2225A00F9E2CF /* ShoppingItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F81F26A2225A00F9E2CF /* ShoppingItemCell.m */; };
-		ED81F82426A2248200F9E2CF /* ShoppingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F82326A2248200F9E2CF /* ShoppingItem.m */; };
 		EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF224B269CD86800862BD5 /* AppDelegate.m */; };
 		EDFF224F269CD86800862BD5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF224E269CD86800862BD5 /* SceneDelegate.m */; };
 		EDFF2255269CD86800862BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFF2253269CD86800862BD5 /* Main.storyboard */; };
@@ -71,8 +70,6 @@
 		ED81F81C26A221CE00F9E2CF /* ShoppingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = SOURCE_ROOT; };
 		ED81F81E26A2225A00F9E2CF /* ShoppingItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShoppingItemCell.h; path = "View Controllers/ShoppingItemCell.h"; sourceTree = "<group>"; };
 		ED81F81F26A2225A00F9E2CF /* ShoppingItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShoppingItemCell.m; path = "View Controllers/ShoppingItemCell.m"; sourceTree = "<group>"; };
-		ED81F82226A2248200F9E2CF /* ShoppingItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingItem.h; sourceTree = "<group>"; };
-		ED81F82326A2248200F9E2CF /* ShoppingItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingItem.m; sourceTree = "<group>"; };
 		EDFF2247269CD86800862BD5 /* Pocket Kitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Kitchen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFF224A269CD86800862BD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDFF224B269CD86800862BD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -195,8 +192,6 @@
 				ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */,
 				EDFF228F269DF77500862BD5 /* FoodItem.h */,
 				EDFF2290269DF77500862BD5 /* FoodItem.m */,
-				ED81F82226A2248200F9E2CF /* ShoppingItem.h */,
-				ED81F82326A2248200F9E2CF /* ShoppingItem.m */,
 				ED81F82126A222CA00F9E2CF /* XIB */,
 				EDFF2289269CE54E00862BD5 /* FoodItemCell.h */,
 				EDFF228A269CE54E00862BD5 /* FoodItemCell.m */,
@@ -493,7 +488,6 @@
 				EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */,
 				ED81F805269F87F700F9E2CF /* DetailsViewController.m in Sources */,
 				EDFF2281269CDA2E00862BD5 /* LogInViewController.m in Sources */,
-				ED81F82426A2248200F9E2CF /* ShoppingItem.m in Sources */,
 				EDFF228E269CF88100862BD5 /* AddItemViewController.m in Sources */,
 				ED81F81D26A221CE00F9E2CF /* ShoppingViewController.m in Sources */,
 				EDFF225D269CD86900862BD5 /* main.m in Sources */,

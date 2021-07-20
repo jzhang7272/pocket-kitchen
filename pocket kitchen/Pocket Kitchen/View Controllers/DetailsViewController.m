@@ -49,6 +49,7 @@
         NSURL *url = [NSURL URLWithString:self.item.image];
         [self.foodView setImageWithURL:url];
     }
+
     
     if (self.item.nutrients == nil){
         [self fetchFoodNutrients];
@@ -92,6 +93,7 @@
                 NSString *nutrientsWithGrams = [NSString stringWithFormat:@"(per gram)\n %@", nutrientsString];
                 NSString *nutrientsWithWhole = [NSString stringWithFormat:@"(per one item)\n %@", nutrientsString];
                 self.nutritionLabel.text = (unitGram) ? nutrientsWithGrams : nutrientsWithWhole;
+//                self.nutritionLabel.text = [nutrientsWithWhole stringByAppendingString:nutrientsWithWhole];
                 NSURL *url = [NSURL URLWithString:foodImage];
                 [self.foodView setImageWithURL:url];
             });

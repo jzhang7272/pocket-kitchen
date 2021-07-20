@@ -30,8 +30,25 @@
     newItem.quantity = quantity;
     newItem.category = category;
     newItem.branded = branded;
+    newItem.grocery = false;
     
     [newItem saveInBackgroundWithBlock: nil];
+}
+
++ (void)saveItemAsGrocery: (NSString *)item :(NSNumber *)quantity :(void(^)(FoodItem *groceryItem, NSError *))completion{
+    FoodItem *newItem = [FoodItem new];
+    newItem.author = PFUser.currentUser;
+    newItem.name = item;
+    newItem.quantity = quantity;
+    newItem.grocery = true;
+    [newItem saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            completion(newItem, nil);
+        }
+        else {
+            completion(nil, error);
+        }
+      }];
 }
 
 + (NSDictionary *)initNutrients: (NSDictionary *)dictionary{

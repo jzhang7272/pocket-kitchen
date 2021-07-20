@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ShoppingItemCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *groceryLabel;
+@property (weak, nonatomic) IBOutlet UIView *boughtButton;
 
 @end
 
