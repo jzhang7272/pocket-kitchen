@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3B0100D75E3E2734BFEE131B /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */; };
 		E5B409BC2D72DD85F1022DD0 /* Pods_Pocket_Kitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */; };
+		ED6CB7BE26A869AB00A1906A /* AddGroceryItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */; };
+		ED6CB7C126A8ACAC00A1906A /* Nutrient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7C026A8ACAC00A1906A /* Nutrient.m */; };
 		ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */; };
 		ED81F805269F87F700F9E2CF /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F804269F87F700F9E2CF /* DetailsViewController.m */; };
 		ED81F81726A109E100F9E2CF /* Category.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED81F81626A109E100F9E2CF /* Category.xib */; };
@@ -59,6 +61,10 @@
 		B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Kitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0183D6556C75F6E2ED958FB /* Pods-Pocket Kitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Kitchen.debug.xcconfig"; path = "Target Support Files/Pods-Pocket Kitchen/Pods-Pocket Kitchen.debug.xcconfig"; sourceTree = "<group>"; };
+		ED6CB7BC26A869AB00A1906A /* AddGroceryItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddGroceryItemViewController.h; path = Pods/AddGroceryItemViewController.h; sourceTree = SOURCE_ROOT; };
+		ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AddGroceryItemViewController.m; path = Pods/AddGroceryItemViewController.m; sourceTree = SOURCE_ROOT; };
+		ED6CB7BF26A8ACAC00A1906A /* Nutrient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Nutrient.h; path = "View Controllers/Nutrient.h"; sourceTree = "<group>"; };
+		ED6CB7C026A8ACAC00A1906A /* Nutrient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Nutrient.m; path = "View Controllers/Nutrient.m"; sourceTree = "<group>"; };
 		ED81F800269E3BDA00F9E2CF /* NutrientApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NutrientApiManager.h; sourceTree = "<group>"; };
 		ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NutrientApiManager.m; sourceTree = "<group>"; };
 		ED81F803269F87F700F9E2CF /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -186,6 +192,8 @@
 		EDFF2249269CD86800862BD5 /* Pocket Kitchen */ = {
 			isa = PBXGroup;
 			children = (
+				ED6CB7BF26A8ACAC00A1906A /* Nutrient.h */,
+				ED6CB7C026A8ACAC00A1906A /* Nutrient.m */,
 				ED81F81E26A2225A00F9E2CF /* ShoppingItemCell.h */,
 				ED81F81F26A2225A00F9E2CF /* ShoppingItemCell.m */,
 				ED81F800269E3BDA00F9E2CF /* NutrientApiManager.h */,
@@ -230,6 +238,8 @@
 		EDFF2282269CDA3300862BD5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ED6CB7BC26A869AB00A1906A /* AddGroceryItemViewController.h */,
+				ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */,
 				ED81F81B26A221CE00F9E2CF /* ShoppingViewController.h */,
 				ED81F81C26A221CE00F9E2CF /* ShoppingViewController.m */,
 				ED81F803269F87F700F9E2CF /* DetailsViewController.h */,
@@ -484,7 +494,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6CB7C126A8ACAC00A1906A /* Nutrient.m in Sources */,
 				EDFF228B269CE54E00862BD5 /* FoodItemCell.m in Sources */,
+				ED6CB7BE26A869AB00A1906A /* AddGroceryItemViewController.m in Sources */,
 				EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */,
 				ED81F805269F87F700F9E2CF /* DetailsViewController.m in Sources */,
 				EDFF2281269CDA2E00862BD5 /* LogInViewController.m in Sources */,

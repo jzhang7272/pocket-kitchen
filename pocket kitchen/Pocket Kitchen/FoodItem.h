@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *quantityUnit;
 @property (nonatomic, strong) NSDate *expirationDate;
 @property (nonatomic, strong) NSString *category;
-@property (nonatomic, strong) NSMutableDictionary *nutrients;
+@property (nonatomic, strong) NSString *nutrients;
 @property (nonatomic, strong) NSString *image;
 @property (nonatomic) BOOL branded;
 @property (nonatomic) BOOL grocery;
@@ -30,7 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)saveItemAsGrocery: (NSString *)item :(NSNumber *)quantity :(void(^)(FoodItem *groceryItem, NSError *))completion;
 
-+ (NSDictionary *)initNutrients: (NSDictionary *)dictionary;
++ (NSDictionary *)initNutrientsWithUnits: (NSDictionary *)dictionary;
+
 
 @end
 

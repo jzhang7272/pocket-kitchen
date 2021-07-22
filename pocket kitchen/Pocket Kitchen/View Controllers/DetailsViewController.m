@@ -55,7 +55,7 @@
         [self fetchFoodNutrients];
     }
     else{
-        self.nutritionLabel.text = [self convertNutrientsToString:self.item.nutrients];
+        self.nutritionLabel.text = self.item.nutrients;
     }
 }
 
@@ -79,21 +79,22 @@
 
 - (void) fetchFoodNutrients{
     NutrientApiManager *nutrientApi = [NutrientApiManager new];
-    [nutrientApi fetchFood:self.item.name :^(NSDictionary *nutrients, BOOL unitGram, NSString *foodImage, NSError *error) {
+    [nutrientApi fetchFoodID:self.item.name :^(NSDictionary *nutrients, BOOL unitGram, NSString *foodImage, NSError *error) {
         // per serving (maybe switch to gram?), vs whole
         if(error){
             NSLog(@"%@", error.localizedDescription);
         }
         else{
-            self.item.nutrients = nutrients;
+            NSMutableDictionary *nutrientWUnit = [NSMutableDictionary new];
+            [nutrientWUnit addEntriesFromDictionary: [FoodItem initNutrientsWithUnits:nutrients]];
             self.item.image = foodImage;
             NSLog(@"%@", self.item);
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSString *nutrientsString = [self convertNutrientsToString:self.item.nutrients];
+                NSString *nutrientsString = [self convertNutrientsToString:nutrientWUnit];
                 NSString *nutrientsWithGrams = [NSString stringWithFormat:@"(per gram)\n %@", nutrientsString];
                 NSString *nutrientsWithWhole = [NSString stringWithFormat:@"(per one item)\n %@", nutrientsString];
-                self.nutritionLabel.text = (unitGram) ? nutrientsWithGrams : nutrientsWithWhole;
-//                self.nutritionLabel.text = [nutrientsWithWhole stringByAppendingString:nutrientsWithWhole];
+                self.item.nutrients = (unitGram) ? nutrientsWithGrams : nutrientsWithWhole;
+                self.nutritionLabel.text = self.item.nutrients;
                 NSURL *url = [NSURL URLWithString:foodImage];
                 [self.foodView setImageWithURL:url];
             });

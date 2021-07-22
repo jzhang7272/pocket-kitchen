@@ -86,12 +86,10 @@ const int QUERIES = 20;
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FoodItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FoodItemCell"];
     FoodItem *item = self.itemArray[indexPath.row];
-    // NSLog(@"%@", item);
     cell.itemLabel.text = item.name;
     cell.quantityLabel.text = [NSString stringWithFormat:@"%@ %@", item.quantity, item.quantityUnit];
     cell.categoryLabel.text = item.category;
     cell.expDateLabel.text = [self getExpirationDate:item.expirationDate];
-   // cell.expDateLabel.text = ([[self getExpirationDate:item.expirationDate] integerValue] < 0) ? @"Expired" : [self getExpirationDate:item.expirationDate];
     
     return cell;
 }

@@ -7,6 +7,7 @@
 
 #import "ShoppingViewController.h"
 #import "InventoryViewController.h"
+#import "AddGroceryItemViewController.h"
 #import "FoodItem.h"
 
 #import "ShoppingItemCell.h"
@@ -50,7 +51,6 @@
                 NSLog(@"%@", error.localizedDescription);
             }
             else {
-                NSLog(@"%@",self.groceryItemArray);
                 [self.groceryItemArray insertObject:groceryItem atIndex:0];
                 [self.tableView reloadData];
             }
@@ -108,15 +108,20 @@
         }];
     }
 }
-/*
+- (IBAction)onTapAdvancedAdd:(id)sender {
+    [self performSegueWithIdentifier:@"addGroceryItemSegue" sender:self];
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"addGroceryItemSegue"]) {
+        UINavigationController *navigationController = [segue destinationViewController];
+            AddGroceryItemViewController *addController = (AddGroceryItemViewController*)navigationController.topViewController;
+        addController.groceryItemArray = self.groceryItemArray;
+    }
 }
-*/
+
 
 
 @end

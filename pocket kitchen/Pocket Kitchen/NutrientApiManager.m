@@ -52,7 +52,7 @@
 }
 
 // Parser API - GET
-- (void)fetchFood:(NSString *)item :(void(^)(NSDictionary *, BOOL, NSString *, NSError *))completion{
+- (void)fetchFoodID:(NSString *)item :(void(^)(NSDictionary *, BOOL, NSString *, NSError *))completion{
     
     NSString *baseParseURL = @"https://api.edamam.com/api/food-database/v2/parser";
     NSURLComponents *components = [NSURLComponents componentsWithString:baseParseURL];
@@ -123,7 +123,7 @@
 //            NSLog(@"%@", httpResponse);
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             if ([dataDictionary[@"totalNutrients"] count] == 0){
-                [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_gram" :^(NSDictionary *dictionary, BOOL unused, NSError *error){
+                [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_cup" :^(NSDictionary *dictionary, BOOL unused, NSError *error){
                     if(error){
                         NSLog(@"%@", error.localizedDescription);
                         completion(nil, nil, error);
@@ -135,8 +135,7 @@
                 }];
             }
             else{
-                [nutrients addEntriesFromDictionary: [FoodItem initNutrients:dataDictionary[@"totalNutrients"]]];
-                completion(nutrients, false, nil);
+                completion(dataDictionary[@"totalNutrients"], false, nil);
             }
         }
     }];

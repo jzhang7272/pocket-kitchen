@@ -53,17 +53,17 @@
       }];
 }
 
-+ (NSDictionary *)initNutrients: (NSDictionary *)dictionary{
++ (NSDictionary *)initNutrientsWithUnits: (NSDictionary *)dictionary{
     NSMutableDictionary *nutrients = [NSMutableDictionary new];
     for(id nutrient in dictionary){
-        NSDictionary *details = dictionary[nutrient];
-        NSString *unit = details[@"unit"];
-        double quantity = [details[@"quantity"] doubleValue];
+        NSDictionary *nutrientDetails = dictionary[nutrient];
+        NSString *unit = nutrientDetails[@"unit"];
+        double quantity = [nutrientDetails[@"quantity"] doubleValue];
         if (quantity < 0.01){
-            [nutrients setObject: [NSString stringWithFormat:@"<0.01 %@", unit] forKey:details[@"label"]];
+            [nutrients setObject: [NSString stringWithFormat:@"<0.01 %@", unit] forKey:nutrientDetails[@"label"]];
         }
         else{
-            [nutrients setObject: [NSString stringWithFormat:@"%.2f %@", quantity, unit] forKey:details[@"label"]];
+            [nutrients setObject: [NSString stringWithFormat:@"%.2f %@", quantity, unit] forKey:nutrientDetails[@"label"]];
         }
         
     }
