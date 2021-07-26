@@ -1,0 +1,2072 @@
+,food,quantity,nutrient
+640,Fish Oil,30000,VITA_RAE
+898,Turkey,22600,VITA_RAE
+5072,Veal,21145,VITA_RAE
+863,Duck,11984,VITA_RAE
+3755,Beef,9442,VITA_RAE
+870,Goose,9309,VITA_RAE
+1586,Liver Sausage,8308,VITA_RAE
+5070,Lamb,7782,VITA_RAE
+1648,Oscar Mayer,7133,VITA_RAE
+2607,Pork,6502,VITA_RAE
+4216,Orange-Flavor Drk,6006,VITA_RAE
+7329,Fruit-Flavored Drk,5997,VITA_RAE
+1585,Liver Cheese,5252,VITA_RAE
+1746,Pate  Truffle Flavor,4505,VITA_RAE
+857,Chicken,4374,VITA_RAE
+1559,Braunschweiger (A Liver Sausage),4220,VITA_RAE
+1715,Liverwurst Sprd,4091,VITA_RAE
+4182,Malted Drk Mix,3929,VITA_RAE
+3536,Peppers,3863,VITA_RAE
+3308,Carrot,3423,VITA_RAE
+3267,Chives,3415,VITA_RAE
+3281,Shallots,2805,VITA_RAE
+215,Paprika,2637,VITA_RAE
+6955,Snacks,2367,VITA_RAE
+218,Pepper,2081,VITA_RAE
+1850,Cereals,1589,VITA_RAE
+196,Chili Powder,1483,VITA_RAE
+709,Margarine-Like Sprd,1433,VITA_RAE
+3573,Grape Leaves,1376,VITA_RAE
+1815,Cereals Rte,1324,VITA_RAE
+4683,Peanut Butter,1172,VITA_RAE
+4319,Eel,1137,VITA_RAE
+7116,Oil,1044,VITA_RAE
+3207,Sweet Potato,1043,VITA_RAE
+700,Margarine,1032,VITA_RAE
+1596,Pate,1001,VITA_RAE
+669,Margarine Sprd,993,VITA_RAE
+3291,Carrot Juice,956,VITA_RAE
+3225,Tomato Powder,862,VITA_RAE
+2902,Carrots,852,VITA_RAE
+2,Butter Oil,840,VITA_RAE
+7192,Vegetable Oil-Butter Sprd,819,VITA_RAE
+7248,Butter-Margarine Blend,819,VITA_RAE
+636,Margarine-Butter Blend,819,VITA_RAE
+3350,Broccoli,800,VITA_RAE
+3137,Pumpkin,778,VITA_RAE
+2982,Kale,769,VITA_RAE
+4411,Tuna,757,VITA_RAE
+3392,Dandelion Grns,727,VITA_RAE
+84,Milk,709,VITA_RAE
+1,Butter,684,VITA_RAE
+2052,Cerls,661,VITA_RAE
+2213,Apricots,633,VITA_RAE
+1752,Scrapple,626,VITA_RAE
+122,Egg,616,VITA_RAE
+7391,Breakfast Bar,608,VITA_RAE
+3166,Spinach,603,VITA_RAE
+1161,Soup,600,VITA_RAE
+3246,Vegetables,583,VITA_RAE
+2990,Lambsquarters,580,VITA_RAE
+3237,Turnip Greens,579,VITA_RAE
+3380,Collards,575,VITA_RAE
+7023,Whale,561,VITA_RAE
+4701,Soy Prot Isolate,559,VITA_RAE
+3474,Squash,558,VITA_RAE
+3498,Turnip Grns,538,VITA_RAE
+245,Spearmint,529,VITA_RAE
+3014,Mustard Greens,525,VITA_RAE
+216,Parsley,509,VITA_RAE
+2960,Dandelion Greens,508,VITA_RAE
+1922,Cereals Ready To Eat,501,VITA_RAE
+3018,Mustard Spinach,495,VITA_RAE
+144,Cheese,486,VITA_RAE
+4255,Cocoa Mix,479,VITA_RAE
+3059,Peas&Carrots,476,VITA_RAE
+190,Spices,469,VITA_RAE
+5696,Toaster Pastries,467,VITA_RAE
+5486,Pie,448,VITA_RAE
+148,Cheese Sub,437,VITA_RAE
+5691,Waffle,437,VITA_RAE
+2997,Lettuce,436,VITA_RAE
+3073,Pokeberry Shoots,435,VITA_RAE
+3243,Turnip Grns&Turnips,431,VITA_RAE
+3138,Pumpkin Pie Mix,415,VITA_RAE
+51,Cream,411,VITA_RAE
+3257,Winged Bean Leaves,405,VITA_RAE
+210,Marjoram,403,VITA_RAE
+5690,Waffles,401,VITA_RAE
+3249,Vinespinach,400,VITA_RAE
+3204,Sweetpotato,399,VITA_RAE
+7057,Seal,393,VITA_RAE
+3404,Lambs Quarters,391,VITA_RAE
+231,Dill Weed,386,VITA_RAE
+2869,Beet Grns,383,VITA_RAE
+2973,Horseradish-Tree Leafy Tips,378,VITA_RAE
+132,Egg Substitute,369,VITA_RAE
+2945,Cornsalad,355,VITA_RAE
+3410,Mustard Grns,354,VITA_RAE
+3396,Horseradish-Tree,351,VITA_RAE
+2956,Cress,346,VITA_RAE
+7311,Cheese Sprd,341,VITA_RAE
+2932,Coriander (Cilantro) Leaves,337,VITA_RAE
+6001,Candies,319,VITA_RAE
+2868,Beet Greens,316,VITA_RAE
+3197,Swamp Cabbage,315,VITA_RAE
+3376,Chard,306,VITA_RAE
+225,Sage,295,VITA_RAE
+195,Chervil,293,VITA_RAE
+199,Coriander Leaf,293,VITA_RAE
+2922,Chicory Greens,286,VITA_RAE
+5588,Breakfast Tart,285,VITA_RAE
+4307,Cisco,283,VITA_RAE
+4399,Sturgeon,280,VITA_RAE
+5406,Cream Puffs,278,VITA_RAE
+2980,Jute,278,VITA_RAE
+4305,Caviar,271,VITA_RAE
+5542,Pie Crust,269,VITA_RAE
+6729,Chicken Pot Pie,266,VITA_RAE
+230,Basil,264,VITA_RAE
+3153,Seaweed,260,VITA_RAE
+4334,Herring,258,VITA_RAE
+226,Savory,257,VITA_RAE
+7227,Cheese Product,254,VITA_RAE
+4489,Mackerel,252,VITA_RAE
+3210,Taro Leaves,241,VITA_RAE
+3294,Spinach Souffle,239,VITA_RAE
+5377,Cookies,238,VITA_RAE
+235,Thyme,238,VITA_RAE
+46,Cheese Fd,237,VITA_RAE
+2879,Broccoli Raab,227,VITA_RAE
+1722,Sausage  Smmr  Pork & Bf  Stks  W/ Cheddar Chs,225,VITA_RAE
+2895,Cabbage,223,VITA_RAE
+3020,New Zealand Spinach,220,VITA_RAE
+3266,Borage,219,VITA_RAE
+7159,Rose Hips,217,VITA_RAE
+5694,Pancakes,216,VITA_RAE
+3487,Taro,212,VITA_RAE
+243,Peppermint,212,VITA_RAE
+4223,Dairy Drk Mix,209,VITA_RAE
+6714,Freezer Queen Gravy&Sliced Bf Meal,208,VITA_RAE
+5408,Croissants,206,VITA_RAE
+4518,Cuttlefish,203,VITA_RAE
+2072,Crls,202,VITA_RAE
+7381,Ice Creams,201,VITA_RAE
+3268,Dock,200,VITA_RAE
+3036,Onions,200,VITA_RAE
+5426,Eclairs,199,VITA_RAE
+2065,Cls,196,VITA_RAE
+2125,Milk & Crl Bar,188,VITA_RAE
+6510,Mcdonald'S,182,VITA_RAE
+3593,Fiddlehead Ferns,181,VITA_RAE
+4450,Clam,181,VITA_RAE
+3584,Fireweed,180,VITA_RAE
+0,Orange juice,379.4,VITC
+1,Grapefruit juice,248.0,VITC
+2,Currants,202.7,VITC
+3,Tomato juice,170.3,VITC
+5,Kiwifruit,166.9,VITC
+6,Drumstick pods,141.0,VITC
+7,Vegetable juice cocktail,137.4,VITC
+8,Litchis,135.8,VITC
+9,Pokeberry shoots,135.3,VITC
+10,Oranges,120.7,VITC
+11,Lemon juice,94.4,VITC
+12,Papayas,88.3,VITC
+13,Broccoli,88.0,VITC
+15,Grapefruit,85.1,VITC
+19,Balsam-pear (bitter gourd),78.1,VITC
+20,Brussels sprouts,74.8,VITC
+21,Soybeans,74.2,VITC
+23,Lime juice,72.6,VITC
+25,Beans,71.2,VITC
+26,Passion-fruit,70.8,VITC
+29,Breadfruit,63.8,VITC
+30,Nuts,62.4,VITC
+31,Mangos,60.1,VITC
+38,Peas,58.8,VITC
+41,Carissa,57.0,VITC
+42,Cauliflower,56.4,VITC
+43,Amaranth leaves,54.3,VITC
+44,Gelatin desserts,53.4,VITC
+46,Tomato products,52.5,VITC
+47,Tangerines,52.1,VITC
+48,Taro,52.1,VITC
+49,Plantains,49.7,VITC
+50,Potatoes,48.6,VITC
+52,Carambola,45.4,VITC
+53,Asparagus,44.5,VITC
+55,Cabbage,44.2,VITC
+57,Garlic,42.4,VITC
+58,Gooseberries,41.5,VITC
+59,Turnip greens,39.5,VITC
+60,Collards,38.0,VITC
+62,Cress,34.5,VITC
+65,Spinach,31.6,VITC
+67,Squash,31.0,VITC
+68,Lima beans,30.9,VITC
+69,Snacks,30.8,VITC
+71,Tomatoes,30.2,VITC
+73,Turnip greens and turnips,29.7,VITC
+74,Rowal,29.4,VITC
+75,Jute,28.7,VITC
+76,Blackberry juice,28.2,VITC
+79,Kale,26.3,VITC
+83,Luncheon meat,24.1,VITC
+84,Candies,23.5,VITC
+87,Peas and carrots,22.5,VITC
+88,Loganberries,22.5,VITC
+89,Sweet potato,22.3,VITC
+91,Tree fern,21.3,VITC
+97,Pastrami,19.7,VITC
+0,Mollusks,18.0,VITB12
+7,Crustaceans,8.82,VITB12
+8,Fish,8.5,VITB12
+11,Liverwurst spread,7.4,VITB12
+15,Braunschweiger (a liver sausage),5.7,VITB12
+16,Pork,4.65,VITB12
+19,Cheese,4.04,VITB12
+22,Desserts,3.8,VITB12
+24,Beef,3.74,VITB12
+28,Whey,3.44,VITB12
+36,Lamb,3.03,VITB12
+49,Chicken,2.62,VITB12
+56,Game meat,2.44,VITB12
+59,Game meat ,2.41,VITB12
+90,Salami,1.76,VITB12
+91,Milk,1.74,VITB12
+94,Cereals,1.68,VITB12
+97,Turkey,1.61,VITB12
+104,Cereals ready-to-eat,1.51,VITB12
+110,Turkey from whole,1.45,VITB12
+116,Veal,1.37,VITB12
+118,Sausage,1.34,VITB12
+130,Eggnog,1.14,VITB12
+141,Bratwurst,1.06,VITB12
+147,Pastrami,1.0,VITB12
+151,Yogurt,0.95,VITB12
+152,Cheese substitute,0.92,VITB12
+153,Pork sausage,0.89,VITB12
+171,Frankfurter,0.82,VITB12
+200,Beerwurst,0.65,VITB12
+205,DIGIORNO Pizza,0.6,VITB12
+217,Soup,0.59,VITB12
+220,Cheese spread,0.56,VITB12
+225,Bacon and beef sticks,0.53,VITB12
+232,Barbecue loaf,0.48,VITB12
+2,Garlic,1.68,VITB6A
+3,Rice flour,1.163,VITB6A
+4,Beans,1.107,VITB6A
+5,Seeds,1.079,VITB6A
+7,Potatoes,1.058,VITB6A
+8,Corn grain,1.033,VITB6A
+10,Turkey,0.919,VITB6A
+11,Pork,0.8540000000000001,VITB6A
+13,Whey,0.847,VITB6A
+15,Fish,0.8340000000000001,VITB6A
+18,Beef,0.754,VITB6A
+20,Cereals,0.745,VITB6A
+22,Game meat,0.7240000000000001,VITB6A
+26,Orange juice,0.6809999999999999,VITB6A
+27,Peanuts,0.68,VITB6A
+28,Nuts,0.672,VITB6A
+32,Cornmeal,0.655,VITB6A
+34,Tomato products,0.654,VITB6A
+35,Plantains,0.653,VITB6A
+38,Lamb,0.649,VITB6A
+42,Cheese,0.636,VITB6A
+43,Apricots,0.619,VITB6A
+52,Turkey from whole,0.5920000000000001,VITB6A
+53,Barley flour or meal,0.586,VITB6A
+55,Cereals ready-to-eat,0.5760000000000001,VITB6A
+63,Corn flour,0.541,VITB6A
+67,Chicken,0.518,VITB6A
+71,Jute,0.496,VITB6A
+75,Salami,0.489,VITB6A
+81,Game meat ,0.473,VITB6A
+84,Desserts,0.469,VITB6A
+98,Currants,0.426,VITB6A
+106,Pasta,0.40299999999999997,VITB6A
+108,Guinea hen,0.39899999999999997,VITB6A
+114,Sorghum flour,0.39299999999999996,VITB6A
+125,Snacks,0.37799999999999995,VITB6A
+133,Bamboo shoots,0.36200000000000004,VITB6A
+135,Squash,0.353,VITB6A
+139,Squab,0.349,VITB6A
+138,Burdock root,0.349,VITB6A
+0,Seeds,49.05,TOCPHA
+1,Nuts,32.98,TOCPHA
+3,Cereals ready-to-eat,13.54,TOCPHA
+5,Bagels,7.39,TOCPHA
+6,Peanuts,7.2,TOCPHA
+10,Oil,5.75,TOCPHA
+11,Tomato products,4.92,TOCPHA
+14,Turnip greens,4.36,TOCPHA
+15,Desserts,4.12,TOCPHA
+17,Apricots,3.83,TOCPHA
+18,Spinach,3.74,TOCPHA
+19,Turnip greens and turnips,3.47,TOCPHA
+20,Pie Crust,3.26,TOCPHA
+21,Salad dressing,3.04,TOCPHA
+0,Fish,566,VITD
+9,Milk,128,VITD
+10,Eggnog,124,VITD
+13,Mushrooms,114,VITD
+16,Cereals ready-to-eat,100,VITD
+17,Orange juice,100,VITD
+21,Cheese,85,VITD
+23,Pork,82,VITD
+25,Cream,76,VITD
+26,Puddings,62,VITD
+37,Egg,41,VITD
+51,Salami,32,VITD
+53,Dessert topping,30,VITD
+63,Potatoes,25,VITD
+70,Cheese spread,22,VITD
+76,Beerwurst,20,VITD
+82,Chicken,17,VITD
+87,Pork sausage,14,VITD
+85,Braunschweiger (a liver sausage),14,VITD
+89,Luncheon meat,13,VITD
+90,Turkey,13,VITD
+98,Milk shakes,12,VITD
+91,Cream puff,12,VITD
+99,Soup,11,VITD
+100,Bologna,11,VITD
+104,Barbecue loaf,10,VITD
+108,Pie,9,VITD
+106,Beef,9,VITD
+107,Sausage,9,VITD
+111,Turkey from whole,8,VITD
+113,Bread,8,VITD
+119,Noodles,6,VITD
+129,Cake,5,VITD
+139,Garlic bread,4,VITD
+140,Fat,4,VITD
+0,Spinach,891.1,VITK1
+1,Turnip greens,851.0,VITK1
+2,Turnip greens and turnips,676.6,VITK1
+5,Cress,270.9,VITK1
+6,Kale,223.5,VITK1
+7,Pokeberry shoots,178.2,VITK1
+8,Broccoli,162.1,VITK1
+9,Noodles,161.8,VITK1
+10,Brussels sprouts,155.8,VITK1
+11,Beet greens,152.0,VITK1
+13,Asparagus,144.0,VITK1
+16,Jute,94.0,VITK1
+17,Snacks,93.2,VITK1
+18,Broccoli raab,89.6,VITK1
+20,Plantains,77.8,VITK1
+21,Kiwifruit,72.5,VITK1
+22,Soybeans,66.4,VITK1
+23,Cowpeas (blackeyes),62.6,VITK1
+24,Cabbage,57.8,VITK1
+26,Endive,57.8,VITK1
+27,Celery,56.7,VITK1
+29,Peas and carrots,52.3,VITK1
+30,Beans,51.4,VITK1
+31,Blueberries,47.2,VITK1
+32,Okra,46.9,VITK1
+38,Blackberry juice,38.0,VITK1
+39,Edamame,37.1,VITK1
+40,Peas,36.0,VITK1
+41,Pie crust,33.8,VITK1
+43,Pie Crust,33.1,VITK1
+45,Leeks,31.5,VITK1
+46,Blackberries,29.9,VITK1
+47,Mung beans,28.1,VITK1
+48,Pomegranate juice,25.9,VITK1
+49,Pears,25.2,VITK1
+50,Soup,24.7,VITK1
+52,Grapes,24.0,VITK1
+1,Whey,3.202,RIBF
+3,Desserts,1.656,RIBF
+4,Nuts,1.652,RIBF
+6,Cheese,1.266,RIBF
+7,Blueberries,0.998,RIBF
+8,Corn flour,0.9179999999999999,RIBF
+9,Milk,0.87,RIBF
+11,Cornmeal,0.736,RIBF
+12,Wheat flour,0.701,RIBF
+15,Cheese spread,0.603,RIBF
+16,Liverwurst spread,0.5670000000000001,RIBF
+18,Pasta,0.562,RIBF
+20,Cereals,0.544,RIBF
+22,Biscuits,0.524,RIBF
+23,Game meat,0.51,RIBF
+26,Cheese substitute,0.502,RIBF
+28,Mushrooms,0.488,RIBF
+27,Cereals ready-to-eat,0.488,RIBF
+29,Eggnog,0.483,RIBF
+30,Pie Crust,0.48200000000000004,RIBF
+37,Pork,0.47100000000000003,RIBF
+42,Beans,0.46,RIBF
+43,Orange juice,0.45799999999999996,RIBF
+46,Soybeans,0.44799999999999995,RIBF
+48,Macaroni,0.441,RIBF
+49,Lamb,0.441,RIBF
+52,Braunschweiger (a liver sausage),0.43200000000000005,RIBF
+62,Pokeberry shoots,0.41200000000000003,RIBF
+74,Seeds,0.382,RIBF
+76,Game meat ,0.38,RIBF
+79,Soup,0.37799999999999995,RIBF
+87,Yogurt,0.364,RIBF
+92,Chicken,0.349,RIBF
+94,Bagels,0.341,RIBF
+96,Candies,0.336,RIBF
+97,Salami,0.336,RIBF
+98,Corn grain,0.33399999999999996,RIBF
+102,Snacks,0.327,RIBF
+103,Tomato products,0.326,RIBF
+104,Pie crust,0.322,RIBF
+106,Mollusks,0.315,RIBF
+108,Turkey,0.314,RIBF
+109,Edamame,0.313,RIBF
+114,Passion-fruit,0.307,RIBF
+126,Peanuts,0.28800000000000003,RIBF
+131,Veal,0.281,RIBF
+134,Beef,0.27699999999999997,RIBF
+138,Cream puff,0.272,RIBF
+140,Taro,0.271,RIBF
+141,Fish,0.26899999999999996,RIBF
+4833,Worthington Meatless Corned Bf,20.57,THIA
+4837,Worthington Prosage Links,16.69,THIA
+6649,Morningstar Farms Spicy Black Bean Burger,13.6,THIA
+6644,Morningstar Farms Garden Veggie Patties,11.2,THIA
+6648,Morningstar Farms Veggie Sausage Patties,11.0,THIA
+4835,Worthington Fripats,10.52,THIA
+4841,Worthington Stripples,10.1,THIA
+4847,Morningstar Farms Veggie Bacon Strips,10.1,THIA
+7356,Yeast Extract Spread,9.7,THIA
+2122,Cereals Rte,7.55,THIA
+1161,Soup,5.18,THIA
+4643,Bacon,4.4,THIA
+4178,Malted Drk Mix,4.2330000000000005,THIA
+7282,Luncheon Slices,4.0,THIA
+4826,Worthington Turkee Slices,3.29,THIA
+3619,Sunflower Sd Flr,3.187,THIA
+4836,Worthington Dinner Rst,3.04,THIA
+4852,Morningstar Farms Grillers Original,2.8,THIA
+6162,Rice Bran,2.753,THIA
+3683,Sesame Flour,2.6839999999999997,THIA
+4678,Veggie Burgers Or Soyburgers  Unprep,2.6510000000000002,THIA
+4701,Soy Prot Isolate,2.6,THIA
+3613,Sesame Meal,2.573,THIA
+3611,Sesame Flr,2.53,THIA
+3299,Seaweed,2.38,THIA
+5528,Leavening Agents,2.36,THIA
+4645,Sausage,2.343,THIA
+4840,Worthington Stakelets,2.27,THIA
+3602,Cottonseed Meal,2.217,THIA
+3600,Cottonseed Flr,2.102,THIA
+1854,Cereals,2.05,THIA
+4850,Morningstar Farms Veggie Sausage Links,1.9,THIA
+6180,Wheat Germ,1.882,THIA
+4824,Worthington Saucettes,1.84,THIA
+4848,Morningstar Farms Veggie Bites Country Scramble,1.7,THIA
+3701,Seeds,1.6440000000000001,THIA
+3722,Sesame Butter,1.59,THIA
+4859,Morningstar Farms Chik'N Nuggets,1.57,THIA
+3614,Sunflower Sd Krnls,1.48,THIA
+543,Salad Drsng,1.445,THIA
+6244,Corn Flr,1.429,THIA
+4807,Loma Linda Fried Chik'N W/ Gravy,1.41,THIA
+4867,Morningstar Farms Sausage Style Recipe Crumbles,1.35,THIA
+1922,Cereals Ready To Eat,1.325,THIA
+7358,Chicken,1.2770000000000001,THIA
+4811,Loma Linda Swiss Stake W/ Gravy,1.27,THIA
+6032,Snacks,1.268,THIA
+199,Coriander Leaf,1.252,THIA
+2653,Pork,1.2429999999999999,THIA
+3672,Pine Nuts,1.2429999999999999,THIA
+4838,Worthington Prosage Roll,1.24,THIA
+3610,Sesame Sd Krnls,1.205,THIA
+6646,Morningstar Farms Grillers Recipe Crumbles,1.2,THIA
+3536,Peppers,1.2,THIA
+3661,Macadamia Nuts,1.195,THIA
+6219,Spaghetti,1.187,THIA
+6201,Macaroni,1.187,THIA
+6139,Oat Bran,1.17,THIA
+3606,Safflower Sd Krnls,1.163,THIA
+4828,Worthington Veg Steaks,1.16,THIA
+3607,Safflower Sd Meal,1.153,THIA
+6207,Noodles,1.133,THIA
+4606,Hyacinth Bns,1.13,THIA
+4871,Morningstar Farms Veggie Cakes Southwestern Style,1.1,THIA
+4870,Morningstar Farms Veggie Cakes Ginger Teriyaki,1.1,THIA
+7284,Vegetarian Fillets,1.1,THIA
+4868,Morningstar Farms Veggie Bites Broccoli Cheddar,1.1,THIA
+7280,Fish Sticks,1.1,THIA
+4791,Soy Flr,1.088,THIA
+4656,Soy Flour,1.088,THIA
+6031,Potato Chips,1.08,THIA
+3276,Parsley,1.04,THIA
+4672,Winged Bns,1.03,THIA
+669,Margarine Sprd,1.011,THIA
+5610,Kellogg,1.0,THIA
+7391,Breakfast Bar,1.0,THIA
+4810,Loma Linda Tender Rounds W/ Gravy,1.0,THIA
+2563,Pork  Frsh  Loin  Tenderloin   Ln Only  Raw,0.998,THIA
+3098,Potatoes,0.988,THIA
+4806,Loma Linda Little Links,0.97,THIA
+5278,Bread Crumbs,0.9670000000000001,THIA
+6643,Kraft Macaroni & Cheese Dinner Original Flavor,0.96,THIA
+7283,Meatballs,0.938,THIA
+1730,Salami  Italian  Pork,0.93,THIA
+1613,Salami,0.93,THIA
+6151,Rice,0.9259999999999999,THIA
+3670,Pilinuts-Canarytree,0.9129999999999999,THIA
+3225,Tomato Powder,0.9129999999999999,THIA
+4556,Beans,0.9,THIA
+4869,Morningstar Farms Veggie Bites Spinach Artichoke,0.9,THIA
+3267,Chives,0.9,THIA
+7287,Vegetarian Meatloaf Or Patties,0.9,THIA
+6185,Wheat Flr,0.892,THIA
+5571,Doughnuts,0.89,THIA
+4670,Yardlong Bns,0.887,THIA
+5611,Kellogg'S Eggo Lowfat Homestyle Waffles,0.88,THIA
+4646,Soybeans,0.8740000000000001,THIA
+4608,Lentils,0.873,THIA
+3673,Pistachio Nuts,0.87,THIA
+3660,Hickorynuts,0.867,THIA
+220,Poppy Seed,0.8540000000000001,THIA
+4602,Cowpeas,0.853,THIA
+3257,Winged Bean Leaves,0.833,THIA
+2979,Pepeao,0.826,THIA
+6168,Semolina,0.8109999999999999,THIA
+3609,Sesame Seeds,0.8029999999999999,THIA
+3686,Chestnuts,0.802,THIA
+3275,Leeks,0.8,THIA
+5387,Crackers,0.7879999999999999,THIA
+6144,Oats,0.763,THIA
+225,Sage,0.754,THIA
+3678,Cottonseed Krnls,0.75,THIA
+1702,Carl Buddig,0.75,THIA
+1717,Salami  Pork  Bf  Less Na,0.738,THIA
+1708,Usda Commodity,0.732,THIA
+4624,Peas,0.726,THIA
+6249,Cornmeal,0.713,THIA
+1575,Ham,0.7120000000000001,THIA
+1602,Luxury Loaf,0.7070000000000001,THIA
+6193,Pasta,0.705,THIA
+4644,Meat Extender,0.7020000000000001,THIA
+7286,Vegetarian Stew,0.7,THIA
+4849,Morningstar Farms Veggie Bites Eggs Florentine,0.7,THIA
+4638,Peanut Flour,0.7,THIA
+5405,Cracker Meal,0.696,THIA
+6228,Oat Flr,0.6920000000000001,THIA
+4657,Soy Meal,0.691,THIA
+7145,Tennis Bread,0.69,THIA
+4832,Worthington Meatless Chick,0.69,THIA
+2159,Rice & Wheat Crl Bar,0.682,THIA
+4362,Pompano,0.68,THIA
+4630,Peanuts,0.675,THIA
+2052,Cerls,0.66,THIA
+3667,Pecans,0.66,THIA
+5263,Bread,0.653,THIA
+5689,Usda Cmdty,0.65,THIA
+6114,Barley,0.6459999999999999,THIA
+215,Paprika,0.645,THIA
+3654,Hazelnuts Or Filberts,0.643,THIA
+4640,Pigeon Peas (Red Gm),0.643,THIA
+4615,Lupins,0.64,THIA
+3603,Lotus Seeds,0.64,THIA
+1629,New England Brand Sausage,0.64,THIA
+1564,Chorizo,0.63,THIA
+201,Cumin Seed,0.628,THIA
+5411,Croutons,0.623,THIA
+101,Whey,0.622,THIA
+4619,Mung Bns,0.621,THIA
+1657,Oscar Mayer,0.62,THIA
+5519,Waffles,0.62,THIA
+5064,Lamb,0.62,THIA
+3629,Brazilnuts,0.617,THIA
+2716,Prk,0.616,THIA
+2125,Milk & Crl Bar,0.615,THIA
+5457,Pancakes,0.61,THIA
+5218,Bagels,0.602,THIA
+1577,Ham&Chs Loaf Or Roll,0.601,THIA
+5217,Bagel,0.601,THIA
+1745,Salami  Italian  Pork & Bf  Dry  Sliced  50% Less Na,0.6,THIA
+7285,Sandwich Spread,0.6,THIA
+4808,Loma Linda Lofat Big Franks,0.6,THIA
+1725,Bacon & Bf Stks,0.6,THIA
+7296,Bacon Bits,0.6,THIA
+5280,Bread Stuffing,0.596,THIA
+1743,Frankfurter,0.593,THIA
+6232,Kamut,0.591,THIA
+5051,Game Meat,0.59,THIA
+5279,Bread Sticks,0.589,THIA
+1640,Oscar Mayer  Ham & Cheese Loaf,0.58,THIA
+6651,Loma Linda Big Franks,0.58,THIA
+5692,Waffle,0.5760000000000001,THIA
+5224,Biscuits,0.575,THIA
+4613,Lima Bns,0.574,THIA
+870,Goose,0.562,THIA
+863,Duck,0.562,THIA
+4617,Mothbeans,0.562,THIA
+4592,Broadbeans (Fava Beans),0.555,THIA
+1550,Beerwurst,0.5539999999999999,THIA
+1603,Mother'S Loaf,0.55,THIA
+211,Mustard Seed,0.5429999999999999,THIA
+5428,English,0.541,THIA
+5496,Phyllo Dough,0.541,THIA
+6028,Cheese Puffs&Twists,0.54,THIA
+5518,Tortillas,0.539,THIA
+3308,Carrot,0.534,THIA
+7143,Frybread,0.531,THIA
+5713,Crisped Rice Bar,0.53,THIA
+3556,Tomatoes,0.528,THIA
+5499,Rolls,0.527,THIA
+5369,Cookies,0.524,THIA
+5410,Croissants,0.523,THIA
+1556,Bologna,0.523,THIA
+6179,Wheat Bran,0.523,THIA
+5062,Veal,0.52,THIA
+5521,Wonton Wrappers (Incl Egg Roll Wrappers),0.519,THIA
+5432,English Muffins,0.518,THIA
+223,Rosemary,0.514,THIA
+228,Spices,0.513,THIA
+5441,Ice Crm Cones,0.511,THIA
+7199,Turkey&Pork Sausage,0.51,THIA
+5741,Pretzels,0.507,THIA
+3665,Mixed Nuts,0.504,THIA
+6173,Wheat,0.504,THIA
+1601,Polish Sausage,0.502,THIA
+1719,Sausage  Polish  Bf W/ Chick  Hot,0.502,THIA
+4510,Tuna,0.501,THIA
+2168,Cereal Wafer Straws,0.5,THIA
+4814,Loma Linda Tender Bits,0.5,THIA
+3028,Onions,0.5,THIA
+4858,Morningstar Farms Meatfree Buffalo Wings,0.5,THIA
+3715,Nuts,0.498,THIA
+7147,Salmon,0.494,THIA
+4801,Tofu,0.494,THIA
+5723,Granola Bars,0.49,THIA
+4831,Worthington Chic-Ketts,0.49,THIA
+4684,Chickpea Flour (Besan),0.486,THIA
+3595,Breadfruit Seeds,0.48200000000000004,THIA
+1580,Honey Loaf  Pork  Bf,0.48200000000000004,THIA
+7211,Pork Sausage Rice Links,0.48,THIA
+6507,Mcdonald'S,0.47700000000000004,THIA
+4596,Chickpeas (Garbanzo Bns,0.47700000000000004,THIA
+5427,English Muffin,0.47700000000000004,THIA
+1166,Gravy,0.47200000000000003,THIA
+5512,Sweet Rolls,0.47,THIA
+6476,"Papa John'S 14"" Chs Pizza",0.469,THIA
+207,Garlic Powder,0.466,THIA
+5750,Trail Mix,0.462,THIA
+1558,Bratwurst,0.45899999999999996,THIA
+6601,Kentucky Fried Chick,0.452,THIA
+4866,Morningstar Farms Meal Starters Steak Strips,0.45,THIA
+4865,Morningstar Farms Meal Starters Chik'N Strips,0.45,THIA
+6181,Wheat Flour,0.447,THIA
+5838,Candies,0.444,THIA
+6190,Rice Flour,0.44299999999999995,THIA
+7121,Caribou,0.442,THIA
+5670,Nabisco,0.442,THIA
+6480,"Little Caesars 14"" Chs Pizza",0.44,THIA
+7398,Celery Flakes,0.44,THIA
+1576,Ham Salad Spread,0.435,THIA
+6474,"Papa John'S 14"" Pepperoni Pizza",0.431,THIA
+1059,Emu,0.43,THIA
+3658,Ginkgo Nuts,0.43,THIA
+5497,Popovers,0.43,THIA
+4479,Burbot,0.429,THIA
+2453,Tamarinds,0.428,THIA
+4508,Trout,0.426,THIA
+6432,Wendy'S,0.42200000000000004,THIA
+4225,Orange-Flavor Drk,0.42200000000000004,THIA
+6137,Millet,0.42100000000000004,THIA
+4524,Catfish,0.42,THIA
+203,Dill Seed,0.418,THIA
+204,Dill Weed,0.418,THIA
+213,Onion Powder,0.418,THIA
+6120,Buckwheat Flr,0.41700000000000004,THIA
+6171,Triticale,0.41600000000000004,THIA
+83,Milk,0.415,THIA
+4151,Coffee Sub,0.413,THIA
+6486,"Pizza Hut 14"" Pepperoni Pizza",0.409,THIA
+5287,Cake,0.408,THIA
+205,Fennel Seed,0.408,THIA
+1742,Ham  Honey  Smoked  Ckd,0.402,THIA
+3070,Pigeonpeas,0.4,THIA
+5617,Kellogg'S Eggo Golden Oat Waffles,0.4,THIA
+4861,Morningstar Farms Italian Herb Chik Patties,0.4,THIA
+5495,Puff Pastry,0.39799999999999996,THIA
+5695,Toaster Pastries,0.396,THIA
+6484,"Pizza Hut 14"" Chs Pizza",0.395,THIA
+6738,Burrito,0.39299999999999996,THIA
+1600,Pickle&Pimiento Loaf,0.392,THIA
+5490,Pie Crust,0.392,THIA
+5228,Biscuit,0.391,THIA
+5655,Kraft,0.39,THIA
+4815,Loma Linda Linketts,0.39,THIA
+6236,Teff,0.39,THIA
+6241,Corn,0.385,THIA
+192,Caraway Seed,0.38299999999999995,THIA
+3630,Butternuts,0.38299999999999995,THIA
+195,Chervil,0.38,THIA
+7234,Orange Juice Drink,0.38,THIA
+1551,Sausage  Berliner  Pork  Bf,0.38,THIA
+1726,Bratwurst  Bf & Pork  Smoked,0.38,THIA
+1598,Peppered Loaf  Pork  Bf,0.38,THIA
+5613,Kellogg'S Eggo Lowfat Blueberry Nutri - Grain Waffles,0.38,THIA
+5612,Kellogg'S Eggo Lowfat Nutri - Grain Waffles,0.38,THIA
+3258,Winged Bean Tuber,0.379,THIA
+6172,Triticale Flr,0.37799999999999995,THIA
+6477,"Little Caesars 14"" Original Rnd Chs Pizza",0.377,THIA
+1604,Picnic Loaf,0.374,THIA
+2483,Durian,0.374,THIA
+6481,"Little Caesars 14"" Pepperoni Pizza",0.373,THIA
+7103,Tortilla,0.37,THIA
+6226,Barley Flour Or Meal,0.37,THIA
+4829,Worthington Vegetarian Burger,0.37,THIA
+6488,"Pizza Hut 14"" Super Supreme Pizza",0.36700000000000005,THIA
+1590,Luncheon Meat,0.36700000000000005,THIA
+6007,Cornnuts,0.366,THIA
+226,Savory,0.366,THIA
+6234,Spelt,0.364,THIA
+3632,Cashew Nuts,0.363,THIA
+4227,Orange Drk,0.363,THIA
+5452,Muffins,0.36,THIA
+5728,Doo Dads Snack Mix,0.36,THIA
+6141,Quinoa,0.36,THIA
+1548,Barbecue Loaf,0.36,THIA
+1607,Pork&Bf Sausage,0.35700000000000004,THIA
+3752,Beef,0.35700000000000004,THIA
+7129,Fish,0.35600000000000004,THIA
+1599,Pepperoni,0.355,THIA
+6490,Fast Fd,0.354,THIA
+5439,Hush Puppies,0.35200000000000004,THIA
+6650,Green Giant,0.35,THIA
+6946,Popcorn,0.35,THIA
+196,Chili Powder,0.349,THIA
+212,Nutmeg,0.34600000000000003,THIA
+5454,Pancakes Plain,0.344,THIA
+232,Mustard,0.34299999999999997,THIA
+1583,Knackwurst  Knockwurst  Pork  Bf,0.342,THIA
+3676,Walnuts,0.341,THIA
+5641,Archway Home Style Cookies,0.34,THIA
+194,Celery Seed,0.34,THIA
+189,Anise Seed,0.34,THIA
+6489,Fst Fd,0.34,THIA
+6478,"Little Caesars 14"" Original Rnd Pepperoni Pizza",0.33799999999999997,THIA
+6441,Burger King,0.33399999999999996,THIA
+6167,Rye Flour,0.331,THIA
+4830,Worthington Veja-Links,0.33,THIA
+218,Pepper,0.32799999999999996,THIA
+122,Egg,0.325,THIA
+1031,Chicken Breast Tenders,0.324,THIA
+3618,Sunflower Sd Butter,0.324,THIA
+6597,Popeyes,0.32299999999999995,THIA
+206,Fenugreek Seed,0.322,THIA
+4825,Worthington Super Links,0.32,THIA
+6464,"Pizza Hut 12"" Pepperoni Pizza",0.32,THIA
+5708,Corn-Based,0.32,THIA
+1578,Ham And Cheese Spread,0.318,THIA
+6164,Rye,0.316,THIA
+4794,Soy Prot Conc,0.316,THIA
+20,Cheese,0.315,THIA
+6725,Tortellini,0.313,THIA
+3712,Cashew Butter,0.312,THIA
+4493,Pike,0.312,THIA
+209,Mace,0.312,THIA
+5727,Oriental Mix,0.311,THIA
+4823,Worthington Prime Stakes,0.31,THIA
+6227,Barley Malt Flr,0.309,THIA
+6453,Taco Bell,0.307,THIA
+3628,Beechnuts,0.304,THIA
+4860,Morningstar Farms Chik Patties Original,0.3,THIA
+4853,Morningstar Farms Grillers Prime,0.3,THIA
+4454,Mussel,0.3,THIA
+3012,Mushrooms,0.3,THIA
+6645,Morningstar Farms America'S Original Veggie Dog,0.3,THIA
+3281,Shallots,0.3,THIA
+5413,Danish Pastry,0.3,THIA
+3061,Peas&Onions,0.297,THIA
+1593,Olive Loaf,0.295,THIA
+1606,Pork Sausage,0.294,THIA
+5299,Coffeecake,0.29100000000000004,THIA
+1635,Oscar Mayer. Bologna (Wisconsin Made Ring),0.29,THIA
+4864,Morningstar Farms Meatless Mini Corn Dogs,0.29,THIA
+210,Marjoram,0.289,THIA
+245,Spearmint,0.28800000000000003,THIA
+6479,"Little Caesars 14"" Original Rnd Meat & Veg Pizza",0.28600000000000003,THIA
+5588,Breakfast Tart,0.285,THIA
+1181,Sauce,0.284,THIA
+878,Quail,0.28300000000000003,THIA
+881,Squab,0.28300000000000003,THIA
+6293,Breakfast Items,0.282,THIA
+7316,Dove,0.28,THIA
+7274,Breakfast Bars,0.28,THIA
+3040,Onion Rings,0.28,THIA
+2357,Orange Juc,0.28,THIA
+7215,Papad,0.27699999999999997,THIA
+4496,Roe,0.27699999999999997,THIA
+7144,Corned Bf & Potatoes In Tortilla (Apache),0.27699999999999997,THIA
+5437,French Toast,0.27699999999999997,THIA
+4622,Mungo Bns,0.273,THIA
+1586,Liver Sausage,0.272,THIA
+1715,Liverwurst Sprd,0.272,THIA
+3144,Radishes,0.27,THIA
+4863,Morningstar Farms Meatless Corn Dogs,0.27,THIA
+4680,Peanut Butter,0.27,THIA
+4813,Loma Linda Redi-Burger,0.27,THIA
+4311,Cod,0.268,THIA
+4134,Cocoa Mix,0.267,THIA
+6466,"Pizza Hut 12"" Super Supreme Pizza",0.266,THIA
+221,Poultry Seasoning,0.264,THIA
+6461,"Pizza Hut 12"" Chs Pizza",0.264,THIA
+3388,Cowpeas (Blackeyes),0.26,THIA
+1720,Sausage  Polish  Pork & Bf  Smoked,0.26,THIA
+2973,Horseradish-Tree Leafy Tips,0.257,THIA
+6581,Fast Fds,0.254,THIA
+202,Curry Powder,0.253,THIA
+6420,Pizza,0.25,THIA
+1560,Brotwurst,0.25,THIA
+6773,Egg Rolls,0.25,THIA
+1561,Cheesefurter,0.25,THIA
+6050,Corn Cakes,0.25,THIA
+1722,Sausage  Smmr  Pork & Bf  Stks  W/ Cheddar Chs,0.249,THIA
+1724,Swisswurst  Pork & Bf  W/ Swiss Chs  Smoked,0.249,THIA
+1721,Sausage  Pork & Bf  W/ Cheddar Chs  Smoked,0.249,THIA
+1559,Braunschweiger (A Liver Sausage),0.249,THIA
+5871,Puddings,0.248,THIA
+1735,Beerwurst  Pork & Bf,0.24600000000000002,THIA
+5753,Tortilla Chips,0.242,THIA
+4819,Worthington Frichik,0.24,THIA
+4812,Loma Linda Vege-Burger,0.24,THIA
+1071,Ostrich,0.24,THIA
+4821,Worthington Lofat Veja-Links,0.24,THIA
+6885,Yeast Extract Spread,127.5,NIA
+2144,Cereals Ready-To-Eat,90.56700000000001,NIA
+4102,Leavening Agents,40.2,NIA
+5604,Rice Bran,33.995,NIA
+3640,Incaparina,27.0,NIA
+4748,Peanut Flour,27.0,NIA
+5726,Salmon,22.75,NIA
+3348,Fish,22.07,NIA
+4278,Meat Extender,22.021,NIA
+2178,Cereals,20.31,NIA
+5954,Snacks,19.267,NIA
+1436,Beef,17.525,NIA
+5872,Seeds,16.825,NIA
+4079,Lamb,16.68,NIA
+4750,Peanut Spread,16.385,NIA
+4759,Peanuts,15.925,NIA
+5312,Pork,15.300999999999998,NIA
+6836,Whale,15.2,NIA
+2397,Chicken,14.782,NIA
+4746,Peanut Butter,14.6,NIA
+6777,Veal,14.35,NIA
+4435,Mushrooms,14.1,NIA
+5435,Protein Supplement,14.0,NIA
+6837,Wheat Bran,13.578,NIA
+1772,Breakfast Bar,13.5,NIA
+5732,Sandwich Spread,13.0,NIA
+4738,Peanut Butter With Omega-3,12.875,NIA
+5835,Seaweed,12.82,NIA
+6593,Turkey,12.55,NIA
+6799,Vegetarian Fillets,12.0,NIA
+4162,Liver Cheese,11.767999999999999,NIA
+6548,Turkey From Whole,11.75,NIA
+4536,Nuts,11.732000000000001,NIA
+5666,Ruffed Grouse,11.6,NIA
+6258,Spices,11.6,NIA
+5792,Sausage,11.195,NIA
+4177,Luncheon Slices,11.11,NIA
+3772,Kfc,10.897,NIA
+3472,Game Meat,10.757,NIA
+3029,Emu,10.569,NIA
+4676,Parsley,10.4,NIA
+2977,Duck,10.35,NIA
+6800,Vegetarian Meatloaf Or Patties,10.0,NIA
+1908,Canadian Bacon,9.988,NIA
+2693,Corn Flour,9.932,NIA
+4999,Popeyes,9.392999999999999,NIA
+4631,Oscar Mayer,9.19,NIA
+5602,Rice And Wheat Cereal Bar,9.091000000000001,NIA
+6544,Turkey Breast,9.067,NIA
+2357,Chicken Breast,9.055,NIA
+6518,Tomatoes,9.05,NIA
+5894,Snack,8.991,NIA
+6808,Waffles,8.888,NIA
+3580,Guinea Hen,8.782,NIA
+2352,Chick-Fil-A,8.763,NIA
+4712,Pasta,8.691,NIA
+4827,Peppers,8.669,NIA
+4857,Pheasant,8.554,NIA
+4468,Noodles,8.387,NIA
+6422,T.G.I. Friday'S,8.387,NIA
+1693,Braunschweiger (A Liver Sausage),8.368,NIA
+3431,Fruit Juice Smoothie,8.333,NIA
+2704,Corn,8.25,NIA
+5507,Quail,8.2,NIA
+1920,Candies,8.2,NIA
+4285,Milk And Cereal Bar,8.193999999999999,NIA
+6414,Syrups,8.12,NIA
+378,Bacon,8.102,NIA
+2910,Denny'S,8.073,NIA
+1809,Burger King,7.96,NIA
+6803,Waffle,7.942,NIA
+4665,Pancakes,7.895,NIA
+51,Applebee'S,7.89,NIA
+5010,Pork Loin,7.882999999999999,NIA
+5605,Rice Cake,7.81,NIA
+5556,Restaurant,7.76,NIA
+5016,Pork Sausage,7.737,NIA
+6371,Subway,7.727,NIA
+6240,Spaghetti,7.654,NIA
+2961,Dove,7.6,NIA
+6843,Wheat Flour,7.553999999999999,NIA
+1688,Bratwurst,7.551,NIA
+4717,Pate,7.517,NIA
+4242,Mcdonald'S,7.4,NIA
+4639,Ostrich,7.364,NIA
+4193,Macaroni,7.327999999999999,NIA
+6304,Squab,7.322,NIA
+6471,Toaster Pastries,7.23,NIA
+6245,Spanish Rice Mix,7.178999999999999,NIA
+2788,Crackers,7.17,NIA
+2248,Cheese Puffs And Twists,7.14,NIA
+4960,Pizza Hut,7.08,NIA
+1799,Buckwheat,7.02,NIA
+2777,Cracker Barrel,7.01,NIA
+5625,Rice,7.005,NIA
+5344,Potato Chips,7.0,NIA
+6249,Spelt,6.843,NIA
+6848,Wheat Germ,6.813,NIA
+1745,Bread,6.81,NIA
+4822,Pepperidge Farm,6.785,NIA
+6849,Wheat,6.7379999999999995,NIA
+6864,Wild Rice,6.733,NIA
+2362,Chicken Patty,6.63,NIA
+2015,Carrot,6.567,NIA
+6246,Spearmint,6.561,NIA
+1907,Canada Goose,6.56,NIA
+4453,Mutton,6.52,NIA
+2355,Chicken Breast Tenders,6.513999999999999,NIA
+3515,Goose,6.5,NIA
+2010,Carrabba'S Italian Grill,6.447,NIA
+4652,Pancakes Plain,6.357,NIA
+5607,Rice Flour,6.34,NIA
+409,Barley Flour Or Meal,6.269,NIA
+3443,Fungi,6.267,NIA
+5393,Potatoes,6.263999999999999,NIA
+5426,Poultry,6.246,NIA
+1800,Buckwheat Flour,6.15,NIA
+521,Beef Composite,6.148,NIA
+5601,Rice And Vermicelli Mix,6.127000000000001,NIA
+5719,Salami,6.105,NIA
+4686,Pasta Mix,6.067,NIA
+6825,Wendy'S,6.042000000000001,NIA
+4337,Millet Flour,6.02,NIA
+5885,Semolina,5.99,NIA
+5815,School Lunch,5.985,NIA
+1655,Bison,5.966,NIA
+5725,Salmon Nuggets,5.9479999999999995,NIA
+2365,Chicken Tenders,5.917000000000001,NIA
+2587,Chives,5.9,NIA
+2006,Caribou,5.89,NIA
+2786,Cracker,5.707000000000001,NIA
+3589,Ham,5.697,NIA
+410,Barley Malt Flour,5.636,NIA
+1671,Bockwurst,5.6160000000000005,NIA
+5644,Roast Beef,5.581,NIA
+4582,Olive Garden,5.58,NIA
+3445,Game Meat ,5.57,NIA
+2255,Cheese,5.56,NIA
+2672,Cookies,5.537999999999999,NIA
+5606,Rice Crackers,5.537000000000001,NIA
+6161,Soup,5.5360000000000005,NIA
+2865,Croutons,5.439,NIA
+6873,Wonton Wrappers (Includes Egg Roll Wrappers),5.4239999999999995,NIA
+4229,Mary'S Gone Crackers,5.39,NIA
+5647,Rolls,5.367000000000001,NIA
+2749,Cornmeal,5.291,NIA
+5609,Rice Mix,5.263,NIA
+6437,Taco Bell,5.17,NIA
+1802,Buckwheat Groats,5.135,NIA
+5642,Rice-A-Roni,5.122999999999999,NIA
+1804,Bulgur,5.114,NIA
+3617,Ice Cream Cones,5.066,NIA
+4713,Pastrami,5.065,NIA
+4407,Muffins,5.0,NIA
+4824,Pepperoni,4.987,NIA
+2890,Crustaceans,4.898,NIA
+4456,Nabisco,4.88,NIA
+374,Bacon And Beef Sticks,4.867,NIA
+6536,Tortillas,4.8580000000000005,NIA
+4731,Peaches,4.825,NIA
+4953,"Pizza Hut 14"" Pepperoni Pizza",4.82,NIA
+4340,Millet,4.72,NIA
+3377,Frankfurter,4.687,NIA
+3162,Fireweed,4.6739999999999995,NIA
+391,Bagels,4.651,NIA
+413,Barley,4.604,NIA
+3442,Frybread,4.603,NIA
+2867,Crunchmaster,4.57,NIA
+1647,Biscuits,4.542,NIA
+3528,Grape Leaves,4.505,NIA
+4958,"Pizza Hut 14"" Sausage Pizza",4.5,NIA
+2613,Cookie,4.5,NIA
+6037,Sorghum Flour,4.496,NIA
+6550,Turkey Roast,4.4,NIA
+111,Archway Home Style Cookies,4.37,NIA
+98,Arby'S,4.343,NIA
+6202,Soy Flour,4.32,NIA
+6469,Thuringer,4.31,NIA
+4164,Liverwurst Spread,4.3,NIA
+4949,"Pizza Hut 14"" Cheese Pizza",4.3,NIA
+4163,Liver Sausage,4.3,NIA
+5670,Rye Flour,4.27,NIA
+5673,Rye Grain,4.27,NIA
+5431,Pretzels,4.27,NIA
+5351,Potato Soup,4.27,NIA
+5643,Roast Beef Spread,4.2,NIA
+6871,Wocas,4.19,NIA
+5488,Puff Pastry,4.168,NIA
+3598,Honey Roll Sausage,4.165,NIA
+3499,Garlic Bread,4.1419999999999995,NIA
+6530,Tortilla,4.125,NIA
+4190,Macaroni Or Noodles With Cheese,4.118,NIA
+3553,Gravy,4.087,NIA
+4862,Phyllo Dough,4.073,NIA
+5814,Schiff,4.039,NIA
+4946,"Pizza Hut 12"" Pepperoni Pizza",4.0280000000000005,NIA
+4185,Macaroni And Cheese,4.003,NIA
+6211,Soy Sauce Made From Soy (Tamari),3.951,NIA
+5758,Sauce,3.917,NIA
+4944,"Pizza Hut 12"" Cheese Pizza",3.91,NIA
+1680,Bologna,3.9,NIA
+3039,English Muffins,3.884,NIA
+4182,Macaroni And Cheese Dinner With Dry Sauce Mix,3.8819999999999997,NIA
+5813,Schar,3.875,NIA
+6452,Taquitos,3.85,NIA
+3797,Kraft,3.84,NIA
+6465,Tart,3.8,NIA
+6683,Udi'S,3.79,NIA
+4355,Mollusks,3.78,NIA
+4161,"Little Caesars 14"" Pepperoni Pizza",3.767,NIA
+6801,Veggie Burgers Or Soyburgers,3.753,NIA
+4160,"Little Caesars 14"" Original Round Pepperoni Pizza",3.737,NIA
+3788,Kielbasa,3.727,NIA
+2931,Digiorno Pizza,3.7230000000000003,NIA
+6402,Sweet Rolls,3.7030000000000003,NIA
+6038,Sorghum Grain,3.688,NIA
+2989,Egg Rolls,3.63,NIA
+2701,Corn Grain,3.627,NIA
+4811,Peas,3.608,NIA
+4420,Mushroom,3.6069999999999998,NIA
+4948,"Pizza Hut 12"" Super Supreme Pizza",3.582,NIA
+92,Apricots,3.58,NIA
+4159,"Little Caesars 14"" Original Round Meat And Vegetable Pizza",3.5669999999999997,NIA
+1827,Burrito,3.5660000000000003,NIA
+4173,Luncheon Meat,3.53,NIA
+4176,Luncheon Sausage,3.5269999999999997,NIA
+2944,"Domino'S 14"" Cheese Pizza",3.51,NIA
+6886,Yellow Rice With Seasoning,3.509,NIA
+5345,Potato Flour,3.5069999999999997,NIA
+4108,Leeks,3.5,NIA
+6538,Tree Fern,3.5,NIA
+2754,Couscous,3.49,NIA
+4181,Luxury Loaf,3.4819999999999998,NIA
+4100,Lean Pockets,3.4619999999999997,NIA
+2946,"Domino'S 14"" Pepperoni Pizza",3.46,NIA
+3582,Ham And Cheese Loaf Or Roll,3.452,NIA
+4883,Pie Crust,3.45,NIA
+4990,Polish Sausage,3.443,NIA
+3601,Hot Pockets Ham 'N Cheese Stuffed Sandwich,3.425,NIA
+3602,Hot Pockets,3.425,NIA
+5519,Radishes,3.4,NIA
+2983,Dutch Brand Loaf,3.384,NIA
+5008,Popovers,3.378,NIA
+6467,Teff,3.363,NIA
+5012,Pork Sausage Rice Links,3.35,NIA
+2949,"Domino'S 14"" Sausage Pizza",3.35,NIA
+6228,Soymilk (All Flavors),3.292,NIA
+3524,Granola Bar,3.29,NIA
+1453,Beerwurst,3.2539999999999996,NIA
+2945,"Domino'S 14"" Extravaganzza Feast Pizza",3.25,NIA
+4158,"Little Caesars 14"" Original Round Cheese Pizza",3.237,NIA
+4968,Pizza,3.235,NIA
+4670,"Papa John'S 14"" Pepperoni Pizza",3.225,NIA
+4104,Lebanon Bologna,3.2230000000000003,NIA
+4671,"Papa John'S 14"" The Works Pizza",3.205,NIA
+0,Beans,1225,FOLDFE
+3,Cereals ready-to-eat,460,FOLDFE
+4,Cornmeal,449,FOLDFE
+5,Soybeans,422,FOLDFE
+9,Cereals,400,FOLDFE
+10,Edamame,358,FOLDFE
+12,Seeds,319,FOLDFE
+14,Wheat flour,251,FOLDFE
+15,Cowpeas (blackeyes),244,FOLDFE
+16,Asparagus,243,FOLDFE
+18,Macaroni,234,FOLDFE
+21,Pasta,227,FOLDFE
+25,Orange juice,202,FOLDFE
+30,Pie crust,190,FOLDFE
+31,Corn flour,185,FOLDFE
+32,Peanuts,181,FOLDFE
+34,Peas,173,FOLDFE
+35,Turnip greens,170,FOLDFE
+36,Soup,170,FOLDFE
+38,Biscuits,150,FOLDFE
+40,Beets,148,FOLDFE
+43,Okra,141,FOLDFE
+44,Spinach,136,FOLDFE
+46,Pie Crust,131,FOLDFE
+48,Nuts,130,FOLDFE
+49,Candies,129,FOLDFE
+50,Desserts,121,FOLDFE
+51,Cardoon,121,FOLDFE
+56,Broccoli,105,FOLDFE
+55,Bagels,105,FOLDFE
+59,Corn,103,FOLDFE
+61,Noodles,102,FOLDFE
+65,Snacks,95,FOLDFE
+69,Jute,90,FOLDFE
+73,Boysenberries,87,FOLDFE
+76,Garlic bread,80,FOLDFE
+0,Cheese,1175,CA
+1,Whey,1154,CA
+7,Tofu,861,CA
+10,Cheese spread,787,CA
+11,Desserts,776,CA
+14,Cheese substitute,689,CA
+17,Cornmeal,508,CA
+18,Soybeans,504,CA
+21,Milk,473,CA
+25,Nuts,370,CA
+29,DIGIORNO Pizza,351,CA
+31,Orange juice,349,CA
+34,Eggnog,330,CA
+35,Wheat flour,315,CA
+36,Yogurt,311,CA
+41,Amaranth leaves,276,CA
+42,Beans,273,CA
+0,Cereals ready-to-eat,16.24,FE
+1,Cereals,16.2,FE
+4,Beans,14.22,FE
+9,Corn flour,9.69,FE
+11,Seeds,9.52,FE
+15,Soybeans,9.09,FE
+16,Cornmeal,8.41,FE
+19,Mollusks,7.83,FE
+20,Pie Crust,7.83,FE
+21,Apricots,7.51,FE
+22,Blueberries,7.02,FE
+25,Wheat flour,6.04,FE
+30,Peaches,5.47,FE
+31,Nuts,5.41,FE
+33,Sausage,5.38,FE
+36,Teff,5.17,FE
+38,Pie crust,5.08,FE
+40,Snacks,4.95,FE
+42,Liverwurst spread,4.87,FE
+45,Chicken,4.63,FE
+49,Corn grain,4.5,FE
+50,Tomato products,4.45,FE
+52,Desserts,4.44,FE
+54,Asparagus,4.43,FE
+55,Cookies,4.37,FE
+56,Game meat,4.31,FE
+58,Pasta,4.29,FE
+61,Lima beans,4.17,FE
+62,Oat flour,4.16,FE
+64,Potatoes,4.08,FE
+67,Barley flour or meal,3.97,FE
+68,Soup,3.85,FE
+69,Sorghum flour,3.8,FE
+70,Passion-fruit,3.78,FE
+72,Spinach,3.7,FE
+74,Cowpeas (blackeyes),3.6,FE
+75,Macaroni,3.6,FE
+0,Seeds,1552,P
+3,Whey,1351,P
+4,Cheese spread,1225,P
+5,Cornmeal,1107,P
+6,Cheese,1067,P
+7,Desserts,945,P
+8,Beans,872,P
+13,Biscuits,702,P
+15,Cheese substitute,659,P
+17,Nuts,650,P
+23,Snacks,565,P
+25,Rice flour,532,P
+26,Peanuts,530,P
+27,Cereals ready-to-eat,526,P
+28,Candies,521,P
+32,Soybeans,497,P
+35,Oat flour,470,P
+37,Pork,447,P
+38,DIGIORNO Pizza,441,P
+39,Barley flour or meal,438,P
+41,Fish,392,P
+42,Milk,387,P
+44,Corn grain,349,P
+48,Sorghum flour,336,P
+54,Pasta,312,P
+56,Teff,302,P
+57,Mollusks,296,P
+67,Game meat,277,P
+68,Eggnog,277,P
+73,Chicken,274,P
+78,Salami,272,P
+79,Turkey,265,P
+82,Beef,263,P
+80,Corn flour,263,P
+87,Pancakes,259,P
+0,Soup,2493,NA
+2,Cheese spread,2275,NA
+3,Cornmeal,2242,NA
+4,Cheese,1918,NA
+8,Whey,1565,NA
+9,Biscuits,1531,NA
+10,Gravy,1475,NA
+12,Pork,1417,NA
+13,Tomato products,1350,NA
+14,DIGIORNO Pizza,1274,NA
+16,Fish,1218,NA
+18,George Weston Bakeries,1126,NA
+22,Noodles,1049,NA
+23,Beans,1047,NA
+30,Pie Crust,915,NA
+35,Sausage,869,NA
+39,Squash,849,NA
+41,Potatoes,821,NA
+46,Pie crust,794,NA
+48,CAMPBELL'S CHUNKY,790,NA
+50,Cheese substitute,774,NA
+51,Snacks,756,NA
+52,Spinach,746,NA
+54,Puddings,722,NA
+56,Asparagus,695,NA
+59,Kielbasa,672,NA
+62,Bratwurst,648,NA
+63,Milk,646,NA
+68,Salami,623,NA
+69,Frankfurter,620,NA
+70,Tomato juice,615,NA
+72,Rice,604,NA
+73,Crustaceans,587,NA
+75,Luncheon meat,580,NA
+76,Turkey,576,NA
+77,Pastrami,576,NA
+78,Cereals,573,NA
+79,Corn,571,NA
+83,Tomatoes,564,NA
+84,Hormel Pillow Pak Sliced Turkey Pepperoni,557,NA
+85,Pillsbury,547,NA
+91,POPEYES,528,NA
+92,Sauce,522,NA
+99,Ham,495,NA
+100,Pork sausage,494,NA
+101,Beerwurst,493,NA
+103,Chicken,479,NA
+0,Beans,3074,K
+1,Whey,3016,K
+4,Apricots,2202,K
+5,Orange juice,1648,K
+6,Potatoes,1644,K
+7,Soybeans,1587,K
+8,Salami,1372,K
+9,Peaches,1341,K
+10,Plantains,1315,K
+11,Desserts,1155,K
+12,Currants,1119,K
+14,Tomato products,1098,K
+15,Breadfruit,1078,K
+18,Grapefruit juice,1002,K
+20,Nuts,984,K
+22,Lima beans,969,K
+23,Snacks,946,K
+0,Seeds,649,MG
+1,Nuts,385,MG
+2,Beans,382,MG
+5,Peanuts,260,MG
+6,Whey,255,MG
+8,Snacks,235,MG
+10,Corn grain,211,MG
+11,Cereals ready-to-eat,205,MG
+14,Candies,185,MG
+15,Rice flour,177,MG
+18,Soybeans,166,MG
+19,Desserts,162,MG
+20,Cornmeal,155,MG
+21,Oat flour,150,MG
+22,Sorghum flour,149,MG
+23,Barley flour or meal,142,MG
+25,Spinach,131,MG
+26,Teff,126,MG
+27,Lima beans,126,MG
+28,Pasta,116,MG
+30,Corn flour,106,MG
+33,Plantains,97,MG
+36,Orange juice,92,MG
+38,Potatoes,90,MG
+40,Cowpeas (blackeyes),86,MG
+42,Soup,85,MG
+1,Chicken,44.07,PROCNT
+2,Beans,44.02,PROCNT
+3,Fish,43.32,PROCNT
+6,Pork,39.7,PROCNT
+8,Peanuts,38.94,PROCNT
+9,Turkey,37.23,PROCNT
+10,Cheese,35.59,PROCNT
+13,Seeds,35.21,PROCNT
+16,Desserts,33.45,PROCNT
+17,Soybeans,33.15,PROCNT
+19,Game meat,32.1,PROCNT
+23,Candies,30.74,PROCNT
+27,Nuts,29.88,PROCNT
+28,Beef,29.41,PROCNT
+35,Lamb,27.2,PROCNT
+37,Veal,26.81,PROCNT
+70,Game meat ,23.84,PROCNT
+73,DIGIORNO Pizza,23.42,PROCNT
+90,Cheese spread,22.97,PROCNT
+92,Turkey from whole,22.92,PROCNT
+105,Crustaceans,22.45,PROCNT
+117,Tofu,21.76,PROCNT
+131,Snacks,20.73,PROCNT
+159,Whey,18.75,PROCNT
+164,Soup,18.1,PROCNT
+166,Mollusks,17.85,PROCNT
+168,Guinea hen,17.54,PROCNT
+174,Cereals ready-to-eat,16.68,PROCNT
+179,Wheat flour,16.41,PROCNT
+183,Squab,15.7,PROCNT
+184,Corn grain,15.64,PROCNT
+185,Barley flour or meal,15.54,PROCNT
+186,Oat flour,15.25,PROCNT
+188,Salami,15.01,PROCNT
+192,Milk,14.65,PROCNT
+193,Pasta,14.48,PROCNT
+195,Cowpeas (blackeyes),14.43,PROCNT
+197,Cornmeal,14.3,PROCNT
+198,Pork sausage,14.24,PROCNT
+204,Sausage,13.55,PROCNT
+205,Edamame,13.24,PROCNT
+206,Rice,13.19,PROCNT
+208,Cheese substitute,12.96,PROCNT
+215,Lima beans,12.45,PROCNT
+216,Pie crust,12.42,PROCNT
+228,Eggnog,11.56,PROCNT
+230,Rice flour,11.42,PROCNT
+232,Pastrami,11.17,PROCNT
+234,Pie Crust,11.07,PROCNT
+235,Macaroni,11.04,PROCNT
+240,Peas,10.56,PROCNT
+241,Bagels,10.45,PROCNT
+242,POPEYES,10.39,PROCNT
+247,Sorghum flour,10.2,PROCNT
+0,Pork,2169,CHOLE
+1,Desserts,1131,CHOLE
+2,Chicken,536,CHOLE
+5,Egg,260,CHOLE
+12,Eggnog,150,CHOLE
+13,Cheese,139,CHOLE
+15,Cream,136,CHOLE
+14,Fish,136,CHOLE
+20,Turkey,127,CHOLE
+31,Veal,105,CHOLE
+32,Lamb,105,CHOLE
+34,Sausage,101,CHOLE
+41,Beef,97,CHOLE
+44,Game meat,94,CHOLE
+45,Pasta,93,CHOLE
+55,Salami,90,CHOLE
+75,Squab,81,CHOLE
+89,Cheese spread,77,CHOLE
+91,Crustaceans,76,CHOLE
+99,Cream puff,75,CHOLE
+108,Game meat ,73,CHOLE
+131,Mollusks,67,CHOLE
+141,Milk,66,CHOLE
+144,Liverwurst spread,65,CHOLE
+0,Syrups,219.24,CHOCDF
+2,Rice,147.91,CHOCDF
+3,Beans,134.8,CHOCDF
+4,Desserts,129.85,CHOCDF
+5,Cornmeal,124.83,CHOCDF
+7,Corn grain,123.27,CHOCDF
+9,Rice flour,120.84,CHOCDF
+10,Pie Crust,117.35,CHOCDF
+11,Cranberry sauce,111.91,CHOCDF
+12,Currants,110.85,CHOCDF
+13,Barley flour or meal,110.29,CHOCDF
+14,Whey,107.97,CHOCDF
+15,Pie crust,105.99,CHOCDF
+18,Wheat flour,99.37,CHOCDF
+19,Apricots,98.64,CHOCDF
+23,Sorghum flour,92.73,CHOCDF
+24,Orange juice,92.2,CHOCDF
+25,Blueberries,90.34,CHOCDF
+26,Corn flour,87.31,CHOCDF
+27,Puddings,86.76,CHOCDF
+28,Pears,86.22,CHOCDF
+29,Plantains,86.1,CHOCDF
+30,Peaches,82.62,CHOCDF
+32,Candies,78.76,CHOCDF
+33,Flan,77.86,CHOCDF
+35,Gelatin desserts,76.92,CHOCDF
+37,Biscuits,76.08,CHOCDF
+38,Grapefruit juice,71.54,CHOCDF
+39,Pasta,71.32,CHOCDF
+41,Oat flour,68.33,CHOCDF
+46,Nuts,66.03,CHOCDF
+47,Cereals ready-to-eat,65.73,CHOCDF
+48,Snacks,65.55,CHOCDF
+49,Potatoes,64.11,CHOCDF
+50,Macaroni,62.9,CHOCDF
+51,Breadfruit,59.66,CHOCDF
+52,Pie,58.35,CHOCDF
+53,DIGIORNO Pizza,58.16,CHOCDF
+55,Boysenberries,57.11,CHOCDF
+58,Passion-fruit,55.18,CHOCDF
+6124,Corn Bran,79.0,FIBTG
+3587,Fungi,70.09999847,FIBTG
+197,Cinnamon,53.09999847,FIBTG
+1951,Cereals Rte,50.0,FIBTG
+226,Savory,45.70000076,FIBTG
+7162,Pinon Nuts,43.40000153,FIBTG
+6179,Wheat Bran,42.79999924,FIBTG
+214,Spices,42.79999924,FIBTG
+223,Rosemary,42.59999847,FIBTG
+200,Coriander Seed,41.90000153,FIBTG
+225,Sage,40.29999924,FIBTG
+210,Marjoram,40.29999924,FIBTG
+205,Fennel Seed,39.79999924,FIBTG
+4595,Carob Flour,39.79999924,FIBTG
+192,Caraway Seed,38.0,FIBTG
+3599,Chia Seeds,37.70000076,FIBTG
+215,Paprika,37.40000153,FIBTG
+196,Chili Powder,34.20000076,FIBTG
+198,Cloves,34.20000076,FIBTG
+6074,Cocoa,33.90000153,FIBTG
+202,Curry Powder,33.20000076,FIBTG
+3276,Parsley,32.70000076,FIBTG
+4608,Lentils,30.5,FIBTG
+245,Spearmint,29.79999924,FIBTG
+3563,Peppers,28.70000076,FIBTG
+7398,Celery Flakes,27.79999924,FIBTG
+3701,Seeds,27.29999924,FIBTG
+218,Pepper,27.20000076,FIBTG
+3267,Chives,26.20000076,FIBTG
+4624,Peas,25.5,FIBTG
+4562,Beans,25.20000076,FIBTG
+4592,Broadbeans (Fava Beans),25.0,FIBTG
+206,Fenugreek Seed,24.60000038,FIBTG
+7159,Rose Hips,24.10000038,FIBTG
+3308,Carrot,23.60000038,FIBTG
+4151,Coffee Sub,23.29999924,FIBTG
+5395,Crackers,22.89999962,FIBTG
+6165,Rye Flour,22.60000038,FIBTG
+188,Allspice,21.60000038,FIBTG
+229,Turmeric,21.10000038,FIBTG
+203,Dill Seed,21.10000038,FIBTG
+5528,Leavening Agents,21.0,FIBTG
+6162,Rice Bran,21.0,FIBTG
+212,Nutmeg,20.79999924,FIBTG
+4613,Lima Bns,20.60000038,FIBTG
+7141,Corn,20.5,FIBTG
+209,Mace,20.20000076,FIBTG
+7160,Chokecherries,20.0,FIBTG
+220,Poppy Seed,19.5,FIBTG
+2174,Cereals,19.39999962,FIBTG
+6527,Mcdonald'S,18.79999924,FIBTG
+248,Campbell Soup Co,18.79999924,FIBTG
+7215,Papad,18.60000038,FIBTG
+6121,Bulgur,18.29999924,FIBTG
+4622,Mungo Bns,18.29999924,FIBTG
+5764,Baking Choc,18.10000038,FIBTG
+7267,Candies,18.0,FIBTG
+4788,Soybeans,17.70000076,FIBTG
+4655,Soy Flour,17.5,FIBTG
+4644,Meat Extender,17.5,FIBTG
+4596,Chickpeas (Garbanzo Bns,17.39999962,FIBTG
+6114,Barley,17.29999924,FIBTG
+3610,Sesame Sd Krnls,16.89999962,FIBTG
+3225,Tomato Powder,16.5,FIBTG
+4619,Mung Bns,16.29999924,FIBTG
+3645,Coconut Meat,16.29999924,FIBTG
+4791,Soy Flr,16.0,FIBTG
+4639,Peanut Flour,15.80000019,FIBTG
+7150,Agave,15.60000038,FIBTG
+6139,Oat Bran,15.39999962,FIBTG
+6053,Popcorn,15.10000038,FIBTG
+4640,Pigeon Peas (Red Gm),15.0,FIBTG
+3598,Breadnuttree Seeds,14.89999962,FIBTG
+222,Pumpkin Pie Spice,14.80000019,FIBTG
+211,Mustard Seed,14.69999981,FIBTG
+6172,Triticale Flr,14.60000038,FIBTG
+6164,Rye,14.60000038,FIBTG
+189,Anise Seed,14.60000038,FIBTG
+2400,Persimmons,14.5,FIBTG
+5282,Bread Stuffing,14.30000019,FIBTG
+5258,Bread,14.30000019,FIBTG
+235,Thyme,14.0,FIBTG
+3609,Sesame Seeds,14.0,FIBTG
+3700,Almonds,13.69999981,FIBTG
+204,Dill Weed,13.60000038,FIBTG
+5727,Oriental Mix,13.19999981,FIBTG
+6180,Wheat Germ,13.19999981,FIBTG
+6177,Wheat,12.69999981,FIBTG
+6947,Snacks,12.69999981,FIBTG
+208,Ginger,12.5,FIBTG
+2192,Apples,12.39999962,FIBTG
+3556,Tomatoes,12.30000019,FIBTG
+6181,Wheat Flour,12.19999981,FIBTG
+194,Celery Seed,11.80000019,FIBTG
+3641,Chestnuts,11.69999981,FIBTG
+3617,Sunflower Sd Krnls,11.5,FIBTG
+3012,Mushrooms,11.5,FIBTG
+221,Poultry Seasoning,11.30000019,FIBTG
+195,Chervil,11.30000019,FIBTG
+3573,Grape Leaves,11.0,FIBTG
+6191,Pasta,11.0,FIBTG
+4670,Yardlong Bns,11.0,FIBTG
+3655,Hazelnuts Or Filberts,11.0,FIBTG
+4684,Chickpea Flour (Besan),10.80000019,FIBTG
+6028,Cheese Puffs&Twists,10.69999981,FIBTG
+4600,Cowpeas,10.69999981,FIBTG
+6234,Spelt,10.69999981,FIBTG
+3672,Pine Nuts,10.69999981,FIBTG
+6144,Oats,10.60000038,FIBTG
+6223,Spaghetti,10.60000038,FIBTG
+2359,Orange Peel,10.60000038,FIBTG
+2322,Lemon Peel,10.60000038,FIBTG
+3584,Fireweed,10.60000038,FIBTG
+201,Cumin Seed,10.5,FIBTG
+7096,Cornmeal,10.39999962,FIBTG
+199,Coriander Leaf,10.39999962,FIBTG
+3275,Leeks,10.39999962,FIBTG
+6747,Burrito,10.39999962,FIBTG
+2370,Passion-Fruit,10.39999962,FIBTG
+3719,Pistachio Nuts,10.30000019,FIBTG
+6118,Buckwheat Groats,10.30000019,FIBTG
+7296,Bacon Bits,10.19999981,FIBTG
+6226,Barley Flour Or Meal,10.10000038,FIBTG
+1180,Sauce,10.10000038,FIBTG
+7403,Puddings,10.10000038,FIBTG
+6120,Buckwheat Flr,10.0,FIBTG
+6117,Buckwheat,10.0,FIBTG
+3664,Mixed Nuts,9.899999618999999,FIBTG
+207,Garlic Powder,9.899999618999999,FIBTG
+2224,Bananas,9.899999618999999,FIBTG
+2269,Figs,9.800000191,FIBTG
+6126,Corn Flr,9.600000381000001,FIBTG
+3667,Pecans,9.600000381000001,FIBTG
+7388,Amaranth Flakes,9.5,FIBTG
+4630,Peanuts,9.5,FIBTG
+4223,Dairy Drk Mix,9.399999618999999,FIBTG
+3680,Sesame Butter,9.300000191,FIBTG
+3659,Ginkgo Nuts,9.300000191,FIBTG
+3028,Onions,9.199999809,FIBTG
+6232,Kamut,9.100000381000001,FIBTG
+3715,Nuts,9.0,FIBTG
+3661,Macadamia Nuts,8.600000381000001,FIBTG
+2823,Artichokes,8.600000381000001,FIBTG
+5951,Pectin,8.600000381000001,FIBTG
+3106,Potatoes,8.600000381000001,FIBTG
+4195,Tea,8.5,FIBTG
+5461,Pancakes,8.5,FIBTG
+6137,Millet,8.5,FIBTG
+6006,Cornnuts,8.399999618999999,FIBTG
+6205,Macaroni,8.300000191,FIBTG
+3138,Pumpkin Pie Mix,8.300000191,FIBTG
+2383,Peaches,8.199999809,FIBTG
+5536,Muffins,8.199999809,FIBTG
+2262,Dates,8.0,FIBTG
+6236,Teff,8.0,FIBTG
+4783,Peanut Butter,8.0,FIBTG
+4124,Carob-Flavor Bev Mix,8.0,FIBTG
+243,Peppermint,8.0,FIBTG
+7156,Prairie Turnips,8.0,FIBTG
+2340,Fruit,7.8000001910000005,FIBTG
+3589,Wasabi,7.8000001910000005,FIBTG
+4679,Peanut Sprd,7.8000001910000005,FIBTG
+6005,Banana Chips,7.6999998089999995,FIBTG
+3297,Seaweed,7.6999998089999995,FIBTG
+5743,Pretzels,7.6999998089999995,FIBTG
+4766,Chickpeas,7.599999905,FIBTG
+6710,Hodgson Mill,7.599999905,FIBTG
+1518,Potato Soup,7.599999905,FIBTG
+4597,Chickpeas ,7.599999905,FIBTG
+3629,Brazilnuts,7.5,FIBTG
+2395,Pears,7.5,FIBTG
+5580,Taco Shells,7.5,FIBTG
+7158,Raspberries,7.5,FIBTG
+6099,Frozen Novelties,7.5,FIBTG
+4134,Cocoa Mix,7.5,FIBTG
+5503,Rolls,7.5,FIBTG
+6031,Potato Chips,7.5,FIBTG
+7372,Cereal Rte,7.3000001910000005,FIBTG
+2215,Apricots,7.3000001910000005,FIBTG
+5436,English Muffins,7.3000001910000005,FIBTG
+5586,Cookies,7.3000001910000005,FIBTG
+6038,Taro Chips,7.1999998089999995,FIBTG
+4666,Tofu,7.1999998089999995,FIBTG
+6227,Barley Malt Flr,7.099999905,FIBTG
+5688,Usda Cmdty,7.099999905,FIBTG
+2426,Plums,7.099999905,FIBTG
+2263,Elderberries,7.0,FIBTG
+6141,Quinoa,7.0,FIBTG
+2434,Raisins,6.8000001910000005,FIBTG
+2260,Currants,6.8000001910000005,FIBTG
+3675,Walnuts,6.8000001910000005,FIBTG
+2221,Avocados,6.8000001910000005,FIBTG
+5728,Doo Dads Snack Mix,6.8000001910000005,FIBTG
+6209,Noodles,6.8000001910000005,FIBTG
+1085,Soup,6.8000001910000005,FIBTG
+6649,Morningstar Farms Spicy Black Bean Burger,6.8000001910000005,FIBTG
+6111,Amaranth,6.6999998089999995,FIBTG
+7039,Cranberries,6.6999998089999995,FIBTG
+2316,Kumquats,6.5,FIBTG
+6228,Oat Flr,6.5,FIBTG
+3660,Hickorynuts,6.400000095,FIBTG
+2949,Cowpeas (Blackeyes),6.400000095,FIBTG
+1168,Campbell Soup,6.3000001910000005,FIBTG
+6650,Green Giant,6.3000001910000005,FIBTG
+6169,Sorghum,6.3000001910000005,FIBTG
+7152,Lambsquarters,6.3000001910000005,FIBTG
+5517,Tortillas,6.3000001910000005,FIBTG
+7235,Granola Bar,6.1999998089999995,FIBTG
+3436,Pigeonpeas,6.1999998089999995,FIBTG
+4702,Campbell Soup Co.,6.1999998089999995,FIBTG
+6188,Wild Rice,6.1999998089999995,FIBTG
+2487,Rowal,6.1999998089999995,FIBTG
+7280,Fish Sticks,6.099999905,FIBTG
+7284,Vegetarian Fillets,6.099999905,FIBTG
+4785,Peanut Butter W/ Omega-3,6.099999905,FIBTG
+3677,Breadfruit Seeds,6.0,FIBTG
+4685,Hummus,6.0,FIBTG
+6081,Frz Nvl,6.0,FIBTG
+1174,Gravy,6.0,FIBTG
+3129,Potato Flour,5.900000095,FIBTG
+6101,Ice Creams,5.8000001910000005,FIBTG
+6652,Morningstar Farms Vegan Burger Made W/ Org Soy,5.6999998089999995,FIBTG
+213,Onion Powder,5.6999998089999995,FIBTG
+0,Desserts,73.94,FASAT
+1,Beef,30.04,FASAT
+2,Cream,27.638,FASAT
+3,Cheese,25.229,FASAT
+10,Nuts,22.436999999999998,FASAT
+11,Candies,22.041999999999998,FASAT
+13,Cheese spread,18.658,FASAT
+14,Pie crust,18.29,FASAT
+18,Dessert topping,15.790999999999999,FASAT
+23,Chicken,13.675,FASAT
+26,Peanuts,11.367,FASAT
+27,Milk,11.277000000000001,FASAT
+29,Pork,10.610999999999999,FASAT
+30,Salami,10.58,FASAT
+31,Chocolate-flavored hazelnut spread,10.517000000000001,FASAT
+33,Seeds,10.082,FASAT
+34,Lamb,10.023,FASAT
+43,Snacks,8.906,FASAT
+44,Pie Crust,8.599,FASAT
+51,Oil,8.119,FASAT
+54,Cream puff,7.972,FASAT
+58,Milk substitutes,7.41,FASAT
+60,Sausage,7.301,FASAT
+61,Squab,7.165,FASAT
+64,POPEYES,6.909,FASAT
+67,Potatoes,6.7010000000000005,FASAT
+69,Frankfurter,6.626,FASAT
+70,Eggnog,6.581,FASAT
+72,DIGIORNO Pizza,6.431,FASAT
+74,Fat,6.374,FASAT
+77,Chocolate,6.246,FASAT
+79,Veal,6.069,FASAT
+82,Turkey,5.852,FASAT
+90,Game meat,5.621,FASAT
+94,Liverwurst spread,5.459,FASAT
+103,Cake,5.159,FASAT
+107,Luncheon meat,4.968999999999999,FASAT
+110,Cereals ready-to-eat,4.828,FASAT
+111,Biscuits,4.758,FASAT
+112,Beerwurst,4.725,FASAT
+117,Bacon and beef sticks,4.48,FASAT
+124,Cookies,4.284,FASAT
+125,Cheese substitute,4.1930000000000005,FASAT
+684,Shortening,100.0,FAT
+635,Oil,100.0,FAT
+644,Fish Oil,100.0,FAT
+639,Vegetable Oil,100.0,FAT
+625,Shortening Frying Hvy Duty,100.0,FAT
+624,Shortening Household Soybn (Hydr)&Palm,100.0,FAT
+623,Shortening Frying (Hvy Duty),100.0,FAT
+535,Fat,100.0,FAT
+622,Shortening Industrial,100.0,FAT
+620,Shortening Confectionery,100.0,FAT
+617,Shortening Cake Mix,100.0,FAT
+616,Shortening Frying (Reg),100.0,FAT
+615,Shortening Bread,100.0,FAT
+536,Lard,100.0,FAT
+707,Usda Cmdty Fd,100.0,FAT
+7220,Flaxseed Oil,100.0,FAT
+651,Animal Fat,99.5,FAT
+2721,Pork,99.5,FAT
+2,Butter Oil,99.48,FAT
+650,Meat Drippings (Lard,98.59,FAT
+7082,Whale,96.5,FAT
+3764,Beef,94.0,FAT
+7168,Sea Lion,94.0,FAT
+7031,Caribou,84.4,FAT
+1,Butter,81.11,FAT
+652,Margarine,80.71,FAT
+7248,Butter-Margarine Blend,80.7,FAT
+636,Margarine-Butter Blend,80.32,FAT
+3670,Pilinuts-Canarytree,79.55,FAT
+586,Salad Drsng,79.4,FAT
+7393,Mayonnaise Drsng,77.8,FAT
+3662,Macadamia Nuts,76.08,FAT
+3718,Pecans,75.23,FAT
+690,Margarine-Like Shortening,71.0,FAT
+4876,Lamb,70.61,FAT
+7251,Margarine-Like Sprd,70.0,FAT
+3688,Coconut Meat,69.08,FAT
+3671,Nuts,68.37,FAT
+767,Chicken,67.95,FAT
+4963,Veal,67.83,FAT
+3629,Brazilnuts,66.43,FAT
+3676,Walnuts,65.21,FAT
+3660,Hickorynuts,64.37,FAT
+3656,Hazelnuts Or Filberts,62.4,FAT
+3695,Sesame Sd Krnls,61.21,FAT
+7088,Willow,61.0,FAT
+3672,Pine Nuts,60.98,FAT
+3721,Almond Butter,59.1,FAT
+3630,Butternuts,56.98,FAT
+3617,Sunflower Sd Krnls,56.8,FAT
+3684,Sesame Butter,56.44,FAT
+3664,Mixed Nuts,56.33,FAT
+125,Egg,55.8,FAT
+3709,Almonds,55.17,FAT
+4679,Peanut Sprd,54.89,FAT
+4785,Peanut Butter W/ Omega-3,54.17,FAT
+7192,Vegetable Oil-Butter Sprd,53.0,FAT
+6527,Mcdonald'S,52.91,FAT
+4628,Peanuts,52.5,FAT
+5765,Baking Choc,52.31,FAT
+4683,Peanut Butter,51.47,FAT
+3628,Beechnuts,50.0,FAT
+3608,Sesame Seeds,49.67,FAT
+6011,Snacks,49.6,FAT
+4694,Usda Cmdty,49.54,FAT
+3634,Cashew Butter,49.41,FAT
+3613,Sesame Meal,48.0,FAT
+3711,Cashew Nuts,47.77,FAT
+3707,Sunflower Sd Butter,47.73,FAT
+668,Margarine Sprd,47.53,FAT
+3685,Watermelon Sd Krnls,47.37,FAT
+3719,Pistachio Nuts,45.97,FAT
+3604,Pumpkin&Squash Sd Krnls,45.85,FAT
+956,Turkey,44.45,FAT
+1725,Bacon & Bf Stks,44.2,FAT
+1599,Pepperoni,43.98,FAT
+1596,Pate,43.84,FAT
+5731,Popcorn,43.55,FAT
+7017,Agutuk,43.5,FAT
+7269,Candies,43.27,FAT
+3701,Seeds,42.16,FAT
+7049,Fish,42.0,FAT
+1180,Sauce,41.58,FAT
+220,Poppy Seed,41.56,FAT
+62,Dessert Topping,39.92,FAT
+859,Duck,39.34,FAT
+5380,Puff Pastry,38.5,FAT
+3606,Safflower Sd Krnls,38.45,FAT
+6014,Snack,38.41,FAT
+1564,Chorizo,38.27,FAT
+1722,Sausage  Smmr  Pork & Bf  Stks  W/ Cheddar Chs,37.91,FAT
+7211,Pork Sausage Rice Links,37.63,FAT
+1755,Beef Sausage,37.57,FAT
+6015,Potato Chips,37.47,FAT
+5711,Corn-Based,37.11,FAT
+3683,Sesame Flour,37.1,FAT
+6611,Kentucky Fried Chick,37.02,FAT
+51,Cream,37.0,FAT
+1730,Salami  Italian  Pork,37.0,FAT
+6021,Sesame Stks,36.7,FAT
+212,Nutmeg,36.31,FAT
+3678,Cottonseed Krnls,36.29,FAT
+1607,Pork&Bf Sausage,36.25,FAT
+5542,Pie Crust,36.2,FAT
+6967,Plantain Chips,35.94,FAT
+144,Cheese,35.59,FAT
+61,Cream Substitute,35.48,FAT
+1754,Pork Sausage,35.04,FAT
+6631,Popeyes,34.74,FAT
+3649,Coconut Crm,34.68,FAT
+187,Egg Mix,34.5,FAT
+1552,Blood Sausage,34.5,FAT
+6019,Potato Sticks,34.4,FAT
+7162,Pinon Nuts,34.08,FAT
+554,Sandwich Sprd,34.0,FAT
+5371,Cookies,34.0,FAT
+1613,Salami,33.72,FAT
+866,Goose,33.62,FAT
+6005,Banana Chips,33.6,FAT
+7258,Salad Dressing,33.4,FAT
+1657,Oscar Mayer,33.3,FAT
+7185,Mayonnaise,33.3,FAT
+5663,Mckee Baking,32.8,FAT
+209,Mace,32.38,FAT
+7235,Granola Bar,32.2,FAT
+1591,Luncheon Meat,32.16,FAT
+7175,Imitation Chs,32.0,FAT
+5752,Trail Mix,31.9,FAT
+6012,Pork Skins,31.8,FAT
+6216,Noodles,31.72,FAT
+1714,Bratwurst  Veal  Ckd,31.7,FAT
+3621,Acorns,31.41,FAT
+1581,Sausage,31.33,FAT
+5725,Granola Bars,31.1,FAT
+3599,Chia Seeds,30.75,FAT
+1758,Pork & Turkey Sausage,30.64,FAT
+1761,Bologna,30.61,FAT
+1717,Salami  Pork  Bf  Less Na,30.5,FAT
+1620,Thuringer,30.43,FAT
+4801,Tofu,30.34,FAT
+3622,Acorn Flour,30.17,FAT
+1670,Oscar Mayer  Wieners (Beef Franks  Bun Length),30.1,FAT
+5811,Chocolate-Flavored Hazelnut Sprd,29.73,FAT
+1567,Frankfurter  Bf,29.57,FAT
+4643,Bacon,29.52,FAT
+1749,Frankfurter  Bf  Htd,29.46,FAT
+6657,Jimmy Dean,29.4,FAT
+1741,Bologna  Pork  Turkey & Bf,29.25,FAT
+1558,Bratwurst,29.18,FAT
+7353,Coffee,29.1,FAT
+1561,Cheesefurter,29.0,FAT
+211,Mustard Seed,28.76,FAT
+1601,Polish Sausage,28.72,FAT
+7311,Cheese Sprd,28.6,FAT
+7371,Frankfurter,28.51,FAT
+1559,Braunschweiger (A Liver Sausage),28.5,FAT
+1586,Liver Sausage,28.5,FAT
+1746,Pate  Truffle Flavor,28.5,FAT
+1635,Oscar Mayer. Bologna (Wisconsin Made Ring),28.4,FAT
+1616,Smoked Link Sausage,28.23,FAT
+7180,Turkey Bacon,27.9,FAT
+1560,Brotwurst,27.8,FAT
+3627,Almond Paste,27.74,FAT
+1583,Knackwurst  Knockwurst  Pork  Bf,27.7,FAT
+1568,Frankfurter  Bf & Pork,27.64,FAT
+1724,Swisswurst  Pork & Bf  W/ Swiss Chs  Smoked,27.37,FAT
+1582,Kielbasa,27.29,FAT
+1703,Hormel Spam  Luncheon Meat  Pork W/ Ham  Minced  Cnd,27.24,FAT
+5668,Nabisco,27.1,FAT
+82,Milk,26.71,FAT
+5403,Crackers,26.7,FAT
+3040,Onion Rings,26.7,FAT
+1661,Oscar Mayer  Smokies (Beef),26.65,FAT
+4847,Morningstar Farms Veggie Bacon Strips,26.6,FAT
+4841,Worthington Stripples,26.6,FAT
+1720,Sausage  Polish  Pork & Bf  Smoked,26.56,FAT
+5640,Archway Home Style Cookies,26.46,FAT
+1745,Salami  Italian  Pork & Bf  Dry  Sliced  50% Less Na,26.4,FAT
+1726,Bratwurst  Bf & Pork  Smoked,26.34,FAT
+7296,Bacon Bits,25.9,FAT
+5406,Cream Puffs,25.9,FAT
+1553,Bockwurst  Pork  Veal  Raw,25.87,FAT
+1721,Sausage  Pork & Bf  W/ Cheddar Chs  Smoked,25.84,FAT
+1751,Frankfurter  Meat,25.76,FAT
+1706,Hormel Wrangler Beef Franks,25.69,FAT
+5705,Beef Jerky,25.6,FAT
+1585,Liver Cheese,25.6,FAT
+5727,Oriental Mix,25.58,FAT
+1715,Liverwurst Sprd,25.45,FAT
+6568,Burger King,25.45,FAT
+4648,Soybeans,25.4,FAT
+1592,Mortadella,25.39,FAT
+194,Celery Seed,25.27,FAT
+5418,Doughnuts,25.25,FAT
+5416,Danish Pastry,25.2,FAT
+45,Cheese Fd,25.18,FAT
+7409,Mackerel,25.1,FAT
+7122,Seal,25.08,FAT
+5675,Pillsbury,25.0,FAT
+6038,Taro Chips,24.9,FAT
+1008,Poultry,24.73,FAT
+1750,Frankfurter  Meat  Htd,24.31,FAT
+5753,Tortilla Chips,24.2,FAT
+1161,Soup,24.1,FAT
+7079,Walrus,24.1,FAT
+1787,Cereals Rte,24.06,FAT
+5897,Frostings,24.0,FAT
+3651,Coconut Milk,23.84,FAT
+880,Squab,23.8,FAT
+6073,Cocoa,23.71,FAT
+5296,Coffeecake,23.3,FAT
+6437,Wendy'S,23.17,FAT
+7199,Turkey&Pork Sausage,23.0,FAT
+1566,Dutch Brand Loaf,22.91,FAT
+5580,Taco Shells,22.6,FAT
+1734,Yachtwurst,22.6,FAT
+1549,Beerwurst,22.53,FAT
+1735,Beerwurst  Pork & Bf,22.53,FAT
+5323,Cheesecake Commly Prep,22.5,FAT
+1603,Mother'S Loaf,22.3,FAT
+201,Cumin Seed,22.27,FAT
+1610,Salami  Ckd  Bf,22.2,FAT
+5485,Pie,22.2,FAT
+6458,Taco Bell,22.17,FAT
+5992,Toppings,22.0,FAT
+170,Kraft Velveeta Past Process Chs Sprd,22.0,FAT
+4639,Peanut Flour,21.9,FAT
+4654,Soy Flr,21.86,FAT
+184,Cream Sub,21.47,FAT
+5408,Croissants,21.0,FAT
+167,Kraft Cheez Whiz Past Process Chs Sau,21.0,FAT
+1528,Adobo Fresco,20.9,FAT
+1628,Luncheon Sausage,20.9,FAT
+6162,Rice Bran,20.85,FAT
+6293,Breakfast Items,20.77,FAT
+1575,Ham,20.68,FAT
+4653,Soy Flour,20.65,FAT
+1682,Louis Rich  Turkey Bacon,20.3,FAT
+1708,Usda Commodity,20.26,FAT
+7370,Frozen Novelt,20.2,FAT
+4368,Sablefish,20.14,FAT
+198,Cloves,20.07,FAT
+1028,Chicken Patty,20.04,FAT
+5307,Cake,19.9,FAT
+1026,Chicken Nuggets,19.82,FAT
+66,Sour Crm,19.52,FAT
+5661,Keebler,19.5,FAT
+3720,Pumpkin&Squash Seeds,19.4,FAT
+1719,Sausage  Polish  Bf W/ Chick  Hot,19.4,FAT
+5443,Muffins,19.24,FAT
+5672,Pepperidge Farm Crusty Italian Bread,19.2,FAT
+3125,Potatoes,18.71,FAT
+1577,Ham&Chs Loaf Or Roll,18.7,FAT
+1578,Ham And Cheese Spread,18.53,FAT
+5728,Doo Dads Snack Mix,18.5,FAT
+5671,Pepperidge Farm Classic Style Croutons,18.5,FAT
+5592,Toaster Pastries,18.4,FAT
+5510,Sweet Rolls,18.3,FAT
+5412,Croutons,18.3,FAT
+1640,Oscar Mayer  Ham & Cheese Loaf,18.2,FAT
+1696,Butcher Boy Meats,18.17,FAT
+1723,Sausage  Turkey  Brkfst Links  Mild,18.09,FAT
+1002,Turkey Patties,18.0,FAT
+7280,Fish Sticks,18.0,FAT
+7284,Vegetarian Fillets,18.0,FAT
+5673,Pepperidge Farm Appl Turnovers,18.0,FAT
+4334,Herring,18.0,FAT
+4305,Caviar,17.9,FAT
+7142,Smelt,17.9,FAT
+4675,Falafel,17.8,FAT
+200,Coriander Seed,17.77,FAT
+6496,Sausage Griddle Cake Sandwich,17.76,FAT
+4485,Halibut,17.74,FAT
+5616,Kellogg'S Pop-Tarts Pastry Swirls,17.7,FAT
+1030,Chicken Breast Tenders,17.69,FAT
+4504,Shad,17.65,FAT
+4838,Worthington Prosage Roll,17.61,FAT
+7274,Breakfast Bars,17.6,FAT
+1563,Chicken Sprd,17.56,FAT
+1692,Louis Rich,17.5,FAT
+1615,Sandwich Spread,17.34,FAT
+218,Pepper,17.27,FAT
+6325,Entrees,17.25,FAT
+1551,Sausage  Berliner  Pork  Bf,17.2,FAT
+6482,"Little Caesars 14"" Chs Pizza",16.99,FAT
+7381,Ice Creams,16.98,FAT
+1007,Turkey Stks,16.9,FAT
+6469,"Domino'S 14"" Cheese Pizza",16.82,FAT
+3737,Bf,16.76,FAT
+196,Chili Powder,16.76,FAT
+5742,Pretzels,16.7,FAT
+1604,Picnic Loaf,16.64,FAT
+56,Sour Drsng,16.57,FAT
+1593,Olive Loaf,16.5,FAT
+5223,Biscuits,16.5,FAT
+4672,Winged Bns,16.32,FAT
+1716,Roast Bf Sprd,16.28,FAT
+4839,Worthington Smoked Turkey,16.12,FAT
+1740,Bologna  Pork & Turkey  Lite,16.06,FAT
+1557,Bologna  Turkey,16.05,FAT
+5860,Desserts,16.0,FAT
+1600,Pickle&Pimiento Loaf,15.95,FAT
+5198,Game Meat Bison,15.93,FAT
+189,Anise Seed,15.9,FAT
+3581,Peppers,15.85,FAT
+4220,Alcoholic Bev,15.7,FAT
+5426,Eclairs,15.7,FAT
+6491,Fast Fd,15.68,FAT
+6476,"Papa John'S 14"" Chs Pizza",15.66,FAT
+5712,Cornnuts,15.64,FAT
+6581,Fast Fds,15.63,FAT
+0,Desserts,119.66,SUGAR
+1,Whey,107.97,SUGAR
+2,Currants,89.68,SUGAR
+3,Cranberry sauce,87.95,SUGAR
+4,Orange juice,77.76,SUGAR
+5,Grapefruit juice,70.71,SUGAR
+6,Pears,69.9,SUGAR
+7,Syrups,67.42,SUGAR
+8,Candies,64.34,SUGAR
+9,Blueberries,61.5,SUGAR
+11,Apricots,51.26,SUGAR
+13,Pie Crust,47.88,SUGAR
+14,Plantains,47.28,SUGAR
+16,Fruit cocktail,44.42,SUGAR
+19,Applesauce,36.09,SUGAR
+20,Peaches,33.26,SUGAR
+21,Tamarind nectar,31.88,SUGAR
+22,Yogurt,31.69,SUGAR
+23,Pomegranate juice,31.5,SUGAR
+24,Nuts,31.24,SUGAR
+30,Figs,29.24,SUGAR
+32,Litchis,28.94,SUGAR
+33,Pie,28.85,SUGAR
+37,Cheese substitute,26.75,SUGAR
+38,Passion-fruit,26.43,SUGAR
+41,Cherries,25.44,SUGAR
+43,Cream puff,24.92,SUGAR
+44,Breadfruit,24.2,SUGAR
+46,Cereals ready-to-eat,24.16,SUGAR
+47,Milk,23.88,SUGAR
+49,Grapes,23.77,SUGAR
+51,Dessert topping,22.59,SUGAR
+52,Mangos,22.54,SUGAR
+54,Grapefruit,21.91,SUGAR
+56,Frostings,21.22,SUGAR
+57,Persimmons,21.05,SUGAR
+59,Cereals,20.9,SUGAR
+64,Tangerines,20.63,SUGAR
+65,Eggnog,20.45,SUGAR
+66,Papaya,20.36,SUGAR
+69,Chocolate-flavored hazelnut spread,20.0,SUGAR
+70,Mckee Baking,19.38,SUGAR
+71,Blackberry juice,19.25,SUGAR
+72,Muffin,19.21,SUGAR
+73,Tomato products,18.4,SUGAR
+74,Popcorn,18.34,SUGAR
+78,Puddings,17.8,SUGAR
+81,Apples,17.47,SUGAR
+82,Ice creams,17.26,SUGAR
+86,Kiwifruit,16.18,SUGAR
+87,Blackberries,16.11,SUGAR
+88,Rowal,16.07,SUGAR
+89,Beets,16.06,SUGAR
+90,Continental Mills,16.0,SUGAR
+95,Cookies,15.46,SUGAR
+97,Cake,15.26,SUGAR
+101,Toaster pastries,14.78,SUGAR
+104,Pillsbury,14.31,SUGAR
+106,Biscuits,13.98,SUGAR
+109,Bread,13.7,SUGAR
+115,POPEYES,13.0,SUGAR
+118,Peas and carrots,12.12,SUGAR
+122,Corn,11.74,SUGAR
+125,Papayas,11.34,SUGAR
+126,Loganberries,11.32,SUGAR
+127,Sweet potato,11.25,SUGAR
+129,Alcoholic beverage,11.21,SUGAR
+133,Keikitos (muffins),10.84,SUGAR
+134,Fish,10.79,SUGAR
+135,Archway Home Style Cookies,10.76,SUGAR
+140,Chocolate,10.41,SUGAR
+144,Snacks,10.32,SUGAR
+145,Cheese spread,10.25,SUGAR
+150,Squash,10.05,SUGAR
