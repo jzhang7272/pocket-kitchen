@@ -64,6 +64,7 @@
     return recommendedAmount;
 }
 
+// positive if nutrient missing
 + (NSDictionary*)nutrientDifference:(NSArray *)groceryItems :(NSMutableDictionary *)recommendedNutrients {
     dispatch_group_t group = dispatch_group_create();
     NSMutableDictionary *sumNutrients = [NSMutableDictionary new];

@@ -10,6 +10,9 @@
 		3B0100D75E3E2734BFEE131B /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */; };
 		E5B409BC2D72DD85F1022DD0 /* Pods_Pocket_Kitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */; };
 		ED380C0726ADB9B7006D9B0C /* Pods-Pocket Kitchen.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E0183D6556C75F6E2ED958FB /* Pods-Pocket Kitchen.debug.xcconfig */; };
+		ED380C1126AF1396006D9B0C /* RecommendedFoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED380C1026AF1396006D9B0C /* RecommendedFoodsCell.m */; };
+		ED380C1526AF1CC8006D9B0C /* CollectionRecommendedFoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED380C1426AF1CC8006D9B0C /* CollectionRecommendedFoodsCell.m */; };
+		ED380C1826AF317E006D9B0C /* NutrientSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ED380C1726AF317E006D9B0C /* NutrientSource.m */; };
 		ED6CB7BE26A869AB00A1906A /* AddGroceryItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */; };
 		ED6CB7C126A8ACAC00A1906A /* Nutrient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7C026A8ACAC00A1906A /* Nutrient.m */; };
 		ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */; };
@@ -62,6 +65,12 @@
 		B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Kitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0183D6556C75F6E2ED958FB /* Pods-Pocket Kitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Kitchen.debug.xcconfig"; path = "Target Support Files/Pods-Pocket Kitchen/Pods-Pocket Kitchen.debug.xcconfig"; sourceTree = "<group>"; };
+		ED380C0F26AF1396006D9B0C /* RecommendedFoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendedFoodsCell.h; sourceTree = "<group>"; };
+		ED380C1026AF1396006D9B0C /* RecommendedFoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendedFoodsCell.m; sourceTree = "<group>"; };
+		ED380C1326AF1CC8006D9B0C /* CollectionRecommendedFoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionRecommendedFoodsCell.h; sourceTree = "<group>"; };
+		ED380C1426AF1CC8006D9B0C /* CollectionRecommendedFoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionRecommendedFoodsCell.m; sourceTree = "<group>"; };
+		ED380C1626AF317E006D9B0C /* NutrientSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NutrientSource.h; path = Pods/NutrientSource.h; sourceTree = SOURCE_ROOT; };
+		ED380C1726AF317E006D9B0C /* NutrientSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NutrientSource.m; path = Pods/NutrientSource.m; sourceTree = SOURCE_ROOT; };
 		ED6CB7BC26A869AB00A1906A /* AddGroceryItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddGroceryItemViewController.h; path = Pods/AddGroceryItemViewController.h; sourceTree = SOURCE_ROOT; };
 		ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AddGroceryItemViewController.m; path = Pods/AddGroceryItemViewController.m; sourceTree = SOURCE_ROOT; };
 		ED6CB7BF26A8ACAC00A1906A /* Nutrient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient.h; sourceTree = "<group>"; };
@@ -75,8 +84,8 @@
 		ED81F81926A109F200F9E2CF /* CategoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryView.m; sourceTree = "<group>"; };
 		ED81F81B26A221CE00F9E2CF /* ShoppingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = SOURCE_ROOT; };
 		ED81F81C26A221CE00F9E2CF /* ShoppingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = SOURCE_ROOT; };
-		ED81F81E26A2225A00F9E2CF /* ShoppingItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShoppingItemCell.h; path = "View Controllers/ShoppingItemCell.h"; sourceTree = "<group>"; };
-		ED81F81F26A2225A00F9E2CF /* ShoppingItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShoppingItemCell.m; path = "View Controllers/ShoppingItemCell.m"; sourceTree = "<group>"; };
+		ED81F81E26A2225A00F9E2CF /* ShoppingItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingItemCell.h; sourceTree = "<group>"; };
+		ED81F81F26A2225A00F9E2CF /* ShoppingItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingItemCell.m; sourceTree = "<group>"; };
 		EDFF2247269CD86800862BD5 /* Pocket Kitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Kitchen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFF224A269CD86800862BD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDFF224B269CD86800862BD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -158,9 +167,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		ED380C1226AF1BA8006D9B0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED380C0F26AF1396006D9B0C /* RecommendedFoodsCell.h */,
+				ED380C1026AF1396006D9B0C /* RecommendedFoodsCell.m */,
+				ED380C1326AF1CC8006D9B0C /* CollectionRecommendedFoodsCell.h */,
+				ED380C1426AF1CC8006D9B0C /* CollectionRecommendedFoodsCell.m */,
+				ED81F81E26A2225A00F9E2CF /* ShoppingItemCell.h */,
+				ED81F81F26A2225A00F9E2CF /* ShoppingItemCell.m */,
+				EDFF2289269CE54E00862BD5 /* FoodItemCell.h */,
+				EDFF228A269CE54E00862BD5 /* FoodItemCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ED6CB7C526AB17F500A1906A /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				ED380C1626AF317E006D9B0C /* NutrientSource.h */,
+				ED380C1726AF317E006D9B0C /* NutrientSource.m */,
 				EDFF228F269DF77500862BD5 /* FoodItem.h */,
 				EDFF2290269DF77500862BD5 /* FoodItem.m */,
 				ED6CB7BF26A8ACAC00A1906A /* Nutrient.h */,
@@ -205,18 +231,15 @@
 			isa = PBXGroup;
 			children = (
 				ED6CB7C526AB17F500A1906A /* Objects */,
-				ED81F81E26A2225A00F9E2CF /* ShoppingItemCell.h */,
-				ED81F81F26A2225A00F9E2CF /* ShoppingItemCell.m */,
 				ED81F800269E3BDA00F9E2CF /* NutrientApiManager.h */,
 				ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */,
 				ED81F82126A222CA00F9E2CF /* XIB */,
-				EDFF2289269CE54E00862BD5 /* FoodItemCell.h */,
-				EDFF228A269CE54E00862BD5 /* FoodItemCell.m */,
 				EDFF224A269CD86800862BD5 /* AppDelegate.h */,
 				EDFF224B269CD86800862BD5 /* AppDelegate.m */,
 				EDFF224D269CD86800862BD5 /* SceneDelegate.h */,
 				EDFF224E269CD86800862BD5 /* SceneDelegate.m */,
 				EDFF2253269CD86800862BD5 /* Main.storyboard */,
+				ED380C1226AF1BA8006D9B0C /* Views */,
 				EDFF2282269CDA3300862BD5 /* View Controllers */,
 				EDFF2256269CD86900862BD5 /* Assets.xcassets */,
 				EDFF2258269CD86900862BD5 /* LaunchScreen.storyboard */,
@@ -504,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED380C1826AF317E006D9B0C /* NutrientSource.m in Sources */,
 				ED6CB7C126A8ACAC00A1906A /* Nutrient.m in Sources */,
 				EDFF228B269CE54E00862BD5 /* FoodItemCell.m in Sources */,
 				ED6CB7BE26A869AB00A1906A /* AddGroceryItemViewController.m in Sources */,
@@ -516,7 +540,9 @@
 				EDFF2285269CDD2200862BD5 /* ProfileViewController.m in Sources */,
 				ED81F82026A2225A00F9E2CF /* ShoppingItemCell.m in Sources */,
 				EDFF2288269CE3AB00862BD5 /* InventoryViewController.m in Sources */,
+				ED380C1126AF1396006D9B0C /* RecommendedFoodsCell.m in Sources */,
 				ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */,
+				ED380C1526AF1CC8006D9B0C /* CollectionRecommendedFoodsCell.m in Sources */,
 				EDFF224F269CD86800862BD5 /* SceneDelegate.m in Sources */,
 				ED81F81A26A109F200F9E2CF /* CategoryView.m in Sources */,
 				EDFF2291269DF77500862BD5 /* FoodItem.m in Sources */,

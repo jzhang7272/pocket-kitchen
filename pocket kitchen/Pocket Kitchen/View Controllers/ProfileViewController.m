@@ -10,15 +10,13 @@
 #import <Parse/Parse.h>
 
 @interface ProfileViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *testLabel;
-
 @end
 
 @implementation ProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.testLabel.text = @"\u03BC";
+//    self.testLabel.text = @"\u03BC";
 }
 
 - (IBAction)onTapLogOut:(id)sender {

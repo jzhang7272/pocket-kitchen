@@ -47,6 +47,10 @@ const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving i
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
+    
+    // all = [[[NSBundle mainBundle] loadNibNamed:@"Category" owner:self options:nil] objectAtIndex:0];
+    // CategoryView *categories = [[CategoryView alloc] init];
+    // [categories.categoryButton setTitle:[_categoriesArray objectAtIndex:i] forState:UIControlStateNormal];
 
 }
 

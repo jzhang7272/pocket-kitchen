@@ -71,7 +71,7 @@
                 }
             }
             if ([highNutrients count] != 0){
-                [[EGOCache globalCache] setObject:highNutrients forKey:foodItem withTimeoutInterval:60*60*24]; // 1 day
+                [[EGOCache globalCache] setObject:highNutrients forKey:[foodItem lowercaseString] withTimeoutInterval:60*60*24]; // 1 day
             }
         }
     }];
