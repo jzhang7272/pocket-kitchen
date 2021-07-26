@@ -245,7 +245,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodItemCell" rowHeight="125" id="KFV-6P-Ek7" customClass="FoodItemCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodItemCell" rowHeight="125" id="KFV-6P-Ek7" customClass="FoodItemCell">
                                         <rect key="frame" x="0.0" y="96.5" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KFV-6P-Ek7" id="ddg-6G-wPM">
@@ -471,11 +471,11 @@
             </objects>
             <point key="canvasLocation" x="138" y="1616"/>
         </scene>
-        <!--Item 1-->
+        <!--Inventory-->
         <scene sceneID="yCB-5G-9JK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bpw-gc-24k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="3vi-SG-7ni"/>
+                    <tabBarItem key="tabBarItem" title="Inventory" id="3vi-SG-7ni"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CJq-ZN-wr9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -490,11 +490,11 @@
             </objects>
             <point key="canvasLocation" x="-1246" y="1616"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="ZMC-b4-cW7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OuD-BZ-uav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3dE-y2-NzX"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="3dE-y2-NzX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6dP-b3-rqU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -660,11 +660,11 @@
             </objects>
             <point key="canvasLocation" x="-528.98550724637687" y="2364.5089285714284"/>
         </scene>
-        <!--Item-->
+        <!--Grocery List-->
         <scene sceneID="9jb-zg-ihB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j10-y9-KE9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Sm9-X6-UuR"/>
+                    <tabBarItem key="tabBarItem" title="Grocery List" id="Sm9-X6-UuR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gn7-fr-hoR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

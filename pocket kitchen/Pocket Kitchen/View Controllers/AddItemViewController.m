@@ -7,7 +7,6 @@
 
 #import "AddItemViewController.h"
 #import "FoodItem.h"
-#import "NutrientSource.h"
 #import "NutrientApiManager.h"
 
 #import "EGOCache.h"

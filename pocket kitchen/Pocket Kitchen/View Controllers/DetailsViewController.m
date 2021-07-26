@@ -38,12 +38,7 @@
     formatter.dateStyle = NSDateFormatterShortStyle;
     self.expDateLabel.text = [formatter stringFromDate:self.item.expirationDate];
     self.categoryLabel.text = self.item.category;
-    
-    // Start Activity Indicator
-    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
-    self.activityIndicator.center = self.view.center;
-    [self.view addSubview:self.activityIndicator];
-    [self.activityIndicator startAnimating];
+
     
     if (self.item.image != nil){
         NSURL *url = [NSURL URLWithString:self.item.image];
@@ -52,6 +47,12 @@
 
     
     if (self.item.nutrients == nil){
+        // Start Activity Indicator
+        self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
+        self.activityIndicator.center = self.view.center;
+        [self.view addSubview:self.activityIndicator];
+        [self.activityIndicator startAnimating];
+        
         [self fetchFoodDetails];
     }
     else{
