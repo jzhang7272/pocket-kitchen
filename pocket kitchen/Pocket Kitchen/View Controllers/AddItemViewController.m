@@ -57,7 +57,7 @@
 
 - (void)cacheUserFoods:(NSString *)foodItem {
     NutrientApiManager *nutrientApi = [NutrientApiManager new];
-    [nutrientApi fetchFoodID:foodItem :@"http://www.edamam.com/ontologies/edamam.owl#Measure_serving" :@"totalDaily" :^(NSDictionary *dictionary, BOOL unitGram, NSString *foodImage, NSError *error) {
+    [nutrientApi fetchInventoryNutrients:foodItem :@"totalDaily" :^(NSDictionary *dictionary, BOOL unitGram, NSString *foodImage, NSError *error) {
         
         if(error){
             NSLog(@"%@", error.localizedDescription);

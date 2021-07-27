@@ -29,12 +29,6 @@
     [nutrient.source addObject:source];
 }
 
-+ (void) checkNutrition{
-    // Get recently bought items/items in inventory
-    // For each new item, check for all nutrients if it is high/low in that nutrient
-    // If it is, add to array - items in array should disappear after 3 weeks
-}
-
 + (NSDictionary *)recommendedNutrientAmount:(int) days{
     NSMutableDictionary *recommendedAmount = [NSMutableDictionary new];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient :(900*days) :@"\u03BCg" :@"VITA_RAE" :@"Vitamin A"] forKey:@"VITA_RAE"];
@@ -60,11 +54,10 @@
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(2300*days) :@"mg" :@"NA" :@"Sodium"] forKey:@"NA"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(28*days) :@"g" :@"FIBTG" :@"Fiber"] forKey:@"FIBTG"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(50*days) :@"g" :@"PROCNT" :@"Protein"] forKey:@"PROCNT"];
-    [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(50*days) :@"g" :@"SUGAR" :@"Sugars"] forKey:@"SUGARS"];
+    [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(50*days) :@"g" :@"SUGAR" :@"Sugars"] forKey:@"SUGAR"];
     return recommendedAmount;
 }
 
-// positive if nutrient missing
 + (NSDictionary*)nutrientDifference:(NSArray *)groceryItems :(NSMutableDictionary *)recommendedNutrients {
     dispatch_group_t group = dispatch_group_create();
     NSMutableDictionary *sumNutrients = [NSMutableDictionary new];
@@ -73,16 +66,16 @@
     for (int i = 0; i < [groceryItems count]; i ++){
         dispatch_group_enter(group);
         FoodItem *groceryItem = [groceryItems objectAtIndex:i];
-    
         NutrientApiManager *nutrientApi = [NutrientApiManager new];
-        [nutrientApi fetchFoodID:groceryItem.name :@"http://www.edamam.com/ontologies/edamam.owl#Measure_serving" :@"totalNutrients" :^(NSDictionary *groceryNutrients, BOOL unitGram, NSString *foodImage, NSError *error) {
+        [nutrientApi fetchGroceryNutrients:groceryItem.name :^(NSDictionary *groceryNutrients, double nmbrServings, NSError *error) {
             if(error){
                 NSLog(@"%@", error.localizedDescription);
             }
             else{
                 for(id nutrient in recommendedNutrients){
                     NSDictionary *nutrientDetails = groceryNutrients[nutrient];
-                    double quantity = [nutrientDetails[@"quantity"] doubleValue];
+                    double quantity = [nutrientDetails[@"quantity"] doubleValue] * nmbrServings;
+
                     Nutrient *nutrientItem = [sumNutrients objectForKey:nutrient];
                     if (nutrientItem){
                         nutrientItem.quantity += quantity;

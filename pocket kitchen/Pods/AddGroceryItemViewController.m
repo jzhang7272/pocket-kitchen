@@ -9,7 +9,9 @@
 #import "InventoryViewController.h"
 
 #import "RecommendedFoodsCell.h"
+#import "BadNutrientCell.h"
 #import "LoadingCell.h"
+
 
 #import "NutrientApiManager.h"
 
@@ -23,6 +25,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *missingNutrients;
+@property (nonatomic, strong) NSMutableArray *tooMuchNutrient;
 @property (nonatomic, strong) NSMutableArray *recommendedFoods;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic) BOOL loaded;
@@ -40,7 +43,6 @@
     
     self.loaded = false;
     
-    
     // Start Activity Indicator
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
     self.activityIndicator.center = self.view.center;
@@ -57,17 +59,25 @@
 }
 
 - (void) analysis{
-    // don't want to be over limit for cholesterol, sugars, satfat, total fat, salt, carbohydrates
-    // include serving size/quantity
     self.missingNutrients = [NSMutableArray new];
+    self.tooMuchNutrient = [NSMutableArray new];
     NSDictionary *recommendedNutrients = [Nutrient recommendedNutrientAmount:1];
     NSDictionary *diffNutrients = [Nutrient nutrientDifference:self.groceryItemArray :recommendedNutrients];
-
+    NSArray *badNutrients = @[@"SUGAR", @"NA", @"CHOLE", @"FASAT", @"FAT"];
+    
     for(id nutrient in diffNutrients){
-        if ([[diffNutrients valueForKey:nutrient] doubleValue] > 0){
-            [self.missingNutrients addObject:nutrient];
+        if ([badNutrients containsObject:nutrient]){
+            if ([[diffNutrients valueForKey:nutrient] doubleValue] < 0){
+                [self.tooMuchNutrient addObject:nutrient];
+            }
+        }
+        else{
+            if ([[diffNutrients valueForKey:nutrient] doubleValue] > 0){
+                [self.missingNutrients addObject:nutrient];
+            }
         }
     }
+
 }
 
 - (void) getRecommendedFoods{
@@ -129,14 +139,20 @@
         self.loaded = true;
         [self.tableView reloadData];
         [self.activityIndicator stopAnimating];
-        NSLog(@"RECOMMENDED \n %@", self.recommendedFoods);
     });
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.loaded == true){
         RecommendedFoodsCell *recCell = cell;
-        [recCell setCollectionViewDataSourceDelegate:recCell forRow:indexPath.row];
+        if (self.tooMuchNutrient.count > 0){
+            if (indexPath.row != 0){
+                [recCell setCollectionViewDataSourceDelegate:recCell forRow:indexPath.row];
+            }
+        }
+        else{
+            [recCell setCollectionViewDataSourceDelegate:recCell forRow:indexPath.row];
+        }
     }
 }
 
@@ -146,19 +162,27 @@
         return cell;
     }
     else{
-        RecommendedFoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendedFoodsCell"];
-        
-        cell.nutrient = self.missingNutrients[indexPath.row];
-        cell.nutrientLabel.text = cell.nutrient;
-        cell.recommendedFoods = self.recommendedFoods[indexPath.row];
+        if (indexPath.row == 0 && self.tooMuchNutrient.count != 0){
+            BadNutrientCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BadNutrientcell"];
+            
+            NSString *nutrients = [[self.tooMuchNutrient valueForKey:@"description"] componentsJoinedByString:@", "];
+            cell.nutrientLabel.text = [NSString stringWithFormat:@"You're going over the recommended values for the following nutrients: %@", nutrients];
+            return cell;
+        }
+        else{
+            RecommendedFoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendedFoodsCell"];
+            cell.nutrient = self.missingNutrients[indexPath.row - 1];
+            cell.nutrientLabel.text = cell.nutrient;
+            cell.recommendedFoods = self.recommendedFoods[indexPath.row - 1];
 
-        return cell;
+            return cell;
+        }
     }
     
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.missingNutrients.count;
+    return (self.missingNutrients.count + 1);
 }
 
 
@@ -174,4 +198,4 @@
 
 @end
 
-// @implementation AddGroceryItemViewController : UIViewCollection
+

@@ -80,7 +80,7 @@
 
 - (void) fetchFoodDetails{
     NutrientApiManager *nutrientApi = [NutrientApiManager new];
-    [nutrientApi fetchFoodID:self.item.name :@"http://www.edamam.com/ontologies/edamam.owl#Measure_unit" :@"totalNutrients":^(NSDictionary *dictionary, BOOL unitCup, NSString *foodImage, NSError *error) {
+    [nutrientApi fetchInventoryNutrients:self.item.name :@"totalNutrients":^(NSDictionary *dictionary, BOOL unitCup, NSString *foodImage, NSError *error) {
         if(error){
             NSLog(@"%@", error.localizedDescription);
         }

@@ -274,8 +274,33 @@
                                             <outlet property="nutrientLabel" destination="jSZ-ba-FKS" id="5YD-h3-AgZ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BadNutrientcell" rowHeight="80" id="gKz-GE-ryU" customClass="BadNutrientCell">
+                                        <rect key="frame" x="0.0" y="223.5" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gKz-GE-ryU" id="sdZ-NC-ZuC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-vm-St0">
+                                                    <rect key="frame" x="35" y="16" width="41.5" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="6Bb-vm-St0" secondAttribute="trailing" constant="10" id="2YS-dG-u8U"/>
+                                                <constraint firstItem="6Bb-vm-St0" firstAttribute="leading" secondItem="sdZ-NC-ZuC" secondAttribute="leadingMargin" constant="15" id="3Jc-dw-Nw7"/>
+                                                <constraint firstItem="6Bb-vm-St0" firstAttribute="top" secondItem="sdZ-NC-ZuC" secondAttribute="topMargin" constant="5" id="BsT-tW-zvj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6Bb-vm-St0" secondAttribute="bottom" constant="5" id="Jft-Kg-S8D"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nutrientLabel" destination="6Bb-vm-St0" id="exo-8V-vAE"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" rowHeight="84" id="Luj-eP-ds4" customClass="LoadingCell">
-                                        <rect key="frame" x="0.0" y="223.5" width="414" height="84"/>
+                                        <rect key="frame" x="0.0" y="303.5" width="414" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Luj-eP-ds4" id="AFd-MP-cTz">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
