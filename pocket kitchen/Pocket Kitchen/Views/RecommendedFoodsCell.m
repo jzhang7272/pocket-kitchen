@@ -8,7 +8,7 @@
 #import "RecommendedFoodsCell.h"
 #import "CollectionRecommendedFoodsCell.h"
 
-@interface RecommendedFoodsCell () <UIPageViewControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface RecommendedFoodsCell () < UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -18,31 +18,26 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
     
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    
-//    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
 //    layout.minimumLineSpacing = 5;
-//    layout.minimumInteritemSpacing = 5;
-//    CGFloat itemWidth = 100;
-//    CGFloat itemHeight = itemWidth;
-//    layout.itemSize = CGSizeMake(itemWidth, itemHeight);
-}
+    layout.minimumInteritemSpacing = 30;
+    layout.estimatedItemSize = CGSizeMake(1.f, 1.f);
 
+}
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     CollectionRecommendedFoodsCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"ColelctionRecommendedFoodsCell" forIndexPath:indexPath];
+    cell.foodLabel.text = self.recommendedFoods[indexPath.row];
     return cell;
 }
 
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 5;
+    return 10;
 }
 
-- (void)setCollectionViewDataSourceDelegate:(id<UICollectionViewDataSource, UICollectionViewDelegate>)dataSourceDelegate indexPath:(int)row {
+- (void)setCollectionViewDataSourceDelegate:(id<UICollectionViewDataSource, UICollectionViewDelegate>)dataSourceDelegate forRow:(int)row {
     self.collectionView.dataSource = dataSourceDelegate;
     self.collectionView.delegate = dataSourceDelegate;
     self.collectionView.tag = row;
@@ -53,7 +48,6 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     
-    // Configure the view for the selected state
 }
 
 
