@@ -48,9 +48,9 @@
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(420*days) :@"mg" :@"MG" :@"Magnesium"] forKey:@"MG"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(4700*days) :@"mg" :@"K" :@"Potassium"] forKey:@"K"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(78*days) :@"g" :@"FAT" :@"Fat"] forKey:@"FAT"];
-    [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(20*days) :@"g" :@"FASAT" :@"Saturated"] forKey:@"FASAT"];
+    [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(20*days) :@"g" :@"FASAT" :@"Saturated Fat"] forKey:@"FASAT"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(300*days) :@"mg" :@"CHOLE" :@"Cholesterol"] forKey:@"CHOLE"];
-    [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(275*days) :@"g" :@"CHOCDF" :@"Carbs"] forKey:@"CHOCDF"];
+    [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(275*days) :@"g" :@"CHOCDF" :@"Carbohydrates"] forKey:@"CHOCDF"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(2300*days) :@"mg" :@"NA" :@"Sodium"] forKey:@"NA"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(28*days) :@"g" :@"FIBTG" :@"Fiber"] forKey:@"FIBTG"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(50*days) :@"g" :@"PROCNT" :@"Protein"] forKey:@"PROCNT"];
