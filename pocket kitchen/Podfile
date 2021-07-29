@@ -11,6 +11,7 @@ target 'Pocket Kitchen' do
   pod 'DateTools'
   pod 'EGOCache', '~> 2.2.0'
   pod 'SFProgressCircle'
+  pod 'CCDropDownMenus'
 
   target 'Pocket KitchenTests' do
     inherit! :search_paths

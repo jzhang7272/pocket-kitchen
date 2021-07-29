@@ -24,7 +24,7 @@
     return @"FoodItem";
 }
 
-+ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSString *)quantityUnit:(NSDate *)expDate :(NSString *)category :(BOOL) branded{
++ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSString *)quantityUnit:(NSDate *)expDate :(NSString *)category :(NSString *)image{
     FoodItem *newItem = [FoodItem new];
     newItem.author = PFUser.currentUser;
     newItem.name = item;
@@ -32,7 +32,8 @@
     newItem.quantity = quantity;
     newItem.quantityUnit = quantityUnit;
     newItem.category = category;
-    newItem.branded = branded;
+    newItem.image = image;
+    // newItem.branded = branded;
     newItem.grocery = false;
     
     [newItem saveInBackgroundWithBlock: nil];

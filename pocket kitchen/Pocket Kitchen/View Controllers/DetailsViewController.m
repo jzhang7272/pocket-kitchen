@@ -94,6 +94,7 @@
                 self.nutritionLabel.text = self.item.nutrients;
                 NSURL *url = [NSURL URLWithString:foodImage];
                 [self.foodView setImageWithURL:url];
+                [self.item saveInBackgroundWithBlock:nil];
             });
         }
     }];

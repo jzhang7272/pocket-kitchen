@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *quantityUnitField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *expirationDate;
 @property (weak, nonatomic) IBOutlet UIPickerView *categoryPicker;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *typeControl;
 
 @property (nonatomic, strong) NSArray *pickerData;
 
@@ -36,17 +35,15 @@
 }
 
 - (IBAction)onTapSave:(id)sender {
-    NSString *item = self.itemField.text;
+    NSString *item = [self.itemField.text capitalizedString];
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     formatter.numberStyle = NSNumberFormatterDecimalStyle;
     NSNumber *quantity = [formatter numberFromString:self.quantityField.text];
     NSDate *expDate = self.expirationDate.date;
     NSString *quantityUnit = self.quantityUnitField.text;
     NSString *category = [self pickerView:self.categoryPicker titleForRow:[self.categoryPicker selectedRowInComponent:0] forComponent:0];
-    BOOL branded = (self.typeControl.selectedSegmentIndex == 1) ? true : false;
-    
-    [self cacheUserFoods:item];
-    [FoodItem saveItem:item :quantity :quantityUnit :expDate :category :branded];
+
+    [self cacheUserFoods:item :quantity :quantityUnit :expDate :category];
     
     [self dismissViewControllerAnimated:true completion:nil];
 }
@@ -55,7 +52,7 @@
     [self.view endEditing:true];
 }
 
-- (void)cacheUserFoods:(NSString *)foodItem {
+- (void)cacheUserFoods:(NSString *)foodItem :(NSNumber *)quantity :(NSString *)quantityUnit:(NSDate *)expDate :(NSString *)category {
     NutrientApiManager *nutrientApi = [NutrientApiManager new];
     [nutrientApi fetchInventoryNutrients:foodItem :@"totalDaily" :^(NSDictionary *dictionary, BOOL unitGram, NSString *foodImage, NSError *error) {
         
@@ -71,8 +68,9 @@
                 }
             }
             if ([highNutrients count] != 0){
-                [[EGOCache globalCache] setObject:highNutrients forKey:[foodItem lowercaseString] withTimeoutInterval:60*60*24]; // 1 day
+                [[EGOCache globalCache] setObject:highNutrients forKey:[foodItem lowercaseString] withTimeoutInterval:60*60*24*7];
             }
+            [FoodItem saveItem:foodItem :quantity :quantityUnit :expDate :category :foodImage];
         }
     }];
 }

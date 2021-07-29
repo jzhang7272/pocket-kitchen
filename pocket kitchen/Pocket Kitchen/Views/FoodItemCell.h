@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *expDateLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *foodView;
+@property (weak, nonatomic) IBOutlet UIButton *alertIcon;
+
 
 @end
 

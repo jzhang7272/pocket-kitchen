@@ -395,62 +395,92 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3NX-O3-oW6">
-                                <rect key="frame" x="0.0" y="132" width="414" height="764"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="Rtf-XM-ghl">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="tsZ-Lu-0K4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderFilterCell" rowHeight="82" id="zje-13-2ng" customClass="HeaderFilterCell">
+                                        <rect key="frame" x="0.0" y="90.5" width="414" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zje-13-2ng" id="0SS-qa-j89">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodItemCell" rowHeight="131" id="KFV-6P-Ek7" customClass="FoodItemCell">
-                                        <rect key="frame" x="0.0" y="96.5" width="414" height="131"/>
+                                        <rect key="frame" x="0.0" y="172.5" width="414" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KFV-6P-Ek7" id="ddg-6G-wPM">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PP0-0x-49s">
-                                                    <rect key="frame" x="30" y="21" width="39" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PP0-0x-49s">
+                                                    <rect key="frame" x="120" y="21" width="41" height="26"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgK-QS-ASL">
-                                                    <rect key="frame" x="30" y="51.5" width="70" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="120" y="80" width="64" height="23"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
                                                     <color key="textColor" systemColor="systemGray2Color"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUS-Td-KKr">
-                                                    <rect key="frame" x="174.5" y="21" width="65" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpz-tr-CcU">
-                                                    <rect key="frame" x="298" y="21" width="76" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="120" y="52" width="73" height="23"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AJZ-x1-EIp">
+                                                    <rect key="frame" x="20" y="21" width="90" height="93"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="0v0-x4-DM7"/>
+                                                        <constraint firstAttribute="width" constant="90" id="OSK-mK-NV6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUS-Td-KKr">
+                                                    <rect key="frame" x="348" y="48.5" width="26" height="34"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoE-zk-1Bh">
+                                                    <rect key="frame" x="166" y="21" width="20" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="5Ky-OM-6aX"/>
+                                                        <constraint firstAttribute="height" constant="22" id="lA2-C7-c9V"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="Button" image="exclamationmark.circle" catalog="system"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="EgK-QS-ASL" firstAttribute="top" secondItem="PP0-0x-49s" secondAttribute="bottom" constant="10" id="3OE-Yh-MjK"/>
-                                                <constraint firstItem="Vpz-tr-CcU" firstAttribute="top" secondItem="PP0-0x-49s" secondAttribute="top" id="6YN-rQ-22C"/>
-                                                <constraint firstItem="PP0-0x-49s" firstAttribute="top" secondItem="ddg-6G-wPM" secondAttribute="topMargin" constant="10" id="9H7-Fb-q1s"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Vpz-tr-CcU" secondAttribute="trailing" constant="20" id="Agb-Ki-PF1"/>
-                                                <constraint firstItem="LUS-Td-KKr" firstAttribute="top" secondItem="PP0-0x-49s" secondAttribute="top" id="B6e-Do-9b2"/>
-                                                <constraint firstItem="LUS-Td-KKr" firstAttribute="centerX" secondItem="ddg-6G-wPM" secondAttribute="centerX" id="FuX-Nf-rMz"/>
-                                                <constraint firstItem="EgK-QS-ASL" firstAttribute="leading" secondItem="ddg-6G-wPM" secondAttribute="leadingMargin" constant="10" id="bIj-Zx-jvj"/>
-                                                <constraint firstItem="PP0-0x-49s" firstAttribute="leading" secondItem="ddg-6G-wPM" secondAttribute="leadingMargin" constant="10" id="h5g-BE-VR5"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="EgK-QS-ASL" secondAttribute="bottom" constant="20" id="sBd-Dp-xfk"/>
+                                                <constraint firstItem="EgK-QS-ASL" firstAttribute="leading" secondItem="AJZ-x1-EIp" secondAttribute="trailing" constant="10" id="0tg-UH-kR4"/>
+                                                <constraint firstItem="AJZ-x1-EIp" firstAttribute="top" secondItem="ddg-6G-wPM" secondAttribute="topMargin" constant="10" id="15q-Lq-hav"/>
+                                                <constraint firstItem="LUS-Td-KKr" firstAttribute="centerY" secondItem="ddg-6G-wPM" secondAttribute="centerY" id="5oq-OS-972"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="AJZ-x1-EIp" secondAttribute="bottom" constant="6" id="IyH-O7-VcO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LUS-Td-KKr" secondAttribute="trailing" constant="20" id="MJ1-yj-kHb"/>
+                                                <constraint firstItem="CoE-zk-1Bh" firstAttribute="leading" secondItem="PP0-0x-49s" secondAttribute="trailing" constant="5" id="SfE-E8-ppM"/>
+                                                <constraint firstItem="Vpz-tr-CcU" firstAttribute="leading" secondItem="AJZ-x1-EIp" secondAttribute="trailing" constant="10" id="Sue-MN-Ney"/>
+                                                <constraint firstItem="CoE-zk-1Bh" firstAttribute="top" secondItem="PP0-0x-49s" secondAttribute="top" id="Uk8-Bj-6DK"/>
+                                                <constraint firstItem="EgK-QS-ASL" firstAttribute="top" secondItem="Vpz-tr-CcU" secondAttribute="bottom" constant="5" id="ccQ-mq-PZM"/>
+                                                <constraint firstItem="PP0-0x-49s" firstAttribute="top" secondItem="ddg-6G-wPM" secondAttribute="topMargin" constant="10" id="g9u-UL-xqs"/>
+                                                <constraint firstItem="Vpz-tr-CcU" firstAttribute="top" secondItem="PP0-0x-49s" secondAttribute="bottom" constant="5" id="lVu-Kq-k3o"/>
+                                                <constraint firstItem="AJZ-x1-EIp" firstAttribute="leading" secondItem="ddg-6G-wPM" secondAttribute="leadingMargin" id="uCm-cZ-zhZ"/>
+                                                <constraint firstItem="PP0-0x-49s" firstAttribute="leading" secondItem="AJZ-x1-EIp" secondAttribute="trailing" constant="10" id="x5F-qE-qjY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="alertIcon" destination="CoE-zk-1Bh" id="jwl-Vx-g0p"/>
                                             <outlet property="categoryLabel" destination="EgK-QS-ASL" id="h0s-zj-vWO"/>
                                             <outlet property="expDateLabel" destination="Vpz-tr-CcU" id="um7-hY-eNg"/>
+                                            <outlet property="foodView" destination="AJZ-x1-EIp" id="nGC-Ot-ZHP"/>
                                             <outlet property="itemLabel" destination="PP0-0x-49s" id="7Xc-4K-DLA"/>
                                             <outlet property="quantityLabel" destination="LUS-Td-KKr" id="Iwo-le-est"/>
                                             <segue destination="nah-Fb-A7z" kind="show" identifier="detailsSegue" id="GMs-pU-Ph1"/>
@@ -458,11 +488,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Xf-Af-DgL">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yjt-56-J3d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -477,6 +502,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="headerView" destination="tsZ-Lu-0K4" id="b0l-ff-rh6"/>
                         <outlet property="tableView" destination="3NX-O3-oW6" id="Z4o-ck-vhu"/>
                     </connections>
                 </viewController>
@@ -543,14 +569,6 @@
                                 <rect key="frame" x="190" y="383" width="204" height="91"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-be-SLx">
-                                <rect key="frame" x="234" y="238" width="143" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Generic"/>
-                                    <segment title="Branded"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-lN-6oC">
                                 <rect key="frame" x="280" y="288" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -578,7 +596,6 @@
                         <outlet property="itemField" destination="AFf-c0-fEg" id="je5-Ba-ZpK"/>
                         <outlet property="quantityField" destination="Jjp-ls-ruI" id="KBX-vA-jzH"/>
                         <outlet property="quantityUnitField" destination="mjR-lN-6oC" id="J7G-tG-yWJ"/>
-                        <outlet property="typeControl" destination="3bH-be-SLx" id="jHr-4k-Qdk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7p-DS-NEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -23,7 +23,6 @@
 }
 
 - (void)fetchInventoryNutrients:(NSString *)item :(NSString *)nutrientType :(void(^)(NSDictionary *, BOOL, NSString *, NSError *))completion{
-    
     NSString *baseParseURL = @"https://api.edamam.com/api/food-database/v2/parser";
     NSURLComponents *components = [NSURLComponents componentsWithString:baseParseURL];
     NSURLQueryItem *appID = [NSURLQueryItem queryItemWithName:@"app_id" value:@"03df0f4f"];
@@ -49,7 +48,7 @@
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             foodID.string = dataDictionary[@"hints"][0][@"food"][@"foodId"];
             NSString *foodImage = dataDictionary[@"hints"][0][@"food"][@"image"];
-            NSString *alternateUnitURL = dataDictionary[@"hints"][0][@"measures"][0];
+            NSString *alternateUnitURL = dataDictionary[@"hints"][0][@"measures"][0][@"uri"];
             
             [self fetchNutrientHelper :foodID :self.servingURL :alternateUnitURL :@"totalNutrients" :^(NSDictionary *dictionary, BOOL cup, double nil1, NSError *error){
                 if(error){
