@@ -242,16 +242,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSZ-ba-FKS">
-                                                    <rect key="frame" x="20" y="18" width="45" height="25.5"/>
-                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xx1-Bw-Udt">
-                                                    <rect key="frame" x="20" y="51" width="334" height="41"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xx1-Bw-Udt">
+                                                    <rect key="frame" x="20" y="84" width="334" height="50"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="51k-gu-jwk"/>
+                                                    </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uEh-jq-zO1">
                                                         <size key="itemSize" width="109" height="30"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -260,7 +256,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColelctionRecommendedFoodsCell" id="8y3-tF-92a" customClass="CollectionRecommendedFoodsCell">
-                                                            <rect key="frame" x="0.0" y="5.5" width="109" height="30"/>
+                                                            <rect key="frame" x="0.0" y="10" width="109" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MSB-3U-3AH">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="30"/>
@@ -287,16 +283,40 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eV-jF-CkI">
+                                                    <rect key="frame" x="20" y="20" width="20" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="8iR-Oh-J1D"/>
+                                                        <constraint firstAttribute="width" constant="20" id="QXv-pm-Ml1"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="systemGreenColor"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="plus.circle" catalog="system"/>
+                                                    <state key="selected" image="checkmark.circle" catalog="system"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSZ-ba-FKS">
+                                                    <rect key="frame" x="50" y="20" width="44" height="54"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="jSZ-ba-FKS" secondAttribute="trailing" constant="20" id="5Qu-Er-cBX"/>
-                                                <constraint firstItem="jSZ-ba-FKS" firstAttribute="leading" secondItem="9gm-GJ-S2K" secondAttribute="leadingMargin" id="I6U-vp-X0B"/>
-                                                <constraint firstItem="jSZ-ba-FKS" firstAttribute="top" secondItem="9gm-GJ-S2K" secondAttribute="topMargin" constant="7" id="VhE-0G-uBn"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="jSZ-ba-FKS" secondAttribute="bottom" constant="60" id="nMw-J3-aqf"/>
+                                                <constraint firstItem="8eV-jF-CkI" firstAttribute="top" secondItem="9gm-GJ-S2K" secondAttribute="top" constant="20" id="0ki-ve-gMh"/>
+                                                <constraint firstItem="jSZ-ba-FKS" firstAttribute="top" secondItem="9gm-GJ-S2K" secondAttribute="top" constant="20" id="7Vk-6r-Hdn"/>
+                                                <constraint firstItem="jSZ-ba-FKS" firstAttribute="leading" secondItem="8eV-jF-CkI" secondAttribute="trailing" constant="10" id="ELX-Ix-mrg"/>
+                                                <constraint firstItem="8eV-jF-CkI" firstAttribute="leading" secondItem="9gm-GJ-S2K" secondAttribute="leading" constant="20" id="JGg-VQ-dka"/>
+                                                <constraint firstItem="Xx1-Bw-Udt" firstAttribute="leading" secondItem="9gm-GJ-S2K" secondAttribute="leading" constant="20" id="JVY-ck-Fdx"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jSZ-ba-FKS" secondAttribute="trailing" constant="20" id="OXC-cB-hMM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Xx1-Bw-Udt" secondAttribute="bottom" constant="10" id="Ttx-Nm-EVn"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="jSZ-ba-FKS" secondAttribute="bottom" constant="20" id="YuB-Tt-Rat"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xx1-Bw-Udt" secondAttribute="trailing" constant="20" id="dKU-yN-bc9"/>
+                                                <constraint firstItem="Xx1-Bw-Udt" firstAttribute="top" secondItem="jSZ-ba-FKS" secondAttribute="bottom" constant="10" id="pPD-rj-CqX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="collectionView" destination="Xx1-Bw-Udt" id="s7N-xA-l7a"/>
+                                            <outlet property="collectionView" destination="Xx1-Bw-Udt" id="ddh-sw-hu0"/>
+                                            <outlet property="iconButton" destination="8eV-jF-CkI" id="uya-ZE-pik"/>
                                             <outlet property="nutrientLabel" destination="jSZ-ba-FKS" id="5YD-h3-AgZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -307,18 +327,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajU-K5-fMw">
+                                                    <rect key="frame" x="20" y="20" width="20" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="9eL-HG-JA0"/>
+                                                        <constraint firstAttribute="height" constant="25" id="hYf-TD-cGZ"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="systemPinkColor"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="exclamationmark.circle" catalog="system"/>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-vm-St0">
-                                                    <rect key="frame" x="35" y="16" width="44" height="48"/>
+                                                    <rect key="frame" x="50" y="20" width="44" height="25.5"/>
                                                     <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="6Bb-vm-St0" secondAttribute="trailing" constant="10" id="2YS-dG-u8U"/>
-                                                <constraint firstItem="6Bb-vm-St0" firstAttribute="leading" secondItem="sdZ-NC-ZuC" secondAttribute="leadingMargin" constant="15" id="3Jc-dw-Nw7"/>
-                                                <constraint firstItem="6Bb-vm-St0" firstAttribute="top" secondItem="sdZ-NC-ZuC" secondAttribute="topMargin" constant="5" id="BsT-tW-zvj"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="6Bb-vm-St0" secondAttribute="bottom" constant="5" id="Jft-Kg-S8D"/>
+                                                <constraint firstItem="ajU-K5-fMw" firstAttribute="top" secondItem="sdZ-NC-ZuC" secondAttribute="top" constant="20" id="EYv-pa-RLf"/>
+                                                <constraint firstItem="ajU-K5-fMw" firstAttribute="leading" secondItem="sdZ-NC-ZuC" secondAttribute="leading" constant="20" id="c2g-b4-23n"/>
+                                                <constraint firstItem="6Bb-vm-St0" firstAttribute="leading" secondItem="ajU-K5-fMw" secondAttribute="trailing" constant="10" id="hS3-SV-q3d"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="6Bb-vm-St0" secondAttribute="trailing" constant="10" id="hl5-Me-ncW"/>
+                                                <constraint firstItem="6Bb-vm-St0" firstAttribute="top" secondItem="sdZ-NC-ZuC" secondAttribute="top" constant="20" id="iHV-iR-0ZY"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="6Bb-vm-St0" secondAttribute="bottom" constant="10" id="znO-rY-WF9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -827,14 +859,23 @@
     </scenes>
     <resources>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

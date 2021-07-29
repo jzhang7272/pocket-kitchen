@@ -12,8 +12,6 @@
 
 @interface RecommendedFoodsCell () < UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
 @end
 
 @implementation RecommendedFoodsCell
@@ -22,10 +20,8 @@
     [super awakeFromNib];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
-//    layout.minimumLineSpacing = 5;
     layout.minimumInteritemSpacing = 30;
     layout.estimatedItemSize = CGSizeMake(1.f, 1.f);
-
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {

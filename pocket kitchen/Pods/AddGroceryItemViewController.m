@@ -60,12 +60,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     UIView *backgroundView = [UIView new];
     backgroundView.backgroundColor = grayColor;
     [self.tableView setBackgroundView:backgroundView];
+    
+    self.tableView.tableFooterView = [UIView new];
     
 }
 
@@ -106,7 +109,6 @@
     self.recommendedNutrients = [Nutrient recommendedNutrientAmount:1];
     NSDictionary *diffNutrients = [Nutrient nutrientDifference:self.groceryItemArray :self.recommendedNutrients];
     NSArray *badNutrients = @[@"SUGAR", @"NA", @"CHOLE", @"FASAT", @"FAT"];
-    
     for(id nutrient in diffNutrients){
         if ([badNutrients containsObject:nutrient]){
             if ([[diffNutrients valueForKey:nutrient] doubleValue] < 0){
@@ -214,7 +216,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (self.loaded == true && indexPath.section != 0){
+    if (self.loaded == true && indexPath.section != 0 && self.missingNutrients.count != 0){
         RecommendedFoodsCell *recCell = cell;
         if (self.tooMuchNutrient.count > 0){
             if (indexPath.section != 1){
@@ -228,7 +230,7 @@
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    if (self.recommendedFoods.count == 0){
+    if (self.loaded == false){
         LoadingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LoadingCell"];
         return cell;
     }
@@ -280,9 +282,9 @@
             
             return cell;
         }
-        if (indexPath.section == 1 && self.tooMuchNutrient.count != 0){
+        else if (indexPath.section == 1 && self.tooMuchNutrient.count != 0){
             BadNutrientCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BadNutrientcell"];
-            
+
             NSMutableArray *nutrientNames = [NSMutableArray new];
             for (NSString *nutrient in self.tooMuchNutrient){
                 Nutrient *currNutrient = [self.recommendedNutrients valueForKey:nutrient];
@@ -297,15 +299,23 @@
         }
         else{
             RecommendedFoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendedFoodsCell"];
-            int index = (int)(indexPath.section - 1);
-            cell.nutrient = self.missingNutrients[index];
-            Nutrient *currNutrient = [self.recommendedNutrients valueForKey:cell.nutrient];
-            cell.nutrientLabel.text = currNutrient.name;
-            cell.recommendedFoods = self.recommendedFoods[index];
+            
+            if (self.missingNutrients.count == 0){
+                [cell.nutrientLabel setFont:[UIFont fontWithName:@"Kohinoor Bangla" size:18]];
+                cell.nutrientLabel.text = @"Recommended values for healthy nutrients reached!";
+                [cell.iconButton setSelected:true];
+            }
+            else{
+                int index = (self.tooMuchNutrient.count > 0) ? (int)(indexPath.section - 2) : (int)(indexPath.section - 1);
+                cell.nutrient = self.missingNutrients[index];
+                Nutrient *currNutrient = [self.recommendedNutrients valueForKey:cell.nutrient];
+                cell.nutrientLabel.text = currNutrient.name;
+                cell.recommendedFoods = self.recommendedFoods[index];
+                [cell.iconButton setSelected:false];
+            }
             cell.backgroundColor = [UIColor whiteColor];
             cell.layer.cornerRadius = 20;
             cell.layer.masksToBounds= true;
-
             return cell;
         }
     }
@@ -317,7 +327,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return (self.missingNutrients.count + 1);
+    return (self.missingNutrients.count == 0) ? 3 : self.missingNutrients.count + 2;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

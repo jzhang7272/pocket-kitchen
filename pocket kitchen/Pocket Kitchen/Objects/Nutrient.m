@@ -75,14 +75,13 @@
                 for(id nutrient in recommendedNutrients){
                     NSDictionary *nutrientDetails = groceryNutrients[nutrient];
                     double quantity = [nutrientDetails[@"quantity"] doubleValue] * nmbrServings;
-
                     Nutrient *nutrientItem = [sumNutrients objectForKey:nutrient];
-                    if (nutrientItem){
+                    if (nutrientItem != nil){
                         nutrientItem.quantity += quantity;
                         [sumNutrients setObject:nutrientItem forKey:nutrient];
                     }
                     else{
-                        [sumNutrients setObject:[[Nutrient alloc] initNutrient:[nutrientDetails[@"quantity"] doubleValue] :nutrientDetails[@"unit"] :nutrient :nutrientDetails[@"label"]] forKey:nutrient];
+                        [sumNutrients setObject:[[Nutrient alloc] initNutrient:quantity :nutrientDetails[@"unit"] :nutrient :nutrientDetails[@"label"]] forKey:nutrient];
                     }
                 }
             }

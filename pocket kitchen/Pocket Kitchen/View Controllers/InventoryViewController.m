@@ -35,7 +35,8 @@ const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving i
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+
     
     // Delegates
     self.tableView.delegate = self;

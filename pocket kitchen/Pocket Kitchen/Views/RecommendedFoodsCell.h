@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RecommendedFoodsCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nutrientLabel;
+@property (weak, nonatomic) IBOutlet UIButton *iconButton;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (nonatomic, strong) NSArray *recommendedFoods;
 @property (nonatomic, strong) NSString *nutrient;

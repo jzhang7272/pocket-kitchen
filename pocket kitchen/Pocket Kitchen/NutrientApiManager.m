@@ -87,7 +87,7 @@
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (error) {
+        if (error || [[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil][@"hints"] count] == 0) {
             NSLog(@"%@", error);
             completion(nil, 0, error);
         }
