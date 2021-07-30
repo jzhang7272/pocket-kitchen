@@ -7,6 +7,10 @@
 
 #import "AddItemViewController.h"
 #import "FoodItem.h"
+#import "NutrientSource.h"
+#import "NutrientApiManager.h"
+
+#import "EGOCache.h"
 
 @interface AddItemViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *itemField;
@@ -31,6 +35,7 @@
     self.categoryPicker.dataSource = self;
     self.categoryPicker.delegate = self;
 }
+
 - (IBAction)onTapSave:(id)sender {
     NSString *item = self.itemField.text;
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
@@ -41,12 +46,36 @@
     NSString *category = [self pickerView:self.categoryPicker titleForRow:[self.categoryPicker selectedRowInComponent:0] forComponent:0];
     BOOL branded = (self.typeControl.selectedSegmentIndex == 1) ? true : false;
     
+    [self cacheUserFoods:item];
     [FoodItem saveItem:item :quantity :quantityUnit :expDate :category :branded];
+    
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (IBAction)onTap:(id)sender {
     [self.view endEditing:true];
+}
+
+- (void)cacheUserFoods:(NSString *)foodItem {
+    NutrientApiManager *nutrientApi = [NutrientApiManager new];
+    [nutrientApi fetchFoodID:foodItem :@"http://www.edamam.com/ontologies/edamam.owl#Measure_serving" :@"totalDaily" :^(NSDictionary *dictionary, BOOL unitGram, NSString *foodImage, NSError *error) {
+        
+        if(error){
+            NSLog(@"%@", error.localizedDescription);
+        }
+        else{
+            NSMutableArray *highNutrients = [NSMutableArray new];
+            for(id nutrient in dictionary){
+                NSDictionary *nutrientDetails = dictionary[nutrient];
+                if ([nutrientDetails[@"quantity"] doubleValue] >= 20){
+                    [highNutrients addObject:nutrient];
+                }
+            }
+            if ([highNutrients count] != 0){
+                [[EGOCache globalCache] setObject:highNutrients forKey:foodItem withTimeoutInterval:60*60*24]; // 1 day
+            }
+        }
+    }];
 }
 
 // PickerView Methods

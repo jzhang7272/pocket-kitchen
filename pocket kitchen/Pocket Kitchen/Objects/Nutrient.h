@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *unit;
 @property (nonatomic, strong) NSString *code;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSMutableArray *source;
 
 - (instancetype)initNutrient:(double)quantity :(NSString *)unit :(NSString *)code :(NSString *)name;
 + (NSDictionary *)recommendedNutrientAmount:(int)days;

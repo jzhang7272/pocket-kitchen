@@ -22,11 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSDate *expirationDate;
 @property (nonatomic, strong) NSString *category;
 @property (nonatomic, strong) NSString *nutrients;
+@property (nonatomic, strong) NSString *nutrientUnit;
 @property (nonatomic, strong) NSString *image;
 @property (nonatomic) BOOL branded;
 @property (nonatomic) BOOL grocery;
 
-+ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSString *)quantityUnit :(NSDate *)expDate :(NSString *)category :(BOOL) branded;
++ (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSString *)quantityUnit:(NSDate *)expDate :(NSString *)category :(BOOL) branded;
 
 + (void)saveItemAsGrocery: (NSString *)item :(NSNumber *)quantity :(void(^)(FoodItem *groceryItem, NSError *))completion;
 

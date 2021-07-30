@@ -18,9 +18,10 @@
 #import "DateTools.h"
 
 const int QUERIES = 20;
+const double PERCENTAGE_HIGH = 0.2; // 20% DV or more of a nutrient per serving is considered high
+const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving is considered low
 
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UIStackView *horizontalScrollView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
@@ -39,15 +40,6 @@ const int QUERIES = 20;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-//    _categoriesArray = @[@"Food", @"Fridge", @"Pantry"];
-    for (int i = 0; i <= 10; i++){
-        CategoryView *categories = [[CategoryView alloc] init];
-        [categories.categoryButton setTitle:@"title" forState:UIControlStateNormal];
-//    all = [[[NSBundle mainBundle] loadNibNamed:@"Category" owner:self options:nil] objectAtIndex:0];
-        [self.horizontalScrollView addArrangedSubview:categories];
-    }
-    
-    
     [self fetchData];
 
     
@@ -60,7 +52,7 @@ const int QUERIES = 20;
 
 - (void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
+  
 }
 
 - (void)fetchData{

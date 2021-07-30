@@ -22,9 +22,22 @@
     return self;
 }
 
++ (void) updateSource:(Nutrient *)nutrient :(NSString *)source{
+    if (nutrient.source == nil){
+        nutrient.source = [NSMutableArray new];
+    }
+    [nutrient.source addObject:source];
+}
+
++ (void) checkNutrition{
+    // Get recently bought items/items in inventory
+    // For each new item, check for all nutrients if it is high/low in that nutrient
+    // If it is, add to array - items in array should disappear after 3 weeks
+}
+
 + (NSDictionary *)recommendedNutrientAmount:(int) days{
     NSMutableDictionary *recommendedAmount = [NSMutableDictionary new];
-    [recommendedAmount setObject:[[Nutrient alloc]initNutrient :(900*days) :@"\u03BCg" :@"VITA_RAE" :@"Vitamin A"] forKey:@"VITA_RAE"];
+    [recommendedAmount setObject:[[Nutrient alloc] initNutrient :(900*days) :@"\u03BCg" :@"VITA_RAE" :@"Vitamin A"] forKey:@"VITA_RAE"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(90*days) :@"mg" :@"VITC" :@"Vitamin C"] forKey:@"VITC"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(1300*days) :@"mg" :@"CA" :@"Calcium"] forKey:@"CA"];
     [recommendedAmount setObject:[[Nutrient alloc] initNutrient:(18*days) :@"mg" :@"FE" :@"Iron"] forKey:@"FE"];
@@ -61,7 +74,7 @@
         FoodItem *groceryItem = [groceryItems objectAtIndex:i];
     
         NutrientApiManager *nutrientApi = [NutrientApiManager new];
-        [nutrientApi fetchFoodID:groceryItem.name :^(NSDictionary *groceryNutrients, BOOL unitGram, NSString *foodImage, NSError *error) {
+        [nutrientApi fetchFoodID:groceryItem.name :@"http://www.edamam.com/ontologies/edamam.owl#Measure_serving" :@"totalNutrients" :^(NSDictionary *groceryNutrients, BOOL unitGram, NSString *foodImage, NSError *error) {
             if(error){
                 NSLog(@"%@", error.localizedDescription);
             }

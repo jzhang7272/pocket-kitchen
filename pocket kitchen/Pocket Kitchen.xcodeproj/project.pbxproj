@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		3B0100D75E3E2734BFEE131B /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB685433F30457D42181F3CC /* Pods_Pocket_Kitchen_Pocket_KitchenUITests.framework */; };
 		E5B409BC2D72DD85F1022DD0 /* Pods_Pocket_Kitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EAD7DDFD6CACF22079F592 /* Pods_Pocket_Kitchen.framework */; };
+		ED380C0726ADB9B7006D9B0C /* Pods-Pocket Kitchen.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E0183D6556C75F6E2ED958FB /* Pods-Pocket Kitchen.debug.xcconfig */; };
 		ED6CB7BE26A869AB00A1906A /* AddGroceryItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */; };
 		ED6CB7C126A8ACAC00A1906A /* Nutrient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7C026A8ACAC00A1906A /* Nutrient.m */; };
+		ED6CB7C426AB17E700A1906A /* NutrientSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7C326AB17E700A1906A /* NutrientSource.m */; };
 		ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */; };
 		ED81F805269F87F700F9E2CF /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F804269F87F700F9E2CF /* DetailsViewController.m */; };
 		ED81F81726A109E100F9E2CF /* Category.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED81F81626A109E100F9E2CF /* Category.xib */; };
@@ -63,8 +65,10 @@
 		E0183D6556C75F6E2ED958FB /* Pods-Pocket Kitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Kitchen.debug.xcconfig"; path = "Target Support Files/Pods-Pocket Kitchen/Pods-Pocket Kitchen.debug.xcconfig"; sourceTree = "<group>"; };
 		ED6CB7BC26A869AB00A1906A /* AddGroceryItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddGroceryItemViewController.h; path = Pods/AddGroceryItemViewController.h; sourceTree = SOURCE_ROOT; };
 		ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AddGroceryItemViewController.m; path = Pods/AddGroceryItemViewController.m; sourceTree = SOURCE_ROOT; };
-		ED6CB7BF26A8ACAC00A1906A /* Nutrient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Nutrient.h; path = "View Controllers/Nutrient.h"; sourceTree = "<group>"; };
-		ED6CB7C026A8ACAC00A1906A /* Nutrient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Nutrient.m; path = "View Controllers/Nutrient.m"; sourceTree = "<group>"; };
+		ED6CB7BF26A8ACAC00A1906A /* Nutrient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient.h; sourceTree = "<group>"; };
+		ED6CB7C026A8ACAC00A1906A /* Nutrient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrient.m; sourceTree = "<group>"; };
+		ED6CB7C226AB17E700A1906A /* NutrientSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NutrientSource.h; path = "Pocket Kitchen/Objects/NutrientSource.h"; sourceTree = SOURCE_ROOT; };
+		ED6CB7C326AB17E700A1906A /* NutrientSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NutrientSource.m; path = "Pocket Kitchen/Objects/NutrientSource.m"; sourceTree = SOURCE_ROOT; };
 		ED81F800269E3BDA00F9E2CF /* NutrientApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NutrientApiManager.h; sourceTree = "<group>"; };
 		ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NutrientApiManager.m; sourceTree = "<group>"; };
 		ED81F803269F87F700F9E2CF /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -157,6 +161,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		ED6CB7C526AB17F500A1906A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				EDFF228F269DF77500862BD5 /* FoodItem.h */,
+				EDFF2290269DF77500862BD5 /* FoodItem.m */,
+				ED6CB7BF26A8ACAC00A1906A /* Nutrient.h */,
+				ED6CB7C026A8ACAC00A1906A /* Nutrient.m */,
+				ED6CB7C226AB17E700A1906A /* NutrientSource.h */,
+				ED6CB7C326AB17E700A1906A /* NutrientSource.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		ED81F82126A222CA00F9E2CF /* XIB */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,14 +209,11 @@
 		EDFF2249269CD86800862BD5 /* Pocket Kitchen */ = {
 			isa = PBXGroup;
 			children = (
-				ED6CB7BF26A8ACAC00A1906A /* Nutrient.h */,
-				ED6CB7C026A8ACAC00A1906A /* Nutrient.m */,
+				ED6CB7C526AB17F500A1906A /* Objects */,
 				ED81F81E26A2225A00F9E2CF /* ShoppingItemCell.h */,
 				ED81F81F26A2225A00F9E2CF /* ShoppingItemCell.m */,
 				ED81F800269E3BDA00F9E2CF /* NutrientApiManager.h */,
 				ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */,
-				EDFF228F269DF77500862BD5 /* FoodItem.h */,
-				EDFF2290269DF77500862BD5 /* FoodItem.m */,
 				ED81F82126A222CA00F9E2CF /* XIB */,
 				EDFF2289269CE54E00862BD5 /* FoodItemCell.h */,
 				EDFF228A269CE54E00862BD5 /* FoodItemCell.m */,
@@ -267,7 +281,7 @@
 				EDFF2243269CD86800862BD5 /* Sources */,
 				EDFF2244269CD86800862BD5 /* Frameworks */,
 				EDFF2245269CD86800862BD5 /* Resources */,
-				AE849CC8F98832D9965C24F3 /* [CP] Embed Pods Frameworks */,
+				B89E7725ABCBEB82C19A1254 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,7 +319,7 @@
 				EDFF2269269CD86900862BD5 /* Sources */,
 				EDFF226A269CD86900862BD5 /* Frameworks */,
 				EDFF226B269CD86900862BD5 /* Resources */,
-				8B1C2EF46305E39BA7A09C31 /* [CP] Embed Pods Frameworks */,
+				9B1E20235E536206E70B3A8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -366,6 +380,7 @@
 				EDFF225A269CD86900862BD5 /* LaunchScreen.storyboard in Resources */,
 				EDFF2257269CD86900862BD5 /* Assets.xcassets in Resources */,
 				EDFF2255269CD86800862BD5 /* Main.storyboard in Resources */,
+				ED380C0726ADB9B7006D9B0C /* Pods-Pocket Kitchen.debug.xcconfig in Resources */,
 				ED81F81726A109E100F9E2CF /* Category.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +424,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8B1C2EF46305E39BA7A09C31 /* [CP] Embed Pods Frameworks */ = {
+		9B1E20235E536206E70B3A8E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,7 +441,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pocket Kitchen-Pocket KitchenUITests/Pods-Pocket Kitchen-Pocket KitchenUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AE849CC8F98832D9965C24F3 /* [CP] Embed Pods Frameworks */ = {
+		B89E7725ABCBEB82C19A1254 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -507,6 +522,7 @@
 				ED81F82026A2225A00F9E2CF /* ShoppingItemCell.m in Sources */,
 				EDFF2288269CE3AB00862BD5 /* InventoryViewController.m in Sources */,
 				ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */,
+				ED6CB7C426AB17E700A1906A /* NutrientSource.m in Sources */,
 				EDFF224F269CD86800862BD5 /* SceneDelegate.m in Sources */,
 				ED81F81A26A109F200F9E2CF /* CategoryView.m in Sources */,
 				EDFF2291269DF77500862BD5 /* FoodItem.m in Sources */,

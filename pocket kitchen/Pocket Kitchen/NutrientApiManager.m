@@ -22,37 +22,8 @@
     return self;
 }
 
-- (void)fetchFoodItem: (NSString *)query :(int)page :(void(^)(NSArray *foodItems, NSError *error))completion {
-    NSURLComponents *components = [NSURLComponents componentsWithString:self.baseURL];
-    NSURLQueryItem *apiKey = [NSURLQueryItem queryItemWithName:@"api_key" value:@"GLI01Ycppc8hpb8MJPDB8Zhar1JbMRzPGFKOlhh5"];
-    NSURLQueryItem *queryItem = [NSURLQueryItem queryItemWithName:@"query" value:query];
-//    NSURLQueryItem *dataType = [NSURLQueryItem queryItemWithName:@"dataType" value:@"Survey (FNDDS)"];
-    NSURLQueryItem *pageSize = [NSURLQueryItem queryItemWithName:@"pageSize" value:[NSString stringWithFormat:@"%i", page]];
-    components.queryItems = @[apiKey, queryItem, pageSize];
-                                
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:components.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
-    
-    [request setHTTPMethod:@"GET"];
-
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (error) {
-            NSLog(@"%@", error);
-        }
-        else {
-            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-            NSLog(@"%@", httpResponse);
-            NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            NSLog(@"%@", dataDictionary);
-//            NSArray *dictionaries = dataDictionary[@"hits"];
-            // NSArray *movies = [Movie moviesWithDictionaries:dictionaries];
-        }
-    }];
-    [dataTask resume];
-}
-
 // Parser API - GET
-- (void)fetchFoodID:(NSString *)item :(void(^)(NSDictionary *, BOOL, NSString *, NSError *))completion{
+- (void)fetchFoodID:(NSString *)item :(NSString *)unitURL :(NSString *)nutrientType :(void(^)(NSDictionary *, BOOL, NSString *, NSError *))completion{
     
     NSString *baseParseURL = @"https://api.edamam.com/api/food-database/v2/parser";
     NSURLComponents *components = [NSURLComponents componentsWithString:baseParseURL];
@@ -60,8 +31,8 @@
     NSURLQueryItem *appKey = [NSURLQueryItem queryItemWithName:@"app_key" value:@"4322af03056e14eafae0bfebbcc340e8"];
     NSURLQueryItem *ingr = [NSURLQueryItem queryItemWithName:@"ingr" value:item];
     NSURLQueryItem *nutritionType = [NSURLQueryItem queryItemWithName:@"nutrition-type" value:@"cooking"];
-    NSURLQueryItem *category = [NSURLQueryItem queryItemWithName:@"category" value:@"generic-foods"];
-    components.queryItems = @[appID, appKey, ingr, nutritionType, category];
+    // NSURLQueryItem *category = [NSURLQueryItem queryItemWithName:@"category" value:@"generic-foods"];
+    components.queryItems = @[appID, appKey, ingr, nutritionType];
                                 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:components.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
     
@@ -79,7 +50,7 @@
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             foodID.string = dataDictionary[@"parsed"][0][@"food"][@"foodId"];
             NSString *foodImage = dataDictionary[@"parsed"][0][@"food"][@"image"];
-            [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_unit" :^(NSDictionary *dictionary, BOOL gram, NSError *error){
+            [self fetchNutrients :foodID :unitURL :@"totalNutrients" :^(NSDictionary *dictionary, BOOL gram, NSError *error){
                 if(error){
                     NSLog(@"%@", error.localizedDescription);
                 }
@@ -94,7 +65,7 @@
 }
 
 // Nutrients API - POST
-- (void) fetchNutrients:(NSString *)foodID :(NSString *)url :(void(^)(NSDictionary *, BOOL, NSError *))completion{
+- (void) fetchNutrients:(NSString *)foodID :(NSString *)url :(NSString *)nutrientType :(void(^)(NSDictionary *, BOOL, NSError *))completion{
     NSString *baseNutrientURL = @"https://api.edamam.com/api/food-database/v2/nutrients";
     NSURLComponents *nutrientComponents = [NSURLComponents componentsWithString:baseNutrientURL];
     NSURLQueryItem *appID = [NSURLQueryItem queryItemWithName:@"app_id" value:@"03df0f4f"];
@@ -122,8 +93,8 @@
 //            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
 //            NSLog(@"%@", httpResponse);
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            if ([dataDictionary[@"totalNutrients"] count] == 0){
-                [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_cup" :^(NSDictionary *dictionary, BOOL unused, NSError *error){
+            if ([dataDictionary[nutrientType] count] == 0){
+                [self fetchNutrients :foodID :@"http://www.edamam.com/ontologies/edamam.owl#Measure_cup" :nutrientType :^(NSDictionary *dictionary, BOOL unused, NSError *error){
                     if(error){
                         NSLog(@"%@", error.localizedDescription);
                         completion(nil, nil, error);
@@ -135,7 +106,7 @@
                 }];
             }
             else{
-                completion(dataDictionary[@"totalNutrients"], false, nil);
+                completion(dataDictionary[nutrientType], false, nil);
             }
         }
     }];

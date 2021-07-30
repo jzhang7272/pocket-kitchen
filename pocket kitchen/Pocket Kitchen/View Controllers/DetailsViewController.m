@@ -52,7 +52,7 @@
 
     
     if (self.item.nutrients == nil){
-        [self fetchFoodNutrients];
+        [self fetchFoodDetails];
     }
     else{
         self.nutritionLabel.text = self.item.nutrients;
@@ -77,23 +77,19 @@
     [super viewWillDisappear:animated];
 }
 
-- (void) fetchFoodNutrients{
+- (void) fetchFoodDetails{
     NutrientApiManager *nutrientApi = [NutrientApiManager new];
-    [nutrientApi fetchFoodID:self.item.name :^(NSDictionary *nutrients, BOOL unitGram, NSString *foodImage, NSError *error) {
-        // per serving (maybe switch to gram?), vs whole
+    [nutrientApi fetchFoodID:self.item.name :@"http://www.edamam.com/ontologies/edamam.owl#Measure_unit" :@"totalNutrients":^(NSDictionary *dictionary, BOOL unitCup, NSString *foodImage, NSError *error) {
         if(error){
             NSLog(@"%@", error.localizedDescription);
         }
         else{
-            NSMutableDictionary *nutrientWUnit = [NSMutableDictionary new];
-            [nutrientWUnit addEntriesFromDictionary: [FoodItem initNutrientsWithUnits:nutrients]];
+            NSMutableDictionary *nutrients = [NSMutableDictionary new];
+            [nutrients addEntriesFromDictionary: [FoodItem initNutrientsWithUnits:dictionary]];
             self.item.image = foodImage;
-            NSLog(@"%@", self.item);
+            self.item.nutrientUnit = (unitCup) ? @"cup" : @"item";
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSString *nutrientsString = [self convertNutrientsToString:nutrientWUnit];
-                NSString *nutrientsWithGrams = [NSString stringWithFormat:@"(per gram)\n %@", nutrientsString];
-                NSString *nutrientsWithWhole = [NSString stringWithFormat:@"(per one item)\n %@", nutrientsString];
-                self.item.nutrients = (unitGram) ? nutrientsWithGrams : nutrientsWithWhole;
+                self.item.nutrients = [self convertNutrientsToString:nutrients];
                 self.nutritionLabel.text = self.item.nutrients;
                 NSURL *url = [NSURL URLWithString:foodImage];
                 [self.foodView setImageWithURL:url];
