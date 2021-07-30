@@ -12,7 +12,7 @@
 
 #import "FoodItemCell.h"
 #import "CategoryView.h"
-#import "HeaderFilterCell.h"
+#import "CategoryCell.h"
 
 #import "FoodItem.h"
 #import <Parse/Parse.h>
@@ -26,16 +26,19 @@ const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving i
 
 #define grayColor [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1.0]
 #define lightBlueColor [UIColor colorWithRed:0.86 green:0.96 blue:0.99 alpha:1.0]
+#define lighterBlueColor [UIColor colorWithRed:0.96 green:0.96 blue:0.99 alpha:1.0]
+#define darkerLightBlueColor [UIColor colorWithRed:0.76 green:0.86 blue:0.89 alpha:1.0]
 
-@interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource, CCDropDownMenuDelegate>
+@interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @property (nonatomic, strong) NSMutableArray *itemArray;
 @property (nonatomic, strong) NSMutableArray *filteredArray;
-@property (nonatomic, strong) ManaDropDownMenu *categoryMenu;
+@property (nonatomic, strong) NSArray *categoryArray;
 
 
 @end
@@ -44,56 +47,38 @@ const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving i
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     
+    // Initialize
+    self.categoryArray = @[@"All items", @"Pantry", @"Fridge", @"Freezer"];
+    self.headerView.backgroundColor = [UIColor systemGray6Color];
+
     // Delegates
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
     
+    // Collection View
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
+    layout.estimatedItemSize = CGSizeMake(1.f, 1.f);
+    self.collectionView.allowsMultipleSelection = false;
+    self.collectionView.backgroundColor = [UIColor systemGray6Color];
+    
+    // Table View
     UIView *backgroundView = [UIView new];
     backgroundView.backgroundColor = grayColor;
     [self.tableView setBackgroundView:backgroundView];
-    
     self.tableView.tableFooterView = [UIView new];
     
+    // Get data
     [self fetchData];
-
     
     // Refresh
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     
-    // all = [[[NSBundle mainBundle] loadNibNamed:@"Category" owner:self options:nil] objectAtIndex:0];
-    // CategoryView *categories = [[CategoryView alloc] init];
-    // [categories.categoryButton setTitle:[_categoriesArray objectAtIndex:i] forState:UIControlStateNormal];
-    
-    // Dropdown
-    self.categoryMenu = [[ManaDropDownMenu alloc] initWithFrame:CGRectMake(8, 8, 120, 30) title:@"All items"];
-    self.categoryMenu.delegate = self;
-    self.categoryMenu.numberOfRows = 4;
-    self.categoryMenu.textOfRows = @[@"All items", @"Pantry", @"Fridge", @"Freezer"];
-    self.categoryMenu.indicator = [UIImage systemImageNamed:@"chevron.down"];
-    NSLog(@"%@", self.categoryMenu.indicator);
-    [self.headerView addSubview:self.categoryMenu];
-    [self.headerView bringSubviewToFront:self.categoryMenu];
-}
-
-- (void)dropDownMenu:(CCDropDownMenu *)dropDownMenu didSelectRowAtIndex:(NSInteger)index {
-    NSString *category = dropDownMenu.textOfRows[index];
-    self.filteredArray = [NSMutableArray new];
-    if ([category isEqual:@"All items"]){
-        [self.filteredArray addObjectsFromArray:self.itemArray];
-    }
-    else{
-        for (FoodItem *food in self.itemArray){
-            if ([food.category isEqual:category]){
-                [self.filteredArray addObject:food];
-            }
-        }
-    }
-    
-    [self.tableView reloadData];
+   
 }
 
 - (void) viewDidAppear:(BOOL)animated{
@@ -122,33 +107,87 @@ const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving i
     [self.refreshControl endRefreshing];
 }
 
-- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    FoodItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FoodItemCell"];
-    FoodItem *item = self.filteredArray[indexPath.section];
-    cell.itemLabel.text = item.name;
-    cell.quantityLabel.text = [NSString stringWithFormat:@"  %@  ", item.quantity];
-    cell.quantityLabel.backgroundColor = lightBlueColor;
-    cell.quantityLabel.layer.cornerRadius = 10;
-    cell.quantityLabel.clipsToBounds = YES;
-    cell.categoryLabel.text = item.category;
-    cell.expDateLabel.text = [self getExpirationDate:item.expirationDate];
+#pragma mark - Collection View
+- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    CategoryCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCell" forIndexPath:indexPath];
+    cell.categoryLabel.text = self.categoryArray[indexPath.row];
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.layer.cornerRadius = 5;
+    cell.layer.masksToBounds= true;
+    return cell;
+}
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.categoryArray.count;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    CategoryCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    cell.backgroundColor = lightBlueColor;
     
-    NSURL *url = [NSURL URLWithString:item.image];
-    [cell.foodView setImageWithURL:url];
-    cell.foodView.layer.cornerRadius = 15;
-    cell.foodView.clipsToBounds = YES;
-    
-    if ([cell.expDateLabel.text isEqualToString:@"Expired"]){
-        cell.alertIcon.tintColor = [UIColor systemRedColor];
-    }
-    else if([cell.expDateLabel.text isEqualToString:@"Expiring today"]){
-        cell.alertIcon.tintColor = [UIColor systemYellowColor];
+    NSString *category = self.categoryArray[indexPath.row];
+    self.filteredArray = [NSMutableArray new];
+    if ([category isEqual:@"All items"]){
+        [self.filteredArray addObjectsFromArray:self.itemArray];
     }
     else{
-        cell.alertIcon.tintColor = [UIColor clearColor];
+        for (FoodItem *food in self.itemArray){
+            if ([food.category isEqual:category]){
+                [self.filteredArray addObject:food];
+            }
+        }
     }
+    [self.tableView reloadData];
+}
 
-    return cell;
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    CategoryCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    cell.backgroundColor = [UIColor whiteColor];
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 20.0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 20.0;
+}
+
+- (UIEdgeInsets)collectionView:
+(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0,0,0,0);
+}
+
+#pragma mark - Table View
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+
+        FoodItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FoodItemCell"];
+        FoodItem *item = self.filteredArray[indexPath.section];
+        cell.itemLabel.text = item.name;
+        cell.quantityLabel.text = [NSString stringWithFormat:@"  %@  ", item.quantity];
+        cell.quantityLabel.backgroundColor = grayColor;
+        cell.quantityLabel.layer.cornerRadius = 10;
+        cell.quantityLabel.clipsToBounds = YES;
+        cell.categoryLabel.text = item.category;
+        cell.expDateLabel.text = [self getExpirationDate:item.expirationDate];
+        
+        NSURL *url = [NSURL URLWithString:item.image];
+        [cell.foodView setImageWithURL:url];
+        cell.foodView.layer.cornerRadius = 15;
+        cell.foodView.clipsToBounds = YES;
+        
+        if ([cell.expDateLabel.text isEqualToString:@"Expired"]){
+            cell.alertIcon.tintColor = [UIColor systemRedColor];
+        }
+        else if([cell.expDateLabel.text isEqualToString:@"Expiring today"]){
+            cell.alertIcon.tintColor = [UIColor systemYellowColor];
+        }
+        else{
+            cell.alertIcon.tintColor = [UIColor clearColor];
+        }
+
+        return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -165,9 +204,12 @@ const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving i
     return headerView;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section{
-    CGFloat height = 2;
-    return height;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.01;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -176,19 +218,24 @@ const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving i
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        FoodItem *foodItem = [self.itemArray objectAtIndex:indexPath.row];
+        FoodItem *foodItem = [self.filteredArray objectAtIndex:indexPath.section];
         [foodItem deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
             if (succeeded) {
-                NSLog(@"The item was deleted.");
-                [self.itemArray removeObjectAtIndex:indexPath.row];
-                [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+                [self.itemArray removeObject:foodItem];
+                [self.filteredArray removeObjectAtIndex:indexPath.section];
+                [tableView beginUpdates];
+                [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section]
+                                     withRowAnimation:UITableViewRowAnimationFade];
+                [tableView endUpdates];
                 [tableView reloadData];
+                
             } else {
                 NSLog(@"Problem deleting item: %@", error.localizedDescription);
             }
         }];
     }
 }
+
 
 // Helper Functions
 - (NSString *)getExpirationDate:(NSDate *)date{
@@ -242,7 +289,7 @@ const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving i
     if([[segue identifier] isEqualToString:@"detailsSegue"]) {
         UITableViewCell *tappedCell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
-        FoodItem *item = self.itemArray[indexPath.section];
+        FoodItem *item = self.filteredArray[indexPath.section];
         DetailsViewController *detailsViewController = [segue destinationViewController];
         detailsViewController.item = item;
     }

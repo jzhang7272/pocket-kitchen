@@ -100,7 +100,7 @@
             if (succeeded) {
                 NSLog(@"The item was deleted.");
                 [self.groceryItemArray removeObjectAtIndex:indexPath.row];
-                [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+                [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
                 [tableView reloadData];
             } else {
                 NSLog(@"Problem deleting item: %@", error.localizedDescription);
