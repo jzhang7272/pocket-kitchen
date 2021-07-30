@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF93D018E96C61278F55F7881DBF87EE"
-               BuildableName = "CCDropDownMenus.framework"
-               BlueprintName = "CCDropDownMenus"
+               BlueprintIdentifier = "CDE128CD20C98BAEC42DBD85E29A43EF"
+               BuildableName = "PKYStepper.framework"
+               BlueprintName = "PKYStepper"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

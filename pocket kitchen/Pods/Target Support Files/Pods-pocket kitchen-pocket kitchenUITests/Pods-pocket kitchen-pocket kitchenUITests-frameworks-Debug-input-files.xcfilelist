@@ -1,8 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-Pocket Kitchen-Pocket KitchenUITests/Pods-Pocket Kitchen-Pocket KitchenUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
 ${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework
-${BUILT_PRODUCTS_DIR}/CCDropDownMenus/CCDropDownMenus.framework
 ${BUILT_PRODUCTS_DIR}/DateTools/DateTools.framework
 ${BUILT_PRODUCTS_DIR}/EGOCache/EGOCache.framework
+${BUILT_PRODUCTS_DIR}/PKYStepper/PKYStepper.framework
 ${BUILT_PRODUCTS_DIR}/Parse/Parse.framework
 ${BUILT_PRODUCTS_DIR}/SFProgressCircle/SFProgressCircle.framework

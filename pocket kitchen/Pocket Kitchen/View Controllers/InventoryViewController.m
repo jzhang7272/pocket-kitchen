@@ -18,7 +18,6 @@
 #import <Parse/Parse.h>
 #import "DateTools.h"
 #import "UIImageView+AFNetworking.h"
-#import <CCDropDownMenus/CCDropDownMenus.h>
 
 const int QUERIES = 20;
 const double PERCENTAGE_HIGH = 0.2; // 20% DV or more of a nutrient per serving is considered high
@@ -49,9 +48,9 @@ const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving i
     [super viewDidLoad];
     
     // Initialize
-    self.categoryArray = @[@"All items", @"Pantry", @"Fridge", @"Freezer"];
-    self.headerView.backgroundColor = [UIColor systemGray6Color];
-
+    self.categoryArray = @[@"All items", @"Fridge", @"Freezer", @"Pantry"];
+    self.headerView.backgroundColor = grayColor;
+    
     // Delegates
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -62,13 +61,17 @@ const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving i
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
     layout.estimatedItemSize = CGSizeMake(1.f, 1.f);
     self.collectionView.allowsMultipleSelection = false;
-    self.collectionView.backgroundColor = [UIColor systemGray6Color];
+    self.collectionView.backgroundColor = grayColor;
     
     // Table View
     UIView *backgroundView = [UIView new];
     backgroundView.backgroundColor = grayColor;
     [self.tableView setBackgroundView:backgroundView];
     self.tableView.tableFooterView = [UIView new];
+    [self.view bringSubviewToFront:self.headerView];
+    CGRect frame = CGRectZero;
+    frame.size.height = CGFLOAT_MIN;
+    [self.tableView setTableHeaderView:[[UIView alloc] initWithFrame:frame]];
     
     // Get data
     [self fetchData];
