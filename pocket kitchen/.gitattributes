@@ -1,0 +1,2 @@
+pocket filter=lfs diff=lfs merge=lfs -text
+kitchen/Pods/MLKitBarcodeScanning/Frameworks/MLKitBarcodeScanning.framework/MLKitBarcodeScanning filter=lfs diff=lfs merge=lfs -text
