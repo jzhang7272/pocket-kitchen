@@ -11,14 +11,22 @@
 
 #import "EGOCache.h"
 
+@import MLImage;
+@import MLKit;
+
+
 @interface AddItemViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *itemField;
 @property (weak, nonatomic) IBOutlet UITextField *quantityField;
 @property (weak, nonatomic) IBOutlet UITextField *quantityUnitField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *expirationDate;
 @property (weak, nonatomic) IBOutlet UIPickerView *categoryPicker;
+@property (weak, nonatomic) IBOutlet UIImageView *barcodeView;
 
 @property (nonatomic, strong) NSArray *pickerData;
+
+@property (strong, nonatomic) UIImagePickerController *imagePickerVC;
+@property (strong, nonatomic) MLKBarcodeScanner *barcodeScanner;
 
 @end
 
@@ -32,6 +40,73 @@
     self.pickerData = @[@"Fridge", @"Freezer", @"Pantry"];
     self.categoryPicker.dataSource = self;
     self.categoryPicker.delegate = self;
+    
+    self.imagePickerVC = [UIImagePickerController new];
+    self.imagePickerVC.delegate = self;
+    self.imagePickerVC.allowsEditing = YES;
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        self.imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else {
+        NSLog(@"Camera not available so we will use photo library instead");
+        self.imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    // User taps on photo to upload photo
+    UITapGestureRecognizer *photoTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(uploadTakePhoto:)];
+    [self.barcodeView addGestureRecognizer:photoTapGestureRecognizer];
+    [self.barcodeView setUserInteractionEnabled:YES];
+    
+    self.barcodeScanner = [MLKBarcodeScanner barcodeScanner];
+}
+
+- (void)uploadTakePhoto:(UITapGestureRecognizer *)sender{
+    [self presentViewController:self.imagePickerVC animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
+    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+
+    self.barcodeView.image = (editedImage != nil) ? editedImage : originalImage;
+    
+    [self getBarcode:self.barcodeView.image];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
+    UIImageView *resizeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    
+    resizeImageView.contentMode = UIViewContentModeScaleAspectFill;
+    resizeImageView.image = image;
+    
+    UIGraphicsBeginImageContext(size);
+    [resizeImageView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+- (void) getBarcode:(UIImage *)image {
+    MLKBarcodeScannerOptions *options = [[MLKBarcodeScannerOptions alloc] initWithFormats:MLKBarcodeFormatUPCA];
+    MLKVisionImage *visionImage = [[MLKVisionImage alloc] initWithImage:image];
+    visionImage.orientation = image.imageOrientation;
+    
+    [self.barcodeScanner processImage:visionImage completion:^(NSArray<MLKBarcode *> *_Nullable barcodes, NSError *_Nullable error) {
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+        }
+        else {
+          for (MLKBarcode *barcode in barcodes) {
+              NSString *displayValue = barcode.displayValue;
+              NSString *rawValue = barcode.rawValue;
+          }
+        }
+        
+    }];
 }
 
 - (IBAction)onTapSave:(id)sender {

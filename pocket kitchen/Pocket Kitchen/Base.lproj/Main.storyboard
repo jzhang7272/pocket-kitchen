@@ -624,6 +624,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZG-H2-Vf7">
+                                <rect key="frame" x="147" y="66" width="121" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EWj-t3-gQ0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -634,6 +638,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ybb-C3-LEx"/>
                     <connections>
+                        <outlet property="barcodeView" destination="iZG-H2-Vf7" id="GGR-4U-mk7"/>
                         <outlet property="categoryPicker" destination="uqQ-yG-M9p" id="Dwb-5T-kJ5"/>
                         <outlet property="expirationDate" destination="w02-NB-Lzw" id="Nr5-e1-5OD"/>
                         <outlet property="itemField" destination="AFf-c0-fEg" id="je5-Ba-ZpK"/>
