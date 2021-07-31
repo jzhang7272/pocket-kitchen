@@ -18,6 +18,7 @@
 		ED380C2D26B1B6B1006D9B0C /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED380C2C26B1B6B1006D9B0C /* ScoreCell.m */; };
 		ED380C3026B30C55006D9B0C /* HeaderFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED380C2F26B30C55006D9B0C /* HeaderFilterCell.m */; };
 		ED380C3326B369CE006D9B0C /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED380C3226B369CE006D9B0C /* CategoryCell.m */; };
+		ED380C3626B51711006D9B0C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = ED380C3526B51711006D9B0C /* Constants.m */; };
 		ED6CB7BE26A869AB00A1906A /* AddGroceryItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */; };
 		ED6CB7C126A8ACAC00A1906A /* Nutrient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7C026A8ACAC00A1906A /* Nutrient.m */; };
 		ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */; };
@@ -86,6 +87,8 @@
 		ED380C2F26B30C55006D9B0C /* HeaderFilterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HeaderFilterCell.m; path = "Pocket Kitchen/HeaderFilterCell.m"; sourceTree = SOURCE_ROOT; };
 		ED380C3126B369CE006D9B0C /* CategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CategoryCell.h; path = "Pocket Kitchen/CategoryCell.h"; sourceTree = SOURCE_ROOT; };
 		ED380C3226B369CE006D9B0C /* CategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CategoryCell.m; path = "Pocket Kitchen/CategoryCell.m"; sourceTree = SOURCE_ROOT; };
+		ED380C3526B51711006D9B0C /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		ED380C3726B51729006D9B0C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		ED6CB7BC26A869AB00A1906A /* AddGroceryItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddGroceryItemViewController.h; path = Pods/AddGroceryItemViewController.h; sourceTree = SOURCE_ROOT; };
 		ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AddGroceryItemViewController.m; path = Pods/AddGroceryItemViewController.m; sourceTree = SOURCE_ROOT; };
 		ED6CB7BF26A8ACAC00A1906A /* Nutrient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient.h; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 				EDFF2258269CD86900862BD5 /* LaunchScreen.storyboard */,
 				EDFF225B269CD86900862BD5 /* Info.plist */,
 				EDFF225C269CD86900862BD5 /* main.m */,
+				ED380C3526B51711006D9B0C /* Constants.m */,
+				ED380C3726B51729006D9B0C /* Constants.h */,
 			);
 			path = "Pocket Kitchen";
 			sourceTree = "<group>";
@@ -557,6 +562,7 @@
 				EDFF228B269CE54E00862BD5 /* FoodItemCell.m in Sources */,
 				ED6CB7BE26A869AB00A1906A /* AddGroceryItemViewController.m in Sources */,
 				ED380C1E26B0AB34006D9B0C /* BadNutrientCell.m in Sources */,
+				ED380C3626B51711006D9B0C /* Constants.m in Sources */,
 				EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */,
 				ED81F805269F87F700F9E2CF /* DetailsViewController.m in Sources */,
 				ED380C3326B369CE006D9B0C /* CategoryCell.m in Sources */,

@@ -111,6 +111,37 @@
     [dataTask resume];
 }
 
+- (void)fetchBarcodeNutrients:(NSString *)barcode :(void(^)(NSString *, NSDictionary *, NSString *, NSString *, NSString *, BOOL))completion{
+    NSString *baseParseURL = @"https://api.edamam.com/api/food-database/v2/parser";
+    NSURLComponents *components = [NSURLComponents componentsWithString:baseParseURL];
+    NSURLQueryItem *appID = [NSURLQueryItem queryItemWithName:@"app_id" value:@"03df0f4f"];
+    NSURLQueryItem *appKey = [NSURLQueryItem queryItemWithName:@"app_key" value:@"4322af03056e14eafae0bfebbcc340e8"];
+    NSURLQueryItem *upc = [NSURLQueryItem queryItemWithName:@"upc" value:barcode];
+    NSURLQueryItem *nutritionType = [NSURLQueryItem queryItemWithName:@"nutrition-type" value:@"cooking"];
+    components.queryItems = @[appID, appKey, upc, nutritionType];
+                                
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:components.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
+    
+    [request setHTTPMethod:@"GET"];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        if (error || dataDictionary[@"hints"] == nil) {
+            completion(nil, nil, nil, nil, nil, true);
+        }
+        else {
+            NSString *name = dataDictionary[@"hints"][0][@"food"][@"label"];
+            NSString *image = dataDictionary[@"hints"][0][@"food"][@"image"];
+            NSDictionary *nutrients = dataDictionary[@"hints"][0][@"food"][@"nutrients"];
+            NSString *unit = dataDictionary[@"hints"][0][@"food"][@"measures"][0][@"label"];
+            NSString *amtPerUnit = dataDictionary[@"hints"][0][@"food"][@"measures"][0][@"weight"];
+            completion(name, nutrients, image, unit, amtPerUnit, false);
+        }
+    }];
+    [dataTask resume];
+}
+
 // Nutrients API - POST
 - (void) fetchNutrientHelper:(NSString *)foodID :(NSString *)unitURL :(NSString *)alternateUnitURL :(NSString *)nutrientType :(void(^)(NSDictionary *, BOOL, double, NSError *))completion{
     NSString *baseNutrientURL = @"https://api.edamam.com/api/food-database/v2/nutrients";

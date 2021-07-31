@@ -20,8 +20,6 @@
 #import "UIImageView+AFNetworking.h"
 
 const int QUERIES = 20;
-const double PERCENTAGE_HIGH = 0.2; // 20% DV or more of a nutrient per serving is considered high
-const double PERCENTAGE_LOW = 0.05; // 5% DV or less of a nutrient per serving is considered low
 
 #define grayColor [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1.0]
 #define lightBlueColor [UIColor colorWithRed:0.86 green:0.96 blue:0.99 alpha:1.0]

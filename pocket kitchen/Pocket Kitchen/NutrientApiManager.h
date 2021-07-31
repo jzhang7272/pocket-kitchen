@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)fetchInventoryNutrients:(NSString *)item :(NSString *)nutrientType :(void(^)(NSDictionary *, BOOL, NSString *, NSError *))completion;
 - (void)fetchGroceryNutrients:(NSString *)foodItem :(void(^)(NSDictionary *, double nmbrServings, NSError *))completion;
 - (void) fetchNutrientHelper:(NSString *)foodID :(NSString *)unitURL :(NSString *)alternateUnitURL :(NSString *)nutrientType :(void(^)(NSDictionary *, BOOL, double, NSError *))completion;
+- (void)fetchBarcodeNutrients:(NSString *)barcode :(void(^)(NSString *, NSDictionary *, NSString *, NSString *, NSString *, BOOL))completion;
 
 @end
 
