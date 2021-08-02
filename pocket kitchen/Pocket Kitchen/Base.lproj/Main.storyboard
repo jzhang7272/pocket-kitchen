@@ -710,11 +710,11 @@
             </objects>
             <point key="canvasLocation" x="138" y="839"/>
         </scene>
-        <!--Item 2-->
+        <!--Recipes-->
         <scene sceneID="cTu-ca-UBG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pZD-Dq-4Yk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="PXc-Ec-RQJ"/>
+                    <tabBarItem key="tabBarItem" title="Recipes" image="list.bullet" catalog="system" id="PXc-Ec-RQJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tn3-Ak-rdR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -733,7 +733,7 @@
         <scene sceneID="yCB-5G-9JK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bpw-gc-24k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Inventory" id="3vi-SG-7ni"/>
+                    <tabBarItem key="tabBarItem" title="Inventory" image="house.fill" catalog="system" id="3vi-SG-7ni"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CJq-ZN-wr9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -755,7 +755,7 @@
         <scene sceneID="ZMC-b4-cW7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OuD-BZ-uav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="3dE-y2-NzX"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="3dE-y2-NzX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6dP-b3-rqU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -946,7 +946,7 @@
         <scene sceneID="9jb-zg-ihB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j10-y9-KE9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Grocery List" id="Sm9-X6-UuR"/>
+                    <tabBarItem key="tabBarItem" title="Grocery List" image="cart.fill" catalog="system" id="Sm9-X6-UuR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gn7-fr-hoR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -981,11 +981,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="exclamationmark.circle" catalog="system" width="128" height="121"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>

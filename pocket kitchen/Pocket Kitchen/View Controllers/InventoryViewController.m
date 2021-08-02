@@ -20,7 +20,7 @@
 #import "UIImageView+AFNetworking.h"
 
 const int QUERIES = 20;
-const int BUTTON_SIZE = 50;
+const int BUTTON_SIZE = 60;
 const int DIST_BOTTOM = -100;
 
 #define grayColor [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1.0]
