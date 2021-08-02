@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.testLabel.text = @"\u03BC";
 }
 
 - (IBAction)onTapLogOut:(id)sender {

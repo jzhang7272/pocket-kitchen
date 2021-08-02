@@ -534,19 +534,12 @@
                             <constraint firstAttribute="bottom" secondItem="3NX-O3-oW6" secondAttribute="bottom" id="ydY-ga-hqN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="n45-6e-8av">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="QQe-qs-RT2">
-                            <color key="tintColor" systemColor="systemTealColor"/>
-                            <connections>
-                                <action selector="onTapAdd:" destination="HXW-lb-ygT" id="hjY-ky-nkB"/>
-                                <segue destination="cyg-ZO-ycA" kind="presentation" identifier="addItemSegue" id="pLa-VT-Wjg"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="n45-6e-8av"/>
                     <connections>
                         <outlet property="collectionView" destination="IYh-Xh-aQ9" id="rzU-5Y-qG3"/>
                         <outlet property="headerView" destination="tsZ-Lu-0K4" id="b0l-ff-rh6"/>
                         <outlet property="tableView" destination="3NX-O3-oW6" id="Z4o-ck-vhu"/>
+                        <segue destination="cyg-ZO-ycA" kind="presentation" identifier="addItemSegue" id="qPh-bt-7gf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJO-Ej-diJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -561,91 +554,122 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFf-c0-fEg">
-                                <rect key="frame" x="190" y="186" width="187" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Item" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="AFf-c0-fEg">
+                                <rect key="frame" x="139" y="251" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ifp-dw-NBx"/>
+                                    <constraint firstAttribute="height" constant="40" id="y6F-pU-MLl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eP9-9H-YP3">
-                                <rect key="frame" x="20" y="295" width="70" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eP9-9H-YP3">
+                                <rect key="frame" x="25" y="331" width="73" height="26"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qg-Bx-y5b">
-                                <rect key="frame" x="20" y="193" width="81" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx2-Qh-07F">
+                                <rect key="frame" x="25" y="397" width="130" height="26"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="w02-NB-Lzw">
+                                <rect key="frame" x="274" y="388" width="100" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Storage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxc-Fu-IwN">
+                                <rect key="frame" x="25" y="463" width="65" height="26"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqQ-yG-M9p">
+                                <rect key="frame" x="249" y="438.5" width="150" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="HF2-Ue-GHk"/>
+                                    <constraint firstAttribute="width" constant="150" id="Kkj-3d-itH"/>
+                                </constraints>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-lN-6oC">
+                                <rect key="frame" x="299" y="326.5" width="90" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="CiH-Or-XpR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjp-ls-ruI">
+                                <rect key="frame" x="239" y="326.5" width="50" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="4n6-oS-HBf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iZG-H2-Vf7">
+                                <rect key="frame" x="130" y="77" width="154" height="147.5"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="YJM-m1-cMK"/>
+                                    <constraint firstAttribute="height" constant="150" id="fd4-Mp-Rwg"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f45-zm-dN5">
-                                <rect key="frame" x="190" y="679" width="34" height="30"/>
+                                <rect key="frame" x="159" y="599" width="110" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="24"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onTapSave:" destination="smK-aF-jaB" eventType="touchUpInside" id="Ank-cW-Gye"/>
                                     <action selector="onTapSave:" destination="nAv-1B-hH4" eventType="touchUpInside" id="XaM-2f-gat"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expiration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx2-Qh-07F">
-                                <rect key="frame" x="20" y="343" width="81" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="w02-NB-Lzw">
-                                <rect key="frame" x="149" y="332" width="245" height="43"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxc-Fu-IwN">
-                                <rect key="frame" x="20" y="387" width="75" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqQ-yG-M9p">
-                                <rect key="frame" x="190" y="383" width="204" height="91"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-lN-6oC">
-                                <rect key="frame" x="280" y="288" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjp-ls-ruI">
-                                <rect key="frame" x="190" y="288" width="65" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZG-H2-Vf7">
-                                <rect key="frame" x="147" y="66" width="121" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJc-9Z-inZ">
-                                <rect key="frame" x="310" y="107" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Clear"/>
-                                <connections>
-                                    <action selector="onClear:" destination="smK-aF-jaB" eventType="touchUpInside" id="dJX-bR-uBS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EWj-t3-gQ0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="AFf-c0-fEg" firstAttribute="top" secondItem="iZG-H2-Vf7" secondAttribute="bottom" constant="25" id="3GA-En-DFV"/>
+                            <constraint firstItem="iZG-H2-Vf7" firstAttribute="leading" secondItem="EWj-t3-gQ0" secondAttribute="leading" constant="130" id="9Bz-PT-J0A"/>
+                            <constraint firstItem="eP9-9H-YP3" firstAttribute="top" secondItem="AFf-c0-fEg" secondAttribute="bottom" constant="40" id="MqZ-3p-u6H"/>
+                            <constraint firstItem="mjR-lN-6oC" firstAttribute="leading" secondItem="Jjp-ls-ruI" secondAttribute="trailing" constant="10" id="PEN-jN-Cwq"/>
+                            <constraint firstItem="uqQ-yG-M9p" firstAttribute="centerY" secondItem="Fxc-Fu-IwN" secondAttribute="centerY" id="aMB-v1-Ode"/>
+                            <constraint firstItem="iZG-H2-Vf7" firstAttribute="top" secondItem="EWj-t3-gQ0" secondAttribute="top" constant="20" id="bIG-8g-BBx"/>
+                            <constraint firstItem="Fx2-Qh-07F" firstAttribute="top" secondItem="eP9-9H-YP3" secondAttribute="bottom" constant="40" id="cEw-gw-2aj"/>
+                            <constraint firstItem="eP9-9H-YP3" firstAttribute="leading" secondItem="1gi-6q-bfn" secondAttribute="leading" constant="25" id="cel-6s-icJ"/>
+                            <constraint firstItem="EWj-t3-gQ0" firstAttribute="trailing" secondItem="mjR-lN-6oC" secondAttribute="trailing" constant="25" id="hh9-Ry-lPE"/>
+                            <constraint firstItem="EWj-t3-gQ0" firstAttribute="trailing" secondItem="uqQ-yG-M9p" secondAttribute="trailing" constant="15" id="iVK-Kv-yAY"/>
+                            <constraint firstItem="mjR-lN-6oC" firstAttribute="centerY" secondItem="eP9-9H-YP3" secondAttribute="centerY" id="jAP-nS-4GD"/>
+                            <constraint firstItem="EWj-t3-gQ0" firstAttribute="trailing" secondItem="iZG-H2-Vf7" secondAttribute="trailing" constant="130" id="lGq-a9-lvZ"/>
+                            <constraint firstItem="EWj-t3-gQ0" firstAttribute="trailing" secondItem="AFf-c0-fEg" secondAttribute="trailing" constant="125" id="oLB-0N-dj8"/>
+                            <constraint firstItem="Jjp-ls-ruI" firstAttribute="centerY" secondItem="eP9-9H-YP3" secondAttribute="centerY" id="pIc-kQ-TgF"/>
+                            <constraint firstItem="Fxc-Fu-IwN" firstAttribute="top" secondItem="Fx2-Qh-07F" secondAttribute="bottom" constant="40" id="qbL-Aa-QLs"/>
+                            <constraint firstItem="Fx2-Qh-07F" firstAttribute="leading" secondItem="EWj-t3-gQ0" secondAttribute="leading" constant="25" id="vYr-9f-jR4"/>
+                            <constraint firstItem="Fxc-Fu-IwN" firstAttribute="leading" secondItem="EWj-t3-gQ0" secondAttribute="leading" constant="25" id="x8U-fV-08b"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="bqq-xm-Dwh" appends="YES" id="APN-Vu-Fe5"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="Ybb-C3-LEx"/>
+                    <navigationItem key="navigationItem" id="Ybb-C3-LEx">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="7tO-fw-7wu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="hJc-9Z-inZ">
+                                <rect key="frame" x="326" y="84" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="onClear:" destination="smK-aF-jaB" eventType="touchUpInside" id="dJX-bR-uBS"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="barcodeView" destination="iZG-H2-Vf7" id="GGR-4U-mk7"/>
                         <outlet property="categoryPicker" destination="uqQ-yG-M9p" id="Dwb-5T-kJ5"/>
@@ -653,6 +677,7 @@
                         <outlet property="itemField" destination="AFf-c0-fEg" id="je5-Ba-ZpK"/>
                         <outlet property="quantityField" destination="Jjp-ls-ruI" id="KBX-vA-jzH"/>
                         <outlet property="quantityUnitField" destination="mjR-lN-6oC" id="J7G-tG-yWJ"/>
+                        <outlet property="saveButton" destination="f45-zm-dN5" id="PMu-fg-biJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7p-DS-NEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -715,6 +740,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hMz-o3-JdD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="HXW-lb-ygT" kind="relationship" relationship="rootViewController" id="pNN-Wh-h81"/>
                     </connections>
@@ -958,8 +986,12 @@
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="exclamationmark.circle" catalog="system" width="128" height="121"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -974,9 +1006,6 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

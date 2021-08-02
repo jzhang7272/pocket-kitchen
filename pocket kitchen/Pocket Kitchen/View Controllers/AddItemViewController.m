@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *expirationDate;
 @property (weak, nonatomic) IBOutlet UIPickerView *categoryPicker;
 @property (weak, nonatomic) IBOutlet UIImageView *barcodeView;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @property (nonatomic, strong) NSArray *pickerData;
 @property (nonatomic, strong) NSMutableDictionary *nutrients;
@@ -65,7 +66,13 @@
     [self.barcodeView addGestureRecognizer:photoTapGestureRecognizer];
     [self.barcodeView setUserInteractionEnabled:YES];
     
+    // UI Setup
+    self.barcodeView.layer.cornerRadius = 15;
+    self.barcodeView.clipsToBounds = true;
+    self.saveButton.layer.cornerRadius = 25;
+    self.saveButton.clipsToBounds = true;
 }
+
 
 // BarcodePickerView Delegate Methods
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
@@ -79,7 +86,7 @@
 }
 
 
-// ExpirationDatePickerView Delegate Methods
+// CategoryPickerView Delegate Methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
      return 1;
 }
@@ -87,6 +94,18 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     return self.pickerData.count;
 }
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel* tView = (UILabel*)view;
+        if (!tView){
+            tView = [[UILabel alloc] init];
+            [tView setFont:[UIFont fontWithName:@"Kohinoor Bangla" size:18]];
+            tView.text = self.pickerData[row];
+            tView.textAlignment = UITextAlignmentCenter;
+        }
+        return tView;
+}
+
 
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
      return self.pickerData[row];
@@ -146,7 +165,7 @@
 - (IBAction)onClear:(id)sender {
     self.nutrients = nil;
     self.nutrientUnit = nil;
-    [self.barcodeView setImage:nil];
+    [self.barcodeView setImage:[UIImage systemImageNamed:@"photo"]];
     self.itemField.text = @"";
     self.foodImage = nil;
 }

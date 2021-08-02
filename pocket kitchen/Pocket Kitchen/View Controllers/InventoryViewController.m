@@ -20,6 +20,8 @@
 #import "UIImageView+AFNetworking.h"
 
 const int QUERIES = 20;
+const int BUTTON_SIZE = 50;
+const int DIST_BOTTOM = -100;
 
 #define grayColor [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1.0]
 #define lightBlueColor [UIColor colorWithRed:0.86 green:0.96 blue:0.99 alpha:1.0]
@@ -32,6 +34,7 @@ const int QUERIES = 20;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (strong, nonatomic) UIButton *addButton;
 
 @property (nonatomic, strong) NSMutableArray *itemArray;
 @property (nonatomic, strong) NSMutableArray *filteredArray;
@@ -45,9 +48,12 @@ const int QUERIES = 20;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Initialize
+    // Initialize and UI Setup
     self.categoryArray = @[@"All items", @"Fridge", @"Freezer", @"Pantry"];
     self.headerView.backgroundColor = grayColor;
+    self.addButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.addButton addTarget:self action:@selector(onTapAdd) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.addButton];
     
     // Delegates
     self.tableView.delegate = self;
@@ -86,26 +92,22 @@ const int QUERIES = 20;
     [super viewDidAppear:animated];
 }
 
-- (void)fetchData{
-    PFQuery *query = [PFQuery queryWithClassName:@"FoodItem"];
-    [query includeKey:@"author"];
-    [query whereKey:@"author" equalTo:PFUser.currentUser];
-    [query whereKey:@"grocery" equalTo:[NSNumber numberWithBool:false]];
-    [query orderByDescending:@"name"];
-    query.limit = QUERIES;
-
-    [query findObjectsInBackgroundWithBlock:^(NSArray<FoodItem *> *items, NSError *error) {
-        if (items != nil) {
-            self.filteredArray = [NSMutableArray new];
-            self.itemArray = [NSMutableArray new];
-            [self.itemArray addObjectsFromArray:items];
-            [self.filteredArray addObjectsFromArray:items];
-            [self.tableView reloadData];
-        } else {
-            NSLog(@"%@", error.localizedDescription);
-        }
-    }];
-    [self.refreshControl endRefreshing];
+- (void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    self.addButton.layer.cornerRadius = self.addButton.layer.frame.size.width / 2;
+    self.addButton.backgroundColor = [UIColor systemTealColor];
+    self.addButton.clipsToBounds = true;
+    [self.addButton setImage:[UIImage systemImageNamed:@"plus"] forState:UIControlStateNormal];
+    [self.addButton setTintColor:[UIColor whiteColor]];
+    self.addButton.translatesAutoresizingMaskIntoConstraints = false;
+    
+    self.addButton.layer.shadowColor = [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.25f] CGColor];
+    self.addButton.layer.shadowOffset = CGSizeMake(0, 2.0f);
+    self.addButton.layer.shadowOpacity = 0.8f;
+    self.addButton.layer.shadowRadius = 1.0f;
+    self.addButton.layer.masksToBounds = false;
+    
+    [NSLayoutConstraint activateConstraints:@[[self.addButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant: -(self.view.frame.size.width / 2) + BUTTON_SIZE / 2], [self.addButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:DIST_BOTTOM], [self.addButton.widthAnchor constraintEqualToConstant: BUTTON_SIZE], [self.addButton.heightAnchor constraintEqualToConstant: BUTTON_SIZE]]];
 }
 
 #pragma mark - Collection View
@@ -238,7 +240,34 @@ const int QUERIES = 20;
 }
 
 
-// Helper Functions
+#pragma mark - Helper Functions
+
+- (void)fetchData{
+    PFQuery *query = [PFQuery queryWithClassName:@"FoodItem"];
+    [query includeKey:@"author"];
+    [query whereKey:@"author" equalTo:PFUser.currentUser];
+    [query whereKey:@"grocery" equalTo:[NSNumber numberWithBool:false]];
+    [query orderByDescending:@"name"];
+    query.limit = QUERIES;
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray<FoodItem *> *items, NSError *error) {
+        if (items != nil) {
+            self.filteredArray = [NSMutableArray new];
+            self.itemArray = [NSMutableArray new];
+            [self.itemArray addObjectsFromArray:items];
+            [self.filteredArray addObjectsFromArray:items];
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+    [self.refreshControl endRefreshing];
+}
+
+- (void) onTapAdd{
+    [self performSegueWithIdentifier:@"addItemSegue" sender:self];
+}
+
 - (NSString *)getExpirationDate:(NSDate *)date{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     NSDate *current = [NSDate date];
@@ -282,10 +311,9 @@ const int QUERIES = 20;
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([[segue identifier] isEqualToString:@"addItemSeque"]) {
+    if([[segue identifier] isEqualToString:@"addItemSegue"]) {
         UINavigationController *navigationController = [segue destinationViewController];
             AddItemViewController *addController = (AddItemViewController*)navigationController.topViewController;
-//            addController.delegate = self;
     }
     if([[segue identifier] isEqualToString:@"detailsSegue"]) {
         UITableViewCell *tappedCell = sender;
