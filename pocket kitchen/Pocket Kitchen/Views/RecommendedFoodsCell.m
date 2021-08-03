@@ -9,7 +9,7 @@
 #import "CollectionRecommendedFoodsCell.h"
 #import "Constants.h"
 
-#define BlueColor [UIColor colorWithRed:0.86 green:0.96 blue:0.99 alpha:1.0]
+#define lightBlueColor [UIColor colorWithRed:0.86 green:0.96 blue:0.99 alpha:1.0]
 
 @interface RecommendedFoodsCell () < UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -28,7 +28,7 @@
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     CollectionRecommendedFoodsCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"ColelctionRecommendedFoodsCell" forIndexPath:indexPath];
     cell.foodLabel.text = self.recommendedFoods[indexPath.row];
-    cell.backgroundColor = BlueColor;
+    cell.backgroundColor = lightBlueColor;
     cell.layer.cornerRadius = SMALL_CORNER_RADIUS;
     cell.layer.masksToBounds= true;
     return cell;

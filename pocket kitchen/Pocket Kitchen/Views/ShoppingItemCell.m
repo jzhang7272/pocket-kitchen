@@ -11,7 +11,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 - (IBAction)onTapBought:(UIButton *)sender {
     if (sender.selected == true){
@@ -24,8 +23,6 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end

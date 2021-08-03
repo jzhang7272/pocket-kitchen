@@ -245,7 +245,9 @@ const int ONE_DAY = 1;
                 [[EGOCache globalCache] setObject:highNutrients forKey:[foodItem capitalizedString] withTimeoutInterval:CACHE_TIME];
             }
             [FoodItem saveItem:foodItem :quantity :quantityUnit :expDate :category :foodImage];
-            [self dismissViewControllerAnimated:true completion:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self dismissViewControllerAnimated:true completion:nil];
+            });
         }
     }];
 }
