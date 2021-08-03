@@ -173,7 +173,6 @@
 #pragma mark - Helper Functions
 
 - (void) getBarcode:(UIImage *)image {
-    MLKBarcodeScannerOptions *options = [[MLKBarcodeScannerOptions alloc] initWithFormats:MLKBarcodeFormatUPCA | MLKBarcodeFormatEAN8];
     MLKVisionImage *visionImage = [[MLKVisionImage alloc] initWithImage:image];
     visionImage.orientation = image.imageOrientation;
     [self.barcodeScanner processImage:visionImage completion:^(NSArray<MLKBarcode *> *_Nullable barcodes, NSError *_Nullable error) {

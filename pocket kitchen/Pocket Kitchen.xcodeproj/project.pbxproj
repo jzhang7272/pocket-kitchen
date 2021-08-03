@@ -23,8 +23,6 @@
 		ED6CB7C126A8ACAC00A1906A /* Nutrient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7C026A8ACAC00A1906A /* Nutrient.m */; };
 		ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */; };
 		ED81F805269F87F700F9E2CF /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F804269F87F700F9E2CF /* DetailsViewController.m */; };
-		ED81F81726A109E100F9E2CF /* Category.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED81F81626A109E100F9E2CF /* Category.xib */; };
-		ED81F81A26A109F200F9E2CF /* CategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F81926A109F200F9E2CF /* CategoryView.m */; };
 		ED81F81D26A221CE00F9E2CF /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F81C26A221CE00F9E2CF /* ShoppingViewController.m */; };
 		ED81F82026A2225A00F9E2CF /* ShoppingItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F81F26A2225A00F9E2CF /* ShoppingItemCell.m */; };
 		EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF224B269CD86800862BD5 /* AppDelegate.m */; };
@@ -97,9 +95,6 @@
 		ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NutrientApiManager.m; sourceTree = "<group>"; };
 		ED81F803269F87F700F9E2CF /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		ED81F804269F87F700F9E2CF /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
-		ED81F81626A109E100F9E2CF /* Category.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Category.xib; sourceTree = "<group>"; };
-		ED81F81826A109F200F9E2CF /* CategoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryView.h; sourceTree = "<group>"; };
-		ED81F81926A109F200F9E2CF /* CategoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryView.m; sourceTree = "<group>"; };
 		ED81F81B26A221CE00F9E2CF /* ShoppingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = SOURCE_ROOT; };
 		ED81F81C26A221CE00F9E2CF /* ShoppingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = SOURCE_ROOT; };
 		ED81F81E26A2225A00F9E2CF /* ShoppingItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingItemCell.h; sourceTree = "<group>"; };
@@ -223,16 +218,6 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		ED81F82126A222CA00F9E2CF /* XIB */ = {
-			isa = PBXGroup;
-			children = (
-				ED81F81926A109F200F9E2CF /* CategoryView.m */,
-				ED81F81826A109F200F9E2CF /* CategoryView.h */,
-				ED81F81626A109E100F9E2CF /* Category.xib */,
-			);
-			path = XIB;
-			sourceTree = "<group>";
-		};
 		EDFF223E269CD86800862BD5 = {
 			isa = PBXGroup;
 			children = (
@@ -261,7 +246,6 @@
 				ED6CB7C526AB17F500A1906A /* Objects */,
 				ED81F800269E3BDA00F9E2CF /* NutrientApiManager.h */,
 				ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */,
-				ED81F82126A222CA00F9E2CF /* XIB */,
 				EDFF224A269CD86800862BD5 /* AppDelegate.h */,
 				EDFF224B269CD86800862BD5 /* AppDelegate.m */,
 				EDFF224D269CD86800862BD5 /* SceneDelegate.h */,
@@ -429,7 +413,6 @@
 				EDFF2257269CD86900862BD5 /* Assets.xcassets in Resources */,
 				EDFF2255269CD86800862BD5 /* Main.storyboard in Resources */,
 				ED380C0726ADB9B7006D9B0C /* Pods-Pocket Kitchen.debug.xcconfig in Resources */,
-				ED81F81726A109E100F9E2CF /* Category.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,7 +563,6 @@
 				ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */,
 				ED380C1526AF1CC8006D9B0C /* CollectionRecommendedFoodsCell.m in Sources */,
 				EDFF224F269CD86800862BD5 /* SceneDelegate.m in Sources */,
-				ED81F81A26A109F200F9E2CF /* CategoryView.m in Sources */,
 				EDFF2291269DF77500862BD5 /* FoodItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

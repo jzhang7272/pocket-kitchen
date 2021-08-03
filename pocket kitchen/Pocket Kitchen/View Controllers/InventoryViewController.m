@@ -11,7 +11,6 @@
 #import "NutrientApiManager.h"
 
 #import "FoodItemCell.h"
-#import "CategoryView.h"
 #import "CategoryCell.h"
 
 #import "FoodItem.h"
@@ -269,7 +268,6 @@ const int DIST_BOTTOM = -100;
 }
 
 - (NSString *)getExpirationDate:(NSDate *)date{
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     NSDate *current = [NSDate date];
     NSInteger yearsApart = [date yearsFrom:current];
     NSInteger monthsApart = [date monthsFrom:current];

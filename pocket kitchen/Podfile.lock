@@ -77,6 +77,7 @@ PODS:
   - Parse/Core (1.19.2):
     - Bolts/Tasks (= 1.9.1)
   - PKYStepper (0.0.1)
+  - PopupKit (3.1.1)
   - PromisesObjC (2.0.0)
   - Protobuf (3.17.0)
   - SFProgressCircle (1.0.6)
@@ -88,6 +89,7 @@ DEPENDENCIES:
   - GoogleMLKit/BarcodeScanning
   - Parse
   - PKYStepper (= 0.0.1)
+  - PopupKit
   - SFProgressCircle
 
 SPEC REPOS:
@@ -109,6 +111,7 @@ SPEC REPOS:
     - nanopb
     - Parse
     - PKYStepper
+    - PopupKit
     - PromisesObjC
     - Protobuf
     - SFProgressCircle
@@ -131,10 +134,11 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   Parse: 081fb8755c3000fd11df817eec235def233d0af3
   PKYStepper: 8dacefbddf9fa2b6aaec2ef828b46a78daa2db7d
+  PopupKit: e362ed92148d831a9c38a2bc7a25893e46d64c54
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   Protobuf: 7327d4444215b5f18e560a97f879ff5503c4581c
   SFProgressCircle: 645d71eb3ffc56939029afa074b5a38ed3cdfa21
 
-PODFILE CHECKSUM: 3ac49d21719403887b3f83066bee1de59bf61ecf
+PODFILE CHECKSUM: cab0f5cf217a0e4f144500c9f77466dae52b77ab
 
 COCOAPODS: 1.10.1

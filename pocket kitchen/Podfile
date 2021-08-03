@@ -13,6 +13,7 @@ target 'Pocket Kitchen' do
   pod 'SFProgressCircle'
   pod 'PKYStepper', '0.0.1'
   pod 'GoogleMLKit/BarcodeScanning'
+  pod 'PopupKit'
 
   target 'Pocket KitchenTests' do
     inherit! :search_paths

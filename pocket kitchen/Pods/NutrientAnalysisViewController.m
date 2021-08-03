@@ -15,6 +15,7 @@
 #import "ScoreCell.h"
 
 #import <SFProgressCircle/SFProgressCircle.h>
+#import <PopupKit/PopupView.h>
 #import "Nutrient.h"
 #import "NutrientSource.h"
 #import "FoodItem.h"
@@ -52,6 +53,7 @@ const int NMBR_DAYS = 7;
 @property (nonatomic) SFCircleGradientView *progressView;
 @property (nonatomic) SFCircleGradientView *backgroundProgressView;
 @property (nonatomic) UILabel *percentageLabel;
+@property (nonatomic) CGPoint cellCenter;
 
 
 @property (nonatomic) BOOL loaded;
@@ -189,6 +191,47 @@ const int NMBR_DAYS = 7;
 - (IBAction)closeButton:(id)sender {
     [self dismissViewControllerAnimated:true completion:nil];
 }
+- (IBAction)onTapInfo:(id)sender {
+    UIView* contentView = [[UIView alloc] init];
+    contentView.backgroundColor = [UIColor whiteColor];
+    contentView.frame = CGRectMake(0.0, 0.0, 300, 390);
+    contentView.layer.cornerRadius = SMALL_CORNER_RADIUS;
+    
+    UIView *titleBackground = [[UIView alloc] init];
+    titleBackground.backgroundColor = lightBlueColor;
+    titleBackground.frame = CGRectMake(0, 0, 300, 40);
+    titleBackground.layer.cornerRadius = SMALL_CORNER_RADIUS;
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 280, 20)];
+    titleLabel.text = @"How does this work?";
+    titleLabel.font = [UIFont fontWithName:@"Kohinoor Bangla Semibold" size:18];
+    titleLabel.numberOfLines = 0;
+    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.clipsToBounds = true;
+    
+    UILabel *bodyLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 40, 280, 340)];
+    bodyLabel.text = @"\tOf the many nutrients that can be found in our diet, the Nutrient Analysis considers 24 main nutrients in foods. In order for individuals to be healthy, they must meet the average daily recommended values (DRV) for intake of nutrients (DRV provided by The Food and Nutrition Board of the National Academies of Sciences Engineering, and Medicine). \n\tThe Nutrient Analysis then calculates the health score (out of 100) for a user's grocery list based on weekly recommended values of nutrients. To reach a score of 100, food items in the shopping list must reach the RV for nutrients beneficial to the body and not exceed RV for nutrients that are detrimental to the body in large amounts. Nutrients that have not met recommended values are represented with a green plus sign with recommended foods that are high in that nutrient. \n\tNotes: Unrecognized foods are not included in calculations. If no quantity of food item is provided, the default is 1. Quantity is measured by one item, or one serving if item information cannot be found.";
+    bodyLabel.font = [UIFont fontWithName:@"Kohinoor Bangla" size:11];
+    bodyLabel.numberOfLines = 0;
+    bodyLabel.backgroundColor = [UIColor whiteColor];
+    bodyLabel.textColor = [UIColor blackColor];
+    bodyLabel.textAlignment = NSTextAlignmentLeft;
+    bodyLabel.clipsToBounds = true;
+    
+    [contentView addSubview:titleBackground];
+    [contentView addSubview:titleLabel];
+    [contentView addSubview:bodyLabel];
+
+
+    PopupView* popup = [PopupView popupViewWithContentView:contentView];
+    popup.showType = PopupViewShowTypeBounceIn;
+    popup.dismissType = PopupViewDismissTypeBounceOut;
+    popup.shouldDismissOnBackgroundTouch = true;
+    popup.backgroundColor = [UIColor clearColor];
+    [popup show];
+}
+
 
 - (void) updateUI {
     self.loaded = true;
@@ -221,7 +264,7 @@ const int NMBR_DAYS = 7;
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.loaded == true && indexPath.section != 0 && self.missingNutrients.count != 0){
-        RecommendedFoodsCell *recCell = cell;
+        RecommendedFoodsCell *recCell = (RecommendedFoodsCell *)cell;
         if (self.tooMuchNutrient.count > 0){
             if (indexPath.section != 1){
                 [recCell setCollectionViewDataSourceDelegate:recCell forRow:(int)indexPath.section];
@@ -243,8 +286,12 @@ const int NMBR_DAYS = 7;
             ScoreCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScoreCell"];
             cell.backgroundColor = grayColor;
             
+            if (!self.loadedProgress){
+                self.cellCenter = cell.placeholderView.center;
+            }
+            
             _backgroundProgressView = [[SFCircleGradientView alloc] initWithFrame:(CGRect){0, 0, 175, 175}];
-            [_backgroundProgressView setCenter:cell.placeholderView.center];
+            [_backgroundProgressView setCenter:self.cellCenter];
             [_backgroundProgressView setLineWidth:10];
             [_backgroundProgressView setProgress:1];
             [_backgroundProgressView setRoundedCorners:YES];
@@ -255,14 +302,14 @@ const int NMBR_DAYS = 7;
             [cell.contentView addSubview:_backgroundProgressView];
             
             _progressView = [[SFCircleGradientView alloc] initWithFrame:(CGRect){0, 0, 175, 175}];
-            [_progressView setCenter:cell.placeholderView.center];
+            [_progressView setCenter:self.cellCenter];
             [_progressView setLineWidth:10];
             [_progressView setProgress:0];
             [_progressView setRoundedCorners:YES];
             [cell.contentView addSubview:_progressView];
                 
             _percentageLabel = [[UILabel alloc] initWithFrame:(CGRect){0, 0, 100, 30}];
-            [_percentageLabel setCenter:cell.placeholderView.center];
+            [_percentageLabel setCenter:self.cellCenter];
             [_percentageLabel setFont:[UIFont fontWithName:@"Kohinoor Bangla Semibold" size:32]];
             [_percentageLabel setTextAlignment:NSTextAlignmentCenter];
             [cell.contentView addSubview:_percentageLabel];
@@ -331,7 +378,8 @@ const int NMBR_DAYS = 7;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return (self.missingNutrients.count == 0) ? 3 : self.missingNutrients.count + 2;
+    int badNutrientCount = (self.tooMuchNutrient.count == 0) ? 0 : 1;
+    return (self.missingNutrients.count == 0) ? (2 + badNutrientCount) : self.missingNutrients.count + badNutrientCount + 1;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

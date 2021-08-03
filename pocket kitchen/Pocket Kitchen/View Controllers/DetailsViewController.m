@@ -123,7 +123,6 @@
                 self.item.nutrients = [self convertNutrientsToString:nutrients];
                 self.nutritionDetailsLabel.text = self.item.nutrients;
                 self.nutritionLabel.text = [NSString stringWithFormat:@"Nutrition Facts (per %@)", self.item.nutrientUnit];
-                NSURL *url = [NSURL URLWithString:foodImage];
                 [self.item saveInBackgroundWithBlock:nil];
             });
         }
