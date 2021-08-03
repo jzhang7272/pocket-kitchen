@@ -11,10 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface InventoryViewController : UIViewController
 
-extern const int QUERIES;
-extern const double PERCENTAGE_HIGH;
-extern const double PERCENTAGE_LOW;
-
 @end
 
 NS_ASSUME_NONNULL_END

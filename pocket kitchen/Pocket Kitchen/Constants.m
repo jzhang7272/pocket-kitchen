@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "Constants.h"
 
 double const THRESHOLD_HIGH_DECIMAL_DRV = 0.2;

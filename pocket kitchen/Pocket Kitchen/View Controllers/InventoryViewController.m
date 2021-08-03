@@ -24,8 +24,6 @@ const int DIST_BOTTOM = -100;
 
 #define grayColor [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1.0]
 #define lightBlueColor [UIColor colorWithRed:0.86 green:0.96 blue:0.99 alpha:1.0]
-#define lighterBlueColor [UIColor colorWithRed:0.96 green:0.96 blue:0.99 alpha:1.0]
-#define darkerLightBlueColor [UIColor colorWithRed:0.76 green:0.86 blue:0.89 alpha:1.0]
 
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -182,7 +180,7 @@ const int DIST_BOTTOM = -100;
         if ([cell.expDateLabel.text isEqualToString:@"Expired"]){
             cell.alertIcon.tintColor = [UIColor systemRedColor];
         }
-        else if([cell.expDateLabel.text isEqualToString:@"Expiring today"]){
+        else if([cell.expDateLabel.text isEqualToString:@"Expiring in < 1 day"]){
             cell.alertIcon.tintColor = [UIColor systemYellowColor];
         }
         else{
@@ -265,6 +263,15 @@ const int DIST_BOTTOM = -100;
 
 - (void) onTapAdd{
     [self performSegueWithIdentifier:@"addItemSegue" sender:self];
+    
+    CABasicAnimation *shake = [CABasicAnimation animationWithKeyPath:@"position"];
+    [shake setDuration:0.1];
+    [shake setRepeatCount:2];
+    [shake setAutoreverses:YES];
+    [shake setFromValue:[NSValue valueWithCGPoint:CGPointMake(self.addButton.center.x - 2, self.addButton.center.y)]];
+    [shake setToValue:[NSValue valueWithCGPoint:CGPointMake(self.addButton.center.x + 2, self.addButton.center.y)]];
+    [self.addButton.layer addAnimation:shake forKey:@"position"];
+    
 }
 
 - (NSString *)getExpirationDate:(NSDate *)date{
@@ -273,7 +280,7 @@ const int DIST_BOTTOM = -100;
     NSInteger monthsApart = [date monthsFrom:current];
     NSInteger daysApart = [date daysFrom:current];
     if (daysApart == 0){
-        return @"Expiring today";
+        return @"Expiring in < 1 day";
     }
     else if ([date timeIntervalSinceDate:current] < 0){
         return @"Expired";

@@ -14,6 +14,8 @@
 #import "EGOCache.h"
 #import "UIImageView+AFNetworking.h"
 
+const int ONE_DAY = 1;
+
 @import MLImage;
 @import MLKit;
 
@@ -66,7 +68,6 @@
     [self.barcodeView addGestureRecognizer:photoTapGestureRecognizer];
     [self.barcodeView setUserInteractionEnabled:YES];
     
-    // UI Setup
     self.barcodeView.layer.cornerRadius = SMALL_CORNER_RADIUS;
     self.barcodeView.clipsToBounds = true;
     self.saveButton.layer.cornerRadius = LARGE_CORNER_RADIUS;
@@ -101,7 +102,7 @@
             tView = [[UILabel alloc] init];
             [tView setFont:[UIFont fontWithName:@"Kohinoor Bangla" size:18]];
             tView.text = self.pickerData[row];
-            tView.textAlignment = UITextAlignmentCenter;
+            tView.textAlignment = NSTextAlignmentCenter;
         }
         return tView;
 }
@@ -150,12 +151,11 @@
     
     if (self.nutrients != nil){
         [self cacheBarcodeFoods:item :quantity :quantityUnit :expDate :category];
+        [self dismissViewControllerAnimated:true completion:nil];
     }
     else{
         [self cacheUserFoods:item :quantity :quantityUnit :expDate :category];
     }
-    
-    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (IBAction)onTap:(id)sender {
@@ -218,8 +218,20 @@
 - (void)cacheUserFoods:(NSString *)foodItem :(NSNumber *)quantity :(NSString *)quantityUnit:(NSDate *)expDate :(NSString *)category {
     NutrientApiManager *nutrientApi = [NutrientApiManager new];
     [nutrientApi fetchInventoryNutrients:foodItem :@"totalDaily" :^(NSDictionary *dictionary, BOOL unitGram, NSString *foodImage, NSError *error) {
-        if(error){
+        if(dictionary == nil){
             NSLog(@"%@", error.localizedDescription);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Item not Found" message:@"The food item you entered was not found in the databse. Would you still like to add this item to your inventory?" preferredStyle:(UIAlertControllerStyleAlert)];
+                UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {[self dismissViewControllerAnimated:true completion:nil];}];
+                [alert addAction:cancelAction];
+
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+                    [FoodItem saveItem:foodItem :quantity :quantityUnit :expDate :category :foodImage];
+                    [self dismissViewControllerAnimated:true completion:nil];
+                }];
+                [alert addAction:okAction];
+                [self presentViewController:alert animated:YES completion:nil];
+            });
         }
         else{
             NSMutableArray *highNutrients = [NSMutableArray new];
@@ -230,16 +242,17 @@
                 }
             }
             if ([highNutrients count] != 0){
-                [[EGOCache globalCache] setObject:highNutrients forKey:[foodItem lowercaseString] withTimeoutInterval:60*60*24*7];
+                [[EGOCache globalCache] setObject:highNutrients forKey:[foodItem capitalizedString] withTimeoutInterval:CACHE_TIME];
             }
             [FoodItem saveItem:foodItem :quantity :quantityUnit :expDate :category :foodImage];
+            [self dismissViewControllerAnimated:true completion:nil];
         }
     }];
 }
 
 - (void)cacheBarcodeFoods:(NSString *)foodItem :(NSNumber *)quantity :(NSString *)quantityUnit :(NSDate *)expDate :(NSString *)category {
     NSMutableArray *highNutrients = [NSMutableArray new];
-    NSDictionary *recommendedNutrients = [Nutrient recommendedNutrientAmount:1];
+    NSDictionary *recommendedNutrients = [Nutrient recommendedNutrientAmount:ONE_DAY];
     for(id nutrient in recommendedNutrients){
         double recommendedAmt = ((Nutrient *)[recommendedNutrients valueForKey:nutrient]).quantity;
         double foodAmt = [self.nutrients[nutrient] doubleValue];

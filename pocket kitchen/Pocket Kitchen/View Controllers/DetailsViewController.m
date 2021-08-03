@@ -40,7 +40,7 @@
     formatter.dateStyle = NSDateFormatterShortStyle;
     self.categoryLabel.text = self.item.category;
     self.expDatePicker.date = self.item.expirationDate;
-    self.expDatePicker.minimumDate = self.item.expirationDate;
+    self.expDatePicker.minimumDate = [self.item.expirationDate earlierDate:[NSDate date]];
     
     self.quantityStepper.value = [self.item.quantity intValue];
     self.quantityStepper.stepInterval = 1;

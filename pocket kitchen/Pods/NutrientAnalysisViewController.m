@@ -33,8 +33,7 @@ const int NMBR_DAYS = 7;
 #define lightPurpleColor [UIColor colorWithRed:0.87 green:0.74 blue:1.00 alpha:1.0]
 
 
-@interface NutrientAnalysisViewController () <UITableViewDelegate, UITableViewDataSource>
-{
+@interface NutrientAnalysisViewController () <UITableViewDelegate, UITableViewDataSource> {
     CFTimeInterval startTime;
     NSNumber *fromNumber;
     NSNumber *toNumber;
@@ -175,8 +174,9 @@ const int NMBR_DAYS = 7;
             dispatch_group_leave(group);
         }];
     }
+    
+    // Save as 2D array to display in UI
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        // Save as 2D array to display in UI
         for (NSString *missing in self.missingNutrients){
             NSArray *foods = [recommendedFoods valueForKey:missing];
             [self.recommendedFoods addObject:foods];
@@ -379,6 +379,8 @@ const int NMBR_DAYS = 7;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     int badNutrientCount = (self.tooMuchNutrient.count == 0) ? 0 : 1;
+    
+    // If there are no missing nutrients, one section still used to display information
     return (self.missingNutrients.count == 0) ? (2 + badNutrientCount) : self.missingNutrients.count + badNutrientCount + 1;
 }
 

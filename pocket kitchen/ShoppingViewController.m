@@ -33,7 +33,6 @@
     
     [self fetchGroceries];
     
-    // Refresh
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchGroceries) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
@@ -48,7 +47,6 @@
         if (items != nil) {
             self.groceryItemArray = [NSMutableArray new];
             [self.groceryItemArray addObjectsFromArray:items];
-//            self.groceryItemArray = [items copy];
             [self.tableView reloadData];
         } else {
             NSLog(@"%@", error.localizedDescription);
