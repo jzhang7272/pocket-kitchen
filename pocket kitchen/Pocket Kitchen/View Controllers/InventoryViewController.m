@@ -18,8 +18,8 @@
 #import <Parse/Parse.h>
 #import "DateTools.h"
 #import "UIImageView+AFNetworking.h"
+#import "Constants.h"
 
-const int QUERIES = 20;
 const int BUTTON_SIZE = 60;
 const int DIST_BOTTOM = -100;
 
@@ -115,7 +115,7 @@ const int DIST_BOTTOM = -100;
     CategoryCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCell" forIndexPath:indexPath];
     cell.categoryLabel.text = self.categoryArray[indexPath.row];
     cell.backgroundColor = [UIColor whiteColor];
-    cell.layer.cornerRadius = 5;
+    cell.layer.cornerRadius = SMALL_CORNER_RADIUS;
     cell.layer.masksToBounds= true;
     return cell;
 }
@@ -170,14 +170,14 @@ const int DIST_BOTTOM = -100;
         cell.itemLabel.text = item.name;
         cell.quantityLabel.text = [NSString stringWithFormat:@"  %@  ", item.quantity];
         cell.quantityLabel.backgroundColor = grayColor;
-        cell.quantityLabel.layer.cornerRadius = 10;
+        cell.quantityLabel.layer.cornerRadius = SMALL_CORNER_RADIUS;
         cell.quantityLabel.clipsToBounds = YES;
         cell.categoryLabel.text = item.category;
         cell.expDateLabel.text = [self getExpirationDate:item.expirationDate];
         
         NSURL *url = [NSURL URLWithString:item.image];
         [cell.foodView setImageWithURL:url];
-        cell.foodView.layer.cornerRadius = 15;
+        cell.foodView.layer.cornerRadius = LARGE_CORNER_RADIUS;
         cell.foodView.clipsToBounds = YES;
         
         if ([cell.expDateLabel.text isEqualToString:@"Expired"]){
@@ -248,7 +248,7 @@ const int DIST_BOTTOM = -100;
     [query whereKey:@"author" equalTo:PFUser.currentUser];
     [query whereKey:@"grocery" equalTo:[NSNumber numberWithBool:false]];
     [query orderByDescending:@"name"];
-    query.limit = QUERIES;
+    query.limit = NMBR_QUERIES;
 
     [query findObjectsInBackgroundWithBlock:^(NSArray<FoodItem *> *items, NSError *error) {
         if (items != nil) {

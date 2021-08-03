@@ -7,6 +7,8 @@
 
 #import "FoodItem.h"
 
+const double DISPLAY_MIN = 0.01;
+
 @implementation FoodItem
 
 @dynamic author;
@@ -18,7 +20,7 @@
 @dynamic nutrients;
 @dynamic nutrientUnit;
 @dynamic image;
-@dynamic branded;
+@dynamic grocery;
 
 + (nonnull NSString *)parseClassName {
     return @"FoodItem";
@@ -33,7 +35,6 @@
     newItem.quantityUnit = quantityUnit;
     newItem.category = category;
     newItem.image = image;
-    // newItem.branded = branded;
     newItem.grocery = false;
     
     [newItem saveInBackgroundWithBlock: nil];
@@ -61,7 +62,7 @@
         NSDictionary *nutrientDetails = dictionary[nutrient];
         NSString *unit = nutrientDetails[@"unit"];
         double quantity = [nutrientDetails[@"quantity"] doubleValue];
-        if (quantity < 0.01){
+        if (quantity < DISPLAY_MIN){
             [nutrients setObject: [NSString stringWithFormat:@"<0.01 %@", unit] forKey:nutrientDetails[@"label"]];
         }
         else{

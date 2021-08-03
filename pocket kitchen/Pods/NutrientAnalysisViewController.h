@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddGroceryItemViewController : UIViewController
+@interface NutrientAnalysisViewController : UIViewController
 
 @property (nonatomic, strong) NSMutableArray *groceryItemArray;
 

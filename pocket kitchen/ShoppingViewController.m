@@ -7,8 +7,9 @@
 
 #import "ShoppingViewController.h"
 #import "InventoryViewController.h"
-#import "AddGroceryItemViewController.h"
+#import "NutrientAnalysisViewController.h"
 #import "FoodItem.h"
+#import "Constants.h"
 
 #import "ShoppingItemCell.h"
 
@@ -38,32 +39,10 @@
     [self.tableView insertSubview:self.refreshControl atIndex:0];
 }
 
-- (IBAction)onTapAdd:(id)sender {
-    if (self.groceryItemField.text.length == 0){
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Empty Field" message:@"Please enter an item to add." preferredStyle:(UIAlertControllerStyleAlert)];
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {}];
-        [alert addAction:okAction];
-        [self presentViewController:alert animated:YES completion:nil];
-    }
-    else {
-        [FoodItem saveItemAsGrocery:self.groceryItemField.text :@1 :^(FoodItem *groceryItem, NSError *error) {
-            if (error) {
-                NSLog(@"%@", error.localizedDescription);
-            }
-            else {
-                [self.groceryItemArray insertObject:groceryItem atIndex:0];
-                [self.tableView reloadData];
-            }
-          }];
-
-        [self.groceryItemField setText:@""];
-    }
-}
-
 - (void)fetchGroceries {
     PFQuery *query = [PFQuery queryWithClassName:@"FoodItem"];
     [query whereKey:@"grocery" equalTo:[NSNumber numberWithBool:true]];
-    query.limit = QUERIES;
+    query.limit = NMBR_QUERIES;
 
     [query findObjectsInBackgroundWithBlock:^(NSArray<FoodItem *> *items, NSError *error) {
         if (items != nil) {
@@ -108,20 +87,41 @@
         }];
     }
 }
-- (IBAction)onTapAdvancedAdd:(id)sender {
-    [self performSegueWithIdentifier:@"addGroceryItemSegue" sender:self];
+
+- (IBAction)onTapAdd:(id)sender {
+    if (self.groceryItemField.text.length == 0){
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Empty Field" message:@"Please enter an item to add." preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {}];
+        [alert addAction:okAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else {
+        [FoodItem saveItemAsGrocery:self.groceryItemField.text :@1 :^(FoodItem *groceryItem, NSError *error) {
+            if (error) {
+                NSLog(@"%@", error.localizedDescription);
+            }
+            else {
+                [self.groceryItemArray insertObject:groceryItem atIndex:0];
+                [self.tableView reloadData];
+            }
+          }];
+
+        [self.groceryItemField setText:@""];
+    }
+}
+
+- (IBAction)onTapNutrientAnalysis:(id)sender {
+    [self performSegueWithIdentifier:@"nutrientAnalysisSegue" sender:self];
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([[segue identifier] isEqualToString:@"addGroceryItemSegue"]) {
+    if([[segue identifier] isEqualToString:@"nutrientAnalysisSegue"]) {
         UINavigationController *navigationController = [segue destinationViewController];
-            AddGroceryItemViewController *addController = (AddGroceryItemViewController*)navigationController.topViewController;
+            NutrientAnalysisViewController *addController = (NutrientAnalysisViewController*)navigationController.topViewController;
         addController.groceryItemArray = self.groceryItemArray;
     }
 }
-
-
 
 @end

@@ -7,32 +7,31 @@
 
 
 #import "NutrientApiManager.h"
-
 #import "FoodItem.h"
+
+const double TIMEOUT = 10.0;
 
 @implementation NutrientApiManager
 
 - (id)init {
     self = [super init];
 
-    self.session = [NSURLSession sharedSession];
-    self.baseURL = @"https://api.nal.usda.gov/fdc/v1/foods/search";
     self.servingURL = @"http://www.edamam.com/ontologies/edamam.owl#Measure_serving";
 
     return self;
 }
 
 - (void)fetchInventoryNutrients:(NSString *)item :(NSString *)nutrientType :(void(^)(NSDictionary *, BOOL, NSString *, NSError *))completion{
+    
     NSString *baseParseURL = @"https://api.edamam.com/api/food-database/v2/parser";
     NSURLComponents *components = [NSURLComponents componentsWithString:baseParseURL];
     NSURLQueryItem *appID = [NSURLQueryItem queryItemWithName:@"app_id" value:@"03df0f4f"];
     NSURLQueryItem *appKey = [NSURLQueryItem queryItemWithName:@"app_key" value:@"4322af03056e14eafae0bfebbcc340e8"];
     NSURLQueryItem *ingr = [NSURLQueryItem queryItemWithName:@"ingr" value:item];
     NSURLQueryItem *nutritionType = [NSURLQueryItem queryItemWithName:@"nutrition-type" value:@"cooking"];
-    // NSURLQueryItem *category = [NSURLQueryItem queryItemWithName:@"category" value:@"generic-foods"];
     components.queryItems = @[appID, appKey, ingr, nutritionType];
                                 
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:components.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:components.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:TIMEOUT];
     
     [request setHTTPMethod:@"GET"];
     
@@ -76,7 +75,7 @@
     NSURLQueryItem *nutritionType = [NSURLQueryItem queryItemWithName:@"nutrition-type" value:@"cooking"];
     components.queryItems = @[appID, appKey, ingr, nutritionType];
 
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:components.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:components.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:TIMEOUT];
 
     [request setHTTPMethod:@"GET"];
 
@@ -112,6 +111,7 @@
 }
 
 - (void)fetchBarcodeNutrients:(NSString *)barcode :(void(^)(NSString *, NSDictionary *, NSString *, NSString *, NSString *, BOOL))completion{
+    
     NSString *baseParseURL = @"https://api.edamam.com/api/food-database/v2/parser";
     NSURLComponents *components = [NSURLComponents componentsWithString:baseParseURL];
     NSURLQueryItem *appID = [NSURLQueryItem queryItemWithName:@"app_id" value:@"03df0f4f"];
@@ -120,7 +120,7 @@
     NSURLQueryItem *nutritionType = [NSURLQueryItem queryItemWithName:@"nutrition-type" value:@"cooking"];
     components.queryItems = @[appID, appKey, upc, nutritionType];
                                 
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:components.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:components.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:TIMEOUT];
     
     [request setHTTPMethod:@"GET"];
     
@@ -142,7 +142,6 @@
     [dataTask resume];
 }
 
-// Nutrients API - POST
 - (void) fetchNutrientHelper:(NSString *)foodID :(NSString *)unitURL :(NSString *)alternateUnitURL :(NSString *)nutrientType :(void(^)(NSDictionary *, BOOL, double, NSError *))completion{
     NSString *baseNutrientURL = @"https://api.edamam.com/api/food-database/v2/nutrients";
     NSURLComponents *nutrientComponents = [NSURLComponents componentsWithString:baseNutrientURL];
@@ -152,12 +151,10 @@
 
     NSMutableURLRequest *requestNutrient = [NSMutableURLRequest requestWithURL:nutrientComponents.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
 
-    // Create POST method
     [requestNutrient setHTTPMethod:@"POST"];
     
     NSString *jsonString = [NSString stringWithFormat:@"{\"ingredients\": [{\"quantity\": 1,\"measureURI\": \"%@\",\"foodId\": \"%@\"}]}", unitURL, foodID];
 
-    // Apply data to body
     [requestNutrient setHTTPBody:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
     [requestNutrient setValue:@"application/json" forHTTPHeaderField:@"content-type"];
     
@@ -188,9 +185,5 @@
     }];
     [nutrient_dataTask resume];
 }
-
-
-
-
 
 @end

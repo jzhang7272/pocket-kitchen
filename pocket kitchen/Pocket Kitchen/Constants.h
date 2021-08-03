@@ -11,6 +11,10 @@
 extern double const THRESHOLD_HIGH_DECIMAL_DRV;
 extern int const THRESHOLD_HIGH_DRV;
 
-// extern NSString * const PREFS_MY_CONSTANT;
+extern int const SMALL_CORNER_RADIUS;
+extern int const LARGE_CORNER_RADIUS;
+
+extern int const NMBR_QUERIES;
+extern int const CACHE_TIME;
 
 #endif /* Constants_h */

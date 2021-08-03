@@ -7,10 +7,15 @@
 
 #import "LogInViewController.h"
 #import <Parse/Parse.h>
+#import "Constants.h"
 
 @interface LogInViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
+@property (weak, nonatomic) IBOutlet UIImageView *magnetView;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -19,7 +24,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.backgroundView.image = [UIImage imageNamed:@"whiteFridge"];
+    [self.view sendSubviewToBack:self.backgroundView];
+    
+    self.titleLabel.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+    self.titleLabel.layer.shadowOpacity = 0.8;
+    self.titleLabel.layer.shadowRadius = 4;
+    self.titleLabel.layer.shadowOffset = CGSizeMake(4, 4);
+    self.titleLabel.layer.masksToBounds = false;
+    
+    self.magnetView.layer.cornerRadius = self.magnetView.frame.size.width / 2;
+    self.magnetView.layer.masksToBounds = true;
+    self.magnetView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+    self.magnetView.layer.shadowOpacity = 0.8;
+    self.magnetView.layer.shadowRadius = 1;
+    self.magnetView.layer.shadowOffset = CGSizeMake(1.5, 3);
+    
+    self.loginButton.layer.cornerRadius = SMALL_CORNER_RADIUS;
+    self.loginButton.layer.masksToBounds = false;
 }
+
+
 - (IBAction)onTapLogIn:(id)sender {
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
@@ -59,16 +84,4 @@
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)usernameField:(id)sender {
-}
 @end

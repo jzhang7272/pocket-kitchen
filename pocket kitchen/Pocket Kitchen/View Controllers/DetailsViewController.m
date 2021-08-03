@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 #import "UIImageView+AFNetworking.h"
 #import "PKYStepper.h"
+#import "Constants.h"
 
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nutritionLabel;
@@ -34,7 +35,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Update labels
     self.foodItemLabel.text = self.item.name;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateStyle = NSDateFormatterShortStyle;
@@ -57,17 +57,14 @@
     
     NSURL *url = [NSURL URLWithString:self.item.image];
     [self.foodView setImageWithURL:url];
-    self.foodView.layer.cornerRadius = 15;
+    self.foodView.layer.cornerRadius = LARGE_CORNER_RADIUS;
     self.foodView.clipsToBounds = YES;
     
-    self.backgroundView.layer.cornerRadius = 20;
+    self.backgroundView.layer.cornerRadius = LARGE_CORNER_RADIUS;
     self.backgroundView.clipsToBounds = YES;
     [self.contentView sendSubviewToBack:self.backgroundView];
 
-    
     if (self.item.nutrients == nil){
-        
-        // Start Activity Indicator
         self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
         self.activityIndicator.center = self.view.center;
         [self.view addSubview:self.activityIndicator];
@@ -82,7 +79,6 @@
 }
 
 - (void)viewDidLayoutSubviews{
-
     self.scrollView.contentSize = self.contentView.frame.size;
 }
 
@@ -98,6 +94,18 @@
         }];
     }
     [super viewWillDisappear:animated];
+}
+
+- (IBAction)onTapDelete:(id)sender {
+    [self.item deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
+        if (succeeded) {
+            NSLog(@"The item was deleted.");
+        } else {
+            NSLog(@"Problem deleting item: %@", error.localizedDescription);
+        }
+    }];
+    [[self navigationController] popViewControllerAnimated:YES];
+    
 }
 
 - (void) fetchFoodDetails{
@@ -132,34 +140,5 @@
     });
     return ret;
 }
-//- (IBAction)stepperValueChanged:(UIStepper *)sender {
-//    int quantity = [self.quantityLabel.text integerValue];
-//    quantity += [sender value];
-//    self.quantityLabel.text = [NSString stringWithFormat:@"%i %@", quantity, self.item.quantityUnit];
-//    sender.value = 0;
-//
-//    self.item.quantity= [NSNumber numberWithInt:quantity];
-//}
-- (IBAction)onTapDelete:(id)sender {
-    [self.item deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
-        if (succeeded) {
-            NSLog(@"The item was deleted.");
-        } else {
-            NSLog(@"Problem deleting item: %@", error.localizedDescription);
-        }
-    }];
-    [[self navigationController] popViewControllerAnimated:YES];
-    
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

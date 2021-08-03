@@ -12,10 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FoodItem : PFObject<PFSubclassing>
 
-//@property (nonatomic, strong) NSString *foodID;
 @property (nonatomic, strong) PFUser *author;
 
-//@property (nonatomic, strong) PFFileObject *image;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *quantity;
 @property (nonatomic, strong) NSString *quantityUnit;
@@ -24,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *nutrients;
 @property (nonatomic, strong) NSString *nutrientUnit;
 @property (nonatomic, strong) NSString *image;
-@property (nonatomic) BOOL branded;
 @property (nonatomic) BOOL grocery;
 
 +  (void)saveItem: (NSString *)item :(NSNumber *)quantity :(NSString *)quantityUnit:(NSDate *)expDate :(NSString *)category :(NSString *)image;

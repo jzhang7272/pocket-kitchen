@@ -5,30 +5,34 @@
 //  Created by Josey Zhang on 7/21/21.
 //
 
-#import "AddGroceryItemViewController.h"
+#import "NutrientAnalysisViewController.h"
 #import "InventoryViewController.h"
+#import "NutrientApiManager.h"
 
 #import "RecommendedFoodsCell.h"
 #import "BadNutrientCell.h"
 #import "LoadingCell.h"
 #import "ScoreCell.h"
 
-
-#import "NutrientApiManager.h"
 #import <SFProgressCircle/SFProgressCircle.h>
 #import "Nutrient.h"
 #import "NutrientSource.h"
 #import "FoodItem.h"
 #import <Parse/Parse.h>
 #import "EGOCache.h"
+#import "Constants.h"
 
-#define AnimationDuration 0.7
+const int TOTAL_FOODS = 10;
+const double TOTAL_NUTRIENTS = 24.;
+const double ANIMATION_DURATION = 0.7;
+const int NMBR_DAYS = 7;
+
 #define grayColor [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1.0]
 #define lightBlueColor [UIColor colorWithRed:0.86 green:0.96 blue:0.99 alpha:1.0]
 #define lightPurpleColor [UIColor colorWithRed:0.87 green:0.74 blue:1.00 alpha:1.0]
 
 
-@interface AddGroceryItemViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface NutrientAnalysisViewController () <UITableViewDelegate, UITableViewDataSource>
 {
     CFTimeInterval startTime;
     NSNumber *fromNumber;
@@ -55,11 +59,10 @@
 
 @end
 
-@implementation AddGroceryItemViewController
+@implementation NutrientAnalysisViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // [[NSUserDefaults standardUserDefaults] setValue:@(NO) forKey:@"_UIConstraintBasedLayoutLogUnsatisfiable"];
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -98,15 +101,12 @@
     [self getRecommendedFoods];
 }
 
-
-- (IBAction)closeButton:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
-}
+#pragma mark - Helper Functions
 
 - (void) analysis{
     self.missingNutrients = [NSMutableArray new];
     self.tooMuchNutrient = [NSMutableArray new];
-    self.recommendedNutrients = [Nutrient recommendedNutrientAmount:1];
+    self.recommendedNutrients = [Nutrient recommendedNutrientAmount:NMBR_DAYS];
     NSDictionary *diffNutrients = [Nutrient nutrientDifference:self.groceryItemArray :self.recommendedNutrients];
     NSArray *badNutrients = @[@"SUGAR", @"NA", @"CHOLE", @"FASAT", @"FAT"];
     for(id nutrient in diffNutrients){
@@ -152,14 +152,14 @@
         PFQuery *query = [PFQuery queryWithClassName:@"NutrientSource"];
         [query whereKey:@"nutrient" equalTo:missing];
         [query orderByDescending:@"quantity"];
-        query.limit = 150;
+        query.limit = NMBR_QUERIES;
 
         [query findObjectsInBackgroundWithBlock:^(NSArray *sources, NSError *error) {
             if (sources != nil) {
                 NSMutableArray *sourcesCopy = [NSMutableArray new];
                 [sourcesCopy addObjectsFromArray:sources];
                 NSMutableArray *currFoods = [recommendedFoods valueForKey:missing];
-                int nmbrNeeded = 10 - currFoods.count;
+                int nmbrNeeded = TOTAL_FOODS - (int)currFoods.count;
                 for (int i = 0; i < nmbrNeeded; i++){
                     uint32_t rnd = arc4random_uniform([sourcesCopy count]);
                     NutrientSource *source = [sourcesCopy objectAtIndex:rnd];
@@ -186,6 +186,10 @@
 
 #pragma mark - UI
 
+- (IBAction)closeButton:(id)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
 - (void) updateUI {
     self.loaded = true;
     self.loadedProgress = false;
@@ -205,7 +209,7 @@
 }
 
 - (void)animateNumber:(CADisplayLink *)link {
-    float dt = ([link timestamp] - startTime) / AnimationDuration;
+    float dt = ([link timestamp] - startTime) / ANIMATION_DURATION;
     if (dt >= 1.0) {
         self.percentageLabel.text = [toNumber stringValue];
         [link removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
@@ -269,9 +273,9 @@
             [self.progressView setEndAngle:2 * M_PI + M_PI_2];
             [self.percentageLabel setTextColor:[UIColor blackColor]];
             
-            double percentage = (24 - self.missingNutrients.count - self.tooMuchNutrient.count)/ 24.;
+            double percentage = (TOTAL_NUTRIENTS - self.missingNutrients.count - self.tooMuchNutrient.count)/ TOTAL_NUTRIENTS;
             if(!self.loadedProgress){
-                [self.progressView setProgress:percentage animateWithDuration:AnimationDuration];
+                [self.progressView setProgress:percentage animateWithDuration:ANIMATION_DURATION];
                 [self animateTitle:@(0.f) toNumber:@((int) (percentage * 100))];
                 self.loadedProgress = true;
             }
@@ -293,7 +297,7 @@
             NSString *nutrientString = [[nutrientNames valueForKey:@"description"] componentsJoinedByString:@", "];
             cell.nutrientLabel.text = [NSString stringWithFormat:@"You're going over the recommended values for the following nutrients: %@", nutrientString];
             cell.backgroundColor = [UIColor whiteColor];
-            cell.layer.cornerRadius = 20;
+            cell.layer.cornerRadius = LARGE_CORNER_RADIUS;
             cell.layer.masksToBounds= true;
             return cell;
         }
@@ -314,7 +318,7 @@
                 [cell.iconButton setSelected:false];
             }
             cell.backgroundColor = [UIColor whiteColor];
-            cell.layer.cornerRadius = 20;
+            cell.layer.cornerRadius = LARGE_CORNER_RADIUS;
             cell.layer.masksToBounds= true;
             return cell;
         }
@@ -337,20 +341,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section{
-    CGFloat height = 10;
-    return height;
+    return (CGFloat) 10;
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
 

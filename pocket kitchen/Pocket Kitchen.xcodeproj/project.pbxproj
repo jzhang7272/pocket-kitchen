@@ -19,7 +19,7 @@
 		ED380C3026B30C55006D9B0C /* HeaderFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED380C2F26B30C55006D9B0C /* HeaderFilterCell.m */; };
 		ED380C3326B369CE006D9B0C /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED380C3226B369CE006D9B0C /* CategoryCell.m */; };
 		ED380C3626B51711006D9B0C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = ED380C3526B51711006D9B0C /* Constants.m */; };
-		ED6CB7BE26A869AB00A1906A /* AddGroceryItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */; };
+		ED6CB7BE26A869AB00A1906A /* NutrientAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7BD26A869AB00A1906A /* NutrientAnalysisViewController.m */; };
 		ED6CB7C126A8ACAC00A1906A /* Nutrient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6CB7C026A8ACAC00A1906A /* Nutrient.m */; };
 		ED81F802269E3BDA00F9E2CF /* NutrientApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F801269E3BDA00F9E2CF /* NutrientApiManager.m */; };
 		ED81F805269F87F700F9E2CF /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81F804269F87F700F9E2CF /* DetailsViewController.m */; };
@@ -89,8 +89,8 @@
 		ED380C3226B369CE006D9B0C /* CategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CategoryCell.m; path = "Pocket Kitchen/CategoryCell.m"; sourceTree = SOURCE_ROOT; };
 		ED380C3526B51711006D9B0C /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		ED380C3726B51729006D9B0C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		ED6CB7BC26A869AB00A1906A /* AddGroceryItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddGroceryItemViewController.h; path = Pods/AddGroceryItemViewController.h; sourceTree = SOURCE_ROOT; };
-		ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AddGroceryItemViewController.m; path = Pods/AddGroceryItemViewController.m; sourceTree = SOURCE_ROOT; };
+		ED6CB7BC26A869AB00A1906A /* NutrientAnalysisViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NutrientAnalysisViewController.h; path = Pods/NutrientAnalysisViewController.h; sourceTree = SOURCE_ROOT; };
+		ED6CB7BD26A869AB00A1906A /* NutrientAnalysisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NutrientAnalysisViewController.m; path = Pods/NutrientAnalysisViewController.m; sourceTree = SOURCE_ROOT; };
 		ED6CB7BF26A8ACAC00A1906A /* Nutrient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrient.h; sourceTree = "<group>"; };
 		ED6CB7C026A8ACAC00A1906A /* Nutrient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrient.m; sourceTree = "<group>"; };
 		ED81F800269E3BDA00F9E2CF /* NutrientApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NutrientApiManager.h; sourceTree = "<group>"; };
@@ -300,8 +300,8 @@
 		EDFF2282269CDA3300862BD5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED6CB7BC26A869AB00A1906A /* AddGroceryItemViewController.h */,
-				ED6CB7BD26A869AB00A1906A /* AddGroceryItemViewController.m */,
+				ED6CB7BC26A869AB00A1906A /* NutrientAnalysisViewController.h */,
+				ED6CB7BD26A869AB00A1906A /* NutrientAnalysisViewController.m */,
 				ED81F81B26A221CE00F9E2CF /* ShoppingViewController.h */,
 				ED81F81C26A221CE00F9E2CF /* ShoppingViewController.m */,
 				ED81F803269F87F700F9E2CF /* DetailsViewController.h */,
@@ -560,7 +560,7 @@
 				ED380C1826AF317E006D9B0C /* NutrientSource.m in Sources */,
 				ED6CB7C126A8ACAC00A1906A /* Nutrient.m in Sources */,
 				EDFF228B269CE54E00862BD5 /* FoodItemCell.m in Sources */,
-				ED6CB7BE26A869AB00A1906A /* AddGroceryItemViewController.m in Sources */,
+				ED6CB7BE26A869AB00A1906A /* NutrientAnalysisViewController.m in Sources */,
 				ED380C1E26B0AB34006D9B0C /* BadNutrientCell.m in Sources */,
 				ED380C3626B51711006D9B0C /* Constants.m in Sources */,
 				EDFF224C269CD86800862BD5 /* AppDelegate.m in Sources */,

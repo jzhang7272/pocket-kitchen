@@ -67,9 +67,9 @@
     [self.barcodeView setUserInteractionEnabled:YES];
     
     // UI Setup
-    self.barcodeView.layer.cornerRadius = 15;
+    self.barcodeView.layer.cornerRadius = SMALL_CORNER_RADIUS;
     self.barcodeView.clipsToBounds = true;
-    self.saveButton.layer.cornerRadius = 25;
+    self.saveButton.layer.cornerRadius = LARGE_CORNER_RADIUS;
     self.saveButton.clipsToBounds = true;
 }
 
@@ -249,17 +249,10 @@
         }
     }
     if ([highNutrients count] != 0){
-        [[EGOCache globalCache] setObject:highNutrients forKey:[foodItem lowercaseString] withTimeoutInterval:60*60*24*7];
+        [[EGOCache globalCache] setObject:highNutrients forKey:[foodItem lowercaseString] withTimeoutInterval:CACHE_TIME];
     }
     [FoodItem saveItem:foodItem :quantity :quantityUnit :expDate :category :self.foodImage];
 }
 
-/*
-#pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
