@@ -9,6 +9,7 @@
 #import "AddItemViewController.h"
 #import "DetailsViewController.h"
 #import "NutrientApiManager.h"
+#import "ProfileViewController.h"
 
 #import "FoodItemCell.h"
 #import "CategoryCell.h"
@@ -17,6 +18,7 @@
 #import <Parse/Parse.h>
 #import "DateTools.h"
 #import "UIImageView+AFNetworking.h"
+#import "SideNavigation-Swift.h"
 #import "Constants.h"
 
 const int BUTTON_SIZE = 60;
@@ -32,6 +34,8 @@ const int DIST_BOTTOM = -100;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) UIButton *addButton;
+@property (nonatomic, strong) SideMenuManager *profileMenu;
+@property (nonatomic, strong) ProfileViewController *profileView;
 
 @property (nonatomic, strong) NSMutableArray *itemArray;
 @property (nonatomic, strong) NSMutableArray *filteredArray;
@@ -52,6 +56,8 @@ const int DIST_BOTTOM = -100;
     self.addButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.addButton addTarget:self action:@selector(onTapAdd) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.addButton];
+    self.profileView = [ProfileViewController new];
+    self.profileMenu = [[SideMenuManager alloc] init:self left:self.profileView];
     
     // Delegates
     self.tableView.delegate = self;
@@ -86,8 +92,13 @@ const int DIST_BOTTOM = -100;
    
 }
 
-- (void) viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"person.fill"] style:UIBarButtonItemStylePlain target:self action:@selector(openProfile)];
+}
+
+- (void)openProfile {
+    [self presentViewController:self.profileView animated:YES completion:nil];
 }
 
 - (void)viewWillLayoutSubviews{
@@ -106,6 +117,10 @@ const int DIST_BOTTOM = -100;
     self.addButton.layer.masksToBounds = false;
     
     [NSLayoutConstraint activateConstraints:@[[self.addButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant: -(self.view.frame.size.width / 2) + BUTTON_SIZE / 2], [self.addButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:DIST_BOTTOM], [self.addButton.widthAnchor constraintEqualToConstant: BUTTON_SIZE], [self.addButton.heightAnchor constraintEqualToConstant: BUTTON_SIZE]]];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Collection View

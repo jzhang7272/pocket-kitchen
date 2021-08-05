@@ -14,6 +14,7 @@ target 'Pocket Kitchen' do
   pod 'PKYStepper', '0.0.1'
   pod 'GoogleMLKit/BarcodeScanning'
   pod 'PopupKit'
+  pod "SideNavigation", :git => 'https://github.com/CNKCQ/SideNavigation.git'
 
   target 'Pocket KitchenTests' do
     inherit! :search_paths

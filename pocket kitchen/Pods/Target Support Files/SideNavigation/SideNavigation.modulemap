@@ -1,0 +1,6 @@
+framework module SideNavigation {
+  umbrella header "SideNavigation-umbrella.h"
+
+  export *
+  module * { export * }
+}

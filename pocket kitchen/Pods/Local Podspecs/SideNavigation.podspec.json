@@ -1,0 +1,23 @@
+{
+  "name": "SideNavigation",
+  "version": "1.1.3",
+  "swift_versions": "5",
+  "summary": "A short description of SideNavigation.",
+  "homepage": "https://github.com/cnkcq/SideNavigation",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "cnkcq": "chengquan.wang@ele.me"
+  },
+  "source": {
+    "git": "https://github.com/cnkcq/SideNavigation.git",
+    "tag": "1.1.3"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SideNavigation/Classes/**/*",
+  "swift_version": "5"
+}

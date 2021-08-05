@@ -13,4 +13,5 @@ ${BUILT_PRODUCTS_DIR}/PopupKit/PopupKit.framework
 ${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework
 ${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework
 ${BUILT_PRODUCTS_DIR}/SFProgressCircle/SFProgressCircle.framework
+${BUILT_PRODUCTS_DIR}/SideNavigation/SideNavigation.framework
 ${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework
