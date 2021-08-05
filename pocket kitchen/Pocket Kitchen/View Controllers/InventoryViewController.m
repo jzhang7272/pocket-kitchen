@@ -44,6 +44,7 @@ const int DIST_BOTTOM = -100;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
     // Initialize and UI Setup
     self.categoryArray = @[@"All items", @"Fridge", @"Freezer", @"Pantry"];

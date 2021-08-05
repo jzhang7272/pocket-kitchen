@@ -36,6 +36,7 @@ const double DISPLAY_MIN = 0.01;
     newItem.category = category;
     newItem.image = image;
     newItem.grocery = false;
+    newItem.bought = false;
     
     [newItem saveInBackgroundWithBlock: nil];
 }

@@ -199,7 +199,7 @@
                                                     <state key="normal" image="circle" catalog="system"/>
                                                     <state key="selected" image="circle.fill" catalog="system"/>
                                                     <connections>
-                                                        <action selector="onTapBought:" destination="yhc-Ss-O3r" eventType="touchUpInside" id="Xfl-nX-FcH"/>
+                                                        <action selector="onTapBought:" destination="yhc-Ss-O3r" eventType="touchUpInside" id="Fce-1h-mD8"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6I-2p-M2F">
@@ -219,7 +219,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="boughtButton" destination="oSh-rl-RAZ" id="tob-pG-L0c"/>
+                                            <outlet property="boughtButton" destination="7Je-hJ-AyY" id="PfZ-Yf-QYe"/>
                                             <outlet property="groceryLabel" destination="b6I-2p-M2F" id="1xt-fJ-Gla"/>
                                         </connections>
                                     </tableViewCell>

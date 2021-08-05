@@ -14,7 +14,7 @@
 #import "ShoppingItemCell.h"
 
 
-@interface ShoppingViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ShoppingViewController () <ShoppingItemCellDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITextField *groceryItemField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -55,9 +55,21 @@
     [self.refreshControl endRefreshing];
 }
 
+- (void)tapBought{
+    [self.tableView reloadData];
+}
+
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     ShoppingItemCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ShoppingItemCell"];
     FoodItem *groceryItem = self.groceryItemArray[indexPath.row];
+    cell.delegate = self;
+    cell.groceryItem = groceryItem;
+    if(groceryItem.bought == true){
+        [cell.boughtButton setSelected:true];
+    }
+    else{
+        [cell.boughtButton setSelected:false];
+    }
     cell.groceryLabel.text = groceryItem.name;
     return cell;
 }

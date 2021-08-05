@@ -7,18 +7,22 @@
 
 #import "ShoppingItemCell.h"
 
+
 @implementation ShoppingItemCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
 }
-- (IBAction)onTapBought:(UIButton *)sender {
-    if (sender.selected == true){
-        [sender setSelected:false];
+
+- (IBAction)onTapBought:(id)sender {
+    if (self.groceryItem.bought){
+        self.groceryItem.bought = false;
     }
     else{
-        [sender setSelected:true];
+        self.groceryItem.bought = true;
     }
+    [self.groceryItem saveInBackgroundWithBlock:nil];
+    [self.delegate tapBought];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
