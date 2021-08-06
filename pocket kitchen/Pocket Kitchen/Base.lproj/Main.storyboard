@@ -251,7 +251,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Grocery List" id="4K7-iU-ug6">
-                        <barButtonItem key="rightBarButtonItem" image="chart.bar.xaxis" catalog="system" id="W1x-td-MR6">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="chart.bar.xaxis" catalog="system" id="W1x-td-MR6">
                             <connections>
                                 <action selector="onTapNutrientAnalysis:" destination="qiQ-33-lZo" id="umd-AU-i9I"/>
                             </connections>

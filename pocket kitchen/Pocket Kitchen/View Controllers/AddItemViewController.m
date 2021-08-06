@@ -152,6 +152,7 @@ const int ONE_DAY = 1;
     if (self.nutrients != nil){
         [self cacheBarcodeFoods:item :quantity :quantityUnit :expDate :category];
         [self dismissViewControllerAnimated:true completion:nil];
+        [self.delegate refreshData];
     }
     else{
         [self cacheUserFoods:item :quantity :quantityUnit :expDate :category];
@@ -247,6 +248,7 @@ const int ONE_DAY = 1;
             [FoodItem saveItem:foodItem :quantity :quantityUnit :expDate :category :foodImage];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self dismissViewControllerAnimated:true completion:nil];
+                [self.delegate refreshData];
             });
         }
     }];

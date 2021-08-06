@@ -27,7 +27,7 @@ const int DIST_BOTTOM = -100;
 #define grayColor [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1.0]
 #define lightBlueColor [UIColor colorWithRed:0.86 green:0.96 blue:0.99 alpha:1.0]
 
-@interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface InventoryViewController () <AddItemViewDelegate, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -36,6 +36,7 @@ const int DIST_BOTTOM = -100;
 @property (strong, nonatomic) UIButton *addButton;
 @property (nonatomic, strong) SideMenuManager *profileMenu;
 @property (nonatomic, strong) ProfileViewController *profileView;
+@property (nonatomic, strong) UIView *loadingView;
 
 @property (nonatomic, strong) NSMutableArray *itemArray;
 @property (nonatomic, strong) NSMutableArray *filteredArray;
@@ -94,7 +95,8 @@ const int DIST_BOTTOM = -100;
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"person.fill"] style:UIBarButtonItemStylePlain target:self action:@selector(openProfile)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"person.circle.fill"] style:UIBarButtonItemStylePlain target:self action:@selector(openProfile)];
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor darkGrayColor];
 }
 
 - (void)openProfile {
@@ -121,6 +123,24 @@ const int DIST_BOTTOM = -100;
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)refreshData{
+    if(!self.loadingView) {
+        self.loadingView = [[UIView alloc] initWithFrame:self.view.frame];
+        [self.loadingView setBackgroundColor:grayColor];
+
+        UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        activityIndicator.color = [UIColor lightGrayColor];
+        [activityIndicator setFrame:CGRectMake((self.loadingView.frame.size.width / 2 - 10), (self.loadingView.frame.size.height / 2 - 10), 20, 20)];
+
+        [self.loadingView addSubview:activityIndicator];
+
+        [activityIndicator startAnimating];
+    }
+    [self.view addSubview:self.loadingView];
+
+    [self fetchData];
 }
 
 #pragma mark - Collection View
@@ -196,7 +216,7 @@ const int DIST_BOTTOM = -100;
         if ([cell.expDateLabel.text isEqualToString:@"Expired"]){
             cell.alertIcon.tintColor = [UIColor systemRedColor];
         }
-        else if([cell.expDateLabel.text isEqualToString:@"Expiring in < 1 day"]){
+        else if([cell.expDateLabel.text isEqualToString:@"Expiring today!"]){
             cell.alertIcon.tintColor = [UIColor systemYellowColor];
         }
         else{
@@ -260,7 +280,7 @@ const int DIST_BOTTOM = -100;
     [query includeKey:@"author"];
     [query whereKey:@"author" equalTo:PFUser.currentUser];
     [query whereKey:@"grocery" equalTo:[NSNumber numberWithBool:false]];
-    [query orderByDescending:@"name"];
+    [query orderByAscending:@"expirationDate"];
     query.limit = NMBR_QUERIES;
 
     [query findObjectsInBackgroundWithBlock:^(NSArray<FoodItem *> *items, NSError *error) {
@@ -275,6 +295,9 @@ const int DIST_BOTTOM = -100;
         }
     }];
     [self.refreshControl endRefreshing];
+    if (self.loadingView != nil){
+        [self.loadingView removeFromSuperview];
+    }
 }
 
 - (void) onTapAdd{
@@ -291,12 +314,14 @@ const int DIST_BOTTOM = -100;
 }
 
 - (NSString *)getExpirationDate:(NSDate *)date{
-    NSDate *current = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitDay | NSCalendarUnitMonth fromDate:[NSDate date]];
+    NSDate *current = [calendar dateFromComponents:components];
     NSInteger yearsApart = [date yearsFrom:current];
     NSInteger monthsApart = [date monthsFrom:current];
     NSInteger daysApart = [date daysFrom:current];
     if (daysApart == 0){
-        return @"Expiring in < 1 day";
+        return @"Expiring today!";
     }
     else if ([date timeIntervalSinceDate:current] < 0){
         return @"Expired";
@@ -335,6 +360,7 @@ const int DIST_BOTTOM = -100;
     if([[segue identifier] isEqualToString:@"addItemSegue"]) {
         UINavigationController *navigationController = [segue destinationViewController];
             AddItemViewController *addController = (AddItemViewController*)navigationController.topViewController;
+        addController.delegate = self;
     }
     if([[segue identifier] isEqualToString:@"detailsSegue"]) {
         UITableViewCell *tappedCell = sender;
